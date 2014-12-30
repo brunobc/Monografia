@@ -1,0 +1,107 @@
+% v0.4 - 2011071901
+%
+% Modelo de monografia em LaTeX da UECE baseado no template disponibilizado
+% por Rudy Matela em http://www.larces.uece.br/~rudy/pub/modelo_monografia/
+
+\input{modelo/tex/preambulo}
+
+% Informações gerais do documento
+\autor{Bruno Bezerra Chaves}
+\autorr{Chaves, Bruno Bezerra}
+\titulo{Métodos Combinatoriais Para Problemas Em Redes Dinâmicas:
+Algoritmos De Caminho Mínimo}
+\orientador{Prof. Dr. Marcos José Negreiros Gomes}
+
+% essas informacoes do codigo CIP você consegue indo na biblioteca central
+\codigocip{O00a}{CDD:000.0}
+
+
+% Epígrafe: citação e autor (OPCIONAL)
+\epigrafe{``A satisfação está no esforço e não apenas na realização final.''}
+\autorepigrafe{Mahatma Gandhi}
+
+
+% Membros da comissão avaliadora
+\bancaum{\ABNTorientadordata\\ 
+Universidade Estadual do Ceará -- UECE\\Orientador}
+\bancadois{Prof. Dr. Albert Einstein Fernandes Muritiba\\
+Universidade Federal do Ceará - UFC}
+\bancatres{Prof. MSc. Anderson Bezerra Calixto\\
+Universidade Estadual do Ceará - UECE} 
+
+% data de aprovação
+\dataaprovacao{00/00/0000}
+
+% Agradecimentos
+\agradecimentostext{
+\noindent
+À minha família, pelo incentivo e apoio em todos os momentos.
+
+\noindent
+À minha namorada Ismaela, pelo incentivo e apoio em todos os momentos.
+
+\noindent
+Aos amigos que conheci na UECE, pela amizade e ajuda. Em especial, aos amigos
+Hedley Luna, Ivo Coelho, João Amílcar e Luiz Prudêncio.
+
+\noindent
+Ao professor Marcos Negreiros pela orientação durante todo o curso e pelas oportunidades 
+de iniciação à pesquisa.
+
+\noindent
+A todas as pessoas que passaram pela minha vida e contribuíram para a
+construção de quem sou hoje.
+
+}
+
+% Resumo/palavras chaves
+\resumotext{
+\indent Este trabalho trata do problema do caminho mínimo para gráficos dinâmicos,
+onde o custo da mudança de arcos, a mudança de topologia ou ambas mudam ao
+longo de um horizonte de tempo. Estas situações aparecem no tráfego dinâmico
+e/ou planejamento de rotas para as redes de transporte. 
+
+Nós mostramos os resultados de uma adaptação da implementação Radix-Heap Dijkstra
+para lidar com as diferentes variações de redes dinâmicas, e mostramos nossos resultados
+para uma série de grafos dinâmicos selecionados. Usamos DYNAGRAPH como um ambiente
+computacional para avaliar nossos métodos.
+}
+\pcs{Caminho Mínimo}{Grafos Dinâmicos}
+
+% abstract/keywords
+\abstracttext{
+\indent This work deals with the dynamic shortest path problem for dynamic
+graphs where the cost of the arcs change, the topology change or both things
+change along a time horizon. These situations appears in dynamic traffic and/or
+route planning for transportation networks.
+
+We show the results of an adaptation of Radix-Heap Dijkstra implementation to
+deal with the different kinks of dynamic networks, and we show our results for
+a number of selected dynamic graphs. We use DYNAGRAPH as a computational
+environment to evaluate our methods.
+}
+\kws{Shortest Path}{Dynamic Graph}
+
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% inicio do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+% o arquivo seguinte contém os elementos pre-textuais. edite-o caso deseje
+% adicionar/remover algum elemento.
+\input{modelo/tex/documento}
+
+% agora adicione os capítulos
+\input{chapters/1introducao}
+\input{chapters/2revisao}
+\input{chapters/3fundamentacao-teorica}
+\input{chapters/7validacao}
+\input{chapters/8conclusao}
+
+% bibliografia
+\bibliography{references}
+
+\end{document}
+

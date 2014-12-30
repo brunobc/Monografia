@@ -1,0 +1,308 @@
+{
+  "metadata": {
+    "vertex": {
+      "fields": {
+        "id": "id",
+        "start": "ini",
+        "end": "fim"
+      },
+      "temporalfields": {
+        "position": {
+          "dataset": "posicao",
+          "attributes": {
+            "x": "x",
+            "y": "y",
+            "zone": "zona",
+            "southHemisphere": "hemisferioSul"
+          }
+        },
+        "label": "rotulo",
+        "type": "tipo",
+        "customfields": {
+          "potencia": "Potência",
+          "clientes": "Clientes"
+        }
+      }
+    },
+    "edge": {
+      "fields": {
+        "id": "id",
+        "start": "ini",
+        "end": "fim"
+      },
+      "temporalfields": {
+        "sourcetarget": {
+          "dataset": "origemdestino",
+          "attributes": {
+            "source": "origem",
+            "target": "destino"
+          }
+        },
+        "label": "rotulo",
+        "type": "tipo"
+      }
+    }
+  },
+  "binding": {
+    "vertex": {
+      "type": {
+        "v1": {
+          "label": "Foco2",
+          "icon": {
+            "path": 2,
+            "fillColor": "orange",
+            "strokeColor": "red",
+            "fillOpacity": 0.3,
+            "scale": 12,
+            "strokeWeight": 2
+          }
+        },
+        "v2": {
+          "label": "Foco",
+          "icon": {
+            "path": 0,
+            "fillColor": "yellow",
+            "strokeColor": "blue",
+            "fillOpacity": 0.7,
+            "scale": 15,
+            "strokeWeight": 4
+          }
+        },
+        "v3": {
+          "label": "Foco1",
+          "icon": {
+            "path": 1,
+            "fillColor": "white",
+            "strokeColor": "blue",
+            "fillOpacity": 0.6,
+            "scale": 15,
+            "strokeWeight": 4
+          }
+        },
+        "default": {
+          "label": "Default",
+          "icon": "images/icons/defaults/default.png"
+        }
+      }
+    },
+    "edge": {
+      "type": {
+        "red": {
+          "label": "Red",
+          "color": "#f00"
+        },
+        "dashed": {
+          "label": "Dashed",
+          "strokeOpacity": 0,
+          "color": "black",
+          "icons": [
+            {
+              "icon": {
+                "path": "M 0,-0.5 0,0.5",
+                "strokeWeight": 2,
+                "strokeOpacity": 1,
+                "scale": 3
+              },
+              "offset": "0",
+              "repeat": "10px"
+            }
+          ]
+        },
+        "arrows": {
+          "label": "Arrows",
+          "strokeOpacity": 0,
+          "color": "black",
+          "icons": [
+            {
+              "icon": {
+                "path": 1,
+                "fillOpacity": 1,
+                "strokeOpacity": 0
+              },
+              "repeat": "10px"
+            }
+          ]
+        },
+        "dotted": {
+          "label": "Dotted",
+          "strokeOpacity": 0,
+          "color": "black",
+          "icons": [
+            {
+              "icon": {
+                "path": "M -.5,-.5 .5,-.5, .5,.5 -.5,.5",
+                "fillOpacity": 1,
+                "strokeOpacity": 0
+              },
+              "repeat": "6px"
+            }
+          ]
+        },
+        "default": {
+          "label": "Default",
+          "color": "#000",
+          "strokeWeight": 2,
+          "strokeOpacity": 1,
+          "icons": []
+        }
+      }
+    }
+  },
+  "data": {
+    "vertex": {
+      "elements": {
+        "1": {
+          "ini": "2014-01-01 11:00:13",
+          "fim": null,
+          "__controlattrs": {
+            "unique": 183,
+            "deps": [
+              "1"
+            ]
+          }
+        },
+        "2": {
+          "ini": "2014-01-02 15:17:53",
+          "fim": null,
+          "__controlattrs": {
+            "unique": 184,
+            "deps": [
+              "1",
+              "2"
+            ]
+          }
+        },
+        "3": {
+          "ini": "2014-01-03 03:48:20",
+          "fim": null,
+          "__controlattrs": {
+            "unique": 185,
+            "deps": [
+              "2"
+            ]
+          }
+        }
+      },
+      "temporalfields": {
+        "posicao": {
+          "1": [
+            {
+              "time": "2014-01-01 11:00:13",
+              "data": {
+                "x": 552713,
+                "y": 9583920,
+                "zona": 24,
+                "hemisferioSul": true
+              }
+            }
+          ],
+          "2": [
+            {
+              "time": "2014-01-02 15:17:53",
+              "data": {
+                "x": 552931,
+                "y": 9584080,
+                "zona": 24,
+                "hemisferioSul": true
+              }
+            }
+          ],
+          "3": [
+            {
+              "time": "2014-01-03 03:48:20",
+              "data": {
+                "x": 552939,
+                "y": 9583780,
+                "zona": 24,
+                "hemisferioSul": true
+              }
+            },
+            {
+              "time": "2014-01-04 03:48:20.000000",
+              "data": {
+                "x": 553058,
+                "y": 9583937,
+                "zona": 24,
+                "hemisferioSul": true
+              }
+            }
+          ]
+        },
+        "tipo": {
+          "1": [
+            {
+              "time": "2014-01-01 11:00:13",
+              "data": "v1"
+            },
+            {
+              "time": "2014-01-03 13:09:02.074000",
+              "data": "v2"
+            }
+          ],
+          "2": [
+            {
+              "time": "2014-01-02 15:17:53",
+              "data": "v2"
+            },
+            {
+              "time": "2014-01-03 13:09:02.074000",
+              "data": "v1"
+            },
+            {
+              "time": "2014-01-04 03:48:20.000000",
+              "data": "v2"
+            }
+          ],
+          "3": [
+            {
+              "time": "2014-01-03 03:48:20",
+              "data": "v3"
+            }
+          ]
+        }
+      }
+    },
+    "edge": {
+      "elements": {
+        "1": {
+          "ini": "2014-01-02 19:00:07",
+          "fim": null,
+          "__controlattrs": {
+            "unique": 186,
+            "deps": []
+          }
+        },
+        "2": {
+          "ini": "2014-01-03 03:48:20",
+          "fim": null,
+          "__controlattrs": {
+            "unique": 187,
+            "deps": []
+          }
+        }
+      },
+      "temporalfields": {
+        "origemdestino": {
+          "1": [
+            {
+              "time": "2014-01-02 19:00:07",
+              "data": {
+                "origem": 1,
+                "destino": 2
+              }
+            }
+          ],
+          "2": [
+            {
+              "time": "2014-01-04 03:48:20",
+              "data": {
+                "origem": 2,
+                "destino": 3
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

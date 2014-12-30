@@ -1,0 +1,107 @@
+\chapter{Introdução}
+
+O problema de caminho mínimo é um dos problemas fundamentais da computação assim como é um problema
+clássico em otimização combinatória.
+Ele é intensamente estudado e utilizado em diversas áreas como Engenharia de Transportes, Pesquisa Operacional, Ciência
+da Computação e Inteligência Artificial. Isso acontece porque tem potencial de aplicação a
+inúmeros problemas que ocorrem em transportes, logística, redes de computadores de
+telecomunicações, etc \cite{peer}.
+
+O roteamento de veículos em um sistema de transporte é atualmente uma das aplicações mais comuns.
+Neste contexto, vértices representam cruzamento de ruas, os arcos representam as vias
+e os pesos representam medida de custo, tempo ou distância. O caminho mínimo entre dois cruzamentos
+é dado pelo conjunto de arcos que resulta no custo mínimo do percurso.
+Este custo não necessariamente é a menor distância a percorrer,
+o conceito é mais genérico, considerando algum atributo quantificável, como,
+por exemplo, distância, tempo, risco, etc \cite{boaventura}, \cite{cormen}, \cite{ziviani}.
+Através do crescente desenvolvimento dos computadores pessoais ou portáteis, como sistemas
+de navegação de carros e sistemas embarcados GPS, esse tipo de problema de caminho mínimo
+tem se tornado cada vez mais usado.
+
+Diante o grande aumento do tráfego de veículos, se torna indispensável o uso de Sistemas Inteligentes
+de Transporte (ITS - Intelligent Transportation System), que realizam o controle e gerenciamento desse fluxo de veículos,
+permitindo assim o aumento do poder de decisão para o planejamento de ações de maneira
+mais inteligente e eficiente \cite{leonard}.
+
+Sistemas de previsão de tráfego são como forma de auxiliar o controle de tráfego de veículos.
+Através de análises de dados históricos e de tempo real sobre
+os dados lidos de fluxo de veículos, informações futuras geradas através de modelos
+estatísticos e computacionais podem prever o comportamento do tráfego em determinadas
+vias. Essas informações de fluxo são obtidas através de equipamentos eletrônicos conhecidos
+como equipamentos de fiscalização eletrônica ou simplesmente radares pela maioria da
+população. Eles não só calculam a quantidade de automóveis que trafegam no local
+monitorado, mas também obtém vários outros dados como velocidade, tipo e placa do
+veículo \cite{leonard}.
+
+\section{Motivação}
+
+Um sistema de seleção da melhor rota em condições de tráfego intenso poderia
+direcionar os condutores a rotas alternativas, para que se evite transitar em rotas já saturadas,
+mitigando os gargalos de tráfego nessas regiões. Todas essas informações seriam
+geradas em tempo real, e estariam disponíveis em um sistema web para os condutores através de aplicações para acesso público.
+Essas aplicações podem fazer uso de Sistemas Inteligentes de Transporte (do inglês Intelligent Transportation Systems ou ITS),
+como já dito anteriormente, definidos genericamente como sistemas de transporte que usam tecnologias de informação e
+de telecomunicações para assegurar a sua melhor utilização e operação, buscando controlar e
+reduzir congestionamentos e filas. Entre as inúmeras aplicações, incluem-se sistemas de apoio
+à navegação em tempo real, cuja finalidade é auxiliar motoristas a encontrar os melhores
+caminhos ou rotas para atingirem seus locais de destino.
+
+Inúmeras aplicações baseadas em SIG’s (GIS - Geographic Information Systems),
+que permitem tratamento computacional a dados geográficos ou geo-referenciados,
+vêm sendo disponibilizadas na internet.
+São ferramentas em forma de mapa que facilitam o usuário localizar um endereço,
+encontrar o menor caminho entre dois lugares, ou até mesmo o caminho mais rápido para chegar ao destino.
+
+O uso de sistemas ``on-line'' que sugere a melhor rota de um ponto de origem a um ponto de destino conhecido,
+obtém dados em tempo real, e com isso realizam a previsão de rotas otimizadas.
+Os usuários que tiverem acesso ao sistema saberiam onde têm congestionamentos ou qualquer tipo de obstrução da via.
+Isso acontece porque o sistema recebe informações dos veículos, logo ele é considerado um sistema dinâmico,
+pois ele se adapta de acordo com os acontecimentos ao longo do tempo.
+Para isso, é necessário um algoritmo de caminho mínimo otimizado que forneça uma resposta rápida para o usuário.
+
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+Criar uma ferramenta que propõe rotas otimizadas entre dois pontos conhecidos ao longo do tempo
+numa rede de topologia dinâmica utilizando o software Dynagraph \cite{dynagraph},
+que permite a edição e representação de grafos dinâmicos.
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+ \item Seguir o modelo computacional Dynagraph \cite{dynagraph} para redes dinâmicas para criacão de um modelo composto
+ que aborde redes de topologia estática e dinâmica.
+ \item Desenvolver uma ferramenta capaz de sugerir um trajeto com menor tempo
+ de percurso entre dois pontos conhecidos, e que recalcula o caminho ótimo em trechos
+ intermediários, caso o tempo realizado num determinado trecho seja diferente do proposto
+ e caso a rede seja alterada ao longo do caminho.
+\end{itemize}
+
+\section{Metodologia de Desenvolvimento}
+
+Para o desenvolvimento dessa solução, os dados utilizados neste trabalho são hipotéticos,
+pois a pesquisa se concentra na modelagem do algoritmo de Dijkstra com Radix Heap aplicado a Grafos Dinâmicos.
+O trabalho foi dividido em 3 etapas, que são descritas à seguir:
+
+\begin{itemize}
+ \item Analisar modelos de Grafos dinâmicos: determinar dentre os modelos existentes o que melhor
+ se adapta ao problema proposto;
+
+ \item Empregar modelos de caminhos mínimos: adaptar a aplicação para sistemas que usam 
+ previsão dos tempos de percurso;
+
+ \item Efetuar testes: elaborar relatórios e métricas através de testes que possam ser analisados pelo
+ software de visualização e edição Dynagraph \cite{dynagraph}.
+\end{itemize}
+
+\section{Organização do Trabalho}
+
+Este trabalho está organizada em cinco capítulos:
+O Capítulo 1 apresenta soluções tecnológicas para resolução de problemas de caminho mínimo,
+além das motivações e metodologia para o desenvolvimento da pesquisa.
+O Capítulo 2 apresenta uma revisão bibliográfica sobre redes de Topologia Estática, redes Dinâmicas e
+sua geração e manutenção, descrevendo e comparando algumas soluções.
+O Capítulo 3 apresenta a fundamentação teórica para a compreensão do trabalho desenvolvido, abordando
+algoritmos de caminho mínimo em grafos estáticos e dinâmicos.
+O Capítulo 4 apresenta os resultados obtidos pelos testes de desempenho, utilizando o Dynagraph \cite{dynagraph}
+como ferramenta de avalição através das métricas utilizadas por ele.
+No Capítulo 5 são apresentadas as conclusões deste trabalho e propostas para trabalhos futuros.

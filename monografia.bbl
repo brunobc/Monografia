@@ -1,0 +1,117 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.53 }
+
+\bibitem[AHUJA, Magnanti e Orlin 1993]{bookahuja}
+\abntrefinfo{AHUJA, Magnanti e Orlin}{AHUJA; MAGNANTI; ORLIN}{1993}
+{AHUJA, R.K.; MAGNANTI, Thomas~L.; ORLIN, James~B. \emph{{Network flows:
+  theory, algorithms, and applications}}. [S.l.]: Prentice-Hall, Inc. Upper
+  Saddle River, NJ, 1993.}
+
+\bibitem[AHUJA et al. 1990]{ahuja}
+\abntrefinfo{AHUJA et al.}{AHUJA et al.}{1990}
+{AHUJA, R.K. et al. {Faster algorithms for the shortest path problem}.
+\emph{Journal of the Association for Computing Machinery}, v.~37, n.~2, p.
+  213--223, 1990.}
+
+\bibitem[ATZINGEN et al. 2007]{cunha}
+\abntrefinfo{ATZINGEN et al.}{ATZINGEN et al.}{2007}
+{ATZINGEN, J.~V. et al. {Análise Comparativa de Algoritmos Eficientes para o
+  Problema de Caminho Mínimo}. In:  \emph{XXI ANPET: Congresso de Pesquisa e
+  Ensino em Transportes, Panorama Nacional da Pesquisa em Transportes.
+  Associação Nacional de Ensino e Pesquisa em Transportes}. [S.l.]: Rio de
+  Janeiro, Brasil, 2007. p. 1--12.}
+
+\bibitem[BASTIAN, HEYMANN e JACOMY 2009]{gephi}
+\abntrefinfo{BASTIAN, HEYMANN e JACOMY}{BASTIAN; HEYMANN; JACOMY}{2009}
+{BASTIAN, Mathieu; HEYMANN, Sebastien; JACOMY, Mathieu. {Gephi: An Open Source
+  Software for Exploring and Manipulating Networks}. In:  \emph{Internacional
+  AAAI Conference on Weblogs and Social Media}. [S.l.]: São José,
+  Califórnia, Estados Unidos, 2009.}
+
+\bibitem[CALIXTO e NEGREIROS 2012]{dynagraph2012}
+\abntrefinfo{CALIXTO e NEGREIROS}{CALIXTO; NEGREIROS}{2012}
+{CALIXTO, Anderson; NEGREIROS, Marcos. {DYNAGRAPH: Um Modelo de Edição e
+  Representação de Grafos Dinâmicos}.
+1 ed. CLAIO/SBPO, p.~8, 2012.}
+
+\bibitem[CALIXTO e NEGREIROS 2013]{dynagraph}
+\abntrefinfo{CALIXTO e NEGREIROS}{CALIXTO; NEGREIROS}{2013}
+{CALIXTO, Anderson; NEGREIROS, Marcos.
+\emph{{DYNAGRAPH: Um Modelo de Edição e Representação de Grafos
+  Dinâmicos}}.
+Disserta\c{c}\~ao (Mestrado) --- Mestrado Acadêmico em Ciência da
+  Computa\c{c}\~ao (MACC), Universidade Estadual do Ceará, 2013.}
+
+\bibitem[CORMEN et al. 2001]{cormen}
+\abntrefinfo{CORMEN et al.}{CORMEN et al.}{2001}
+{CORMEN, Thomas~H. et al. \emph{{Introduction to Algorithms}}. [S.l.]:
+  Cambridge and NewYork: The MIT Press and McGraw-Hill Book Company, 2nd.
+  Edition, 2001.}
+
+\bibitem[CROCKFORD 2008]{douglas}
+\abntrefinfo{CROCKFORD}{CROCKFORD}{2008}
+{CROCKFORD, Douglas. \emph{{JavaScript: The Good Parts}}. [S.l.]: (O'Reilly
+  Media), 2008.}
+
+\bibitem[GOLDBARG e GOLDBARG 2012]{goldbarg}
+\abntrefinfo{GOLDBARG e GOLDBARG}{GOLDBARG; GOLDBARG}{2012}
+{GOLDBARG, Marco; GOLDBARG, Elizabeth. \emph{{Grafos: Conceitos, algoritmos e
+  aplicações}}. [S.l.]: 1a Edição, Editora Elservier, 2012.}
+
+\bibitem[GOODRICH e TAMASSIA 2007]{goodrich}
+\abntrefinfo{GOODRICH e TAMASSIA}{GOODRICH; TAMASSIA}{2007}
+{GOODRICH, Michael~T.; TAMASSIA, Roberto. \emph{{Estrutura de Dados e
+  Algoritmos em JAVA}}. [S.l.]: (4a Edição, Editora Bookman), 2007.}
+
+\bibitem[HARARY e GUPTA 1997]{harary}
+\abntrefinfo{HARARY e GUPTA}{HARARY; GUPTA}{1997}
+{HARARY, F.; GUPTA, G. {Dynamic Graph Models}.
+\emph{Mathl. Comput. Modelling}, v.~25, n.~7, p. 79--87, 1997.}
+
+\bibitem[KIM e ANDERSON 2012]{kim}
+\abntrefinfo{KIM e ANDERSON}{KIM; ANDERSON}{2012}
+{KIM, Hyoungshick; ANDERSON, Ross. {Temporal node centrality in complex
+  networks}.
+1 ed. PHYSICAL REVIEW, p.~8, 2012.}
+
+\bibitem[Leonard 2013]{leonard}
+\abntrefinfo{Leonard}{LEONARD}{2013}
+{LEONARD, Augusto~C.S.
+\emph{{Uma Metodologia para Previsão On-line de Tempos de Viagem e Rotas
+  Ótimas em Redes Viárias Urbanas}}.
+Disserta\c{c}\~ao (Mestrado) --- Mestrado Acadêmico em Ciência da
+  Computa\c{c}\~ao (MACC), Universidade Estadual do Ceará, 2013.}
+
+\bibitem[Negreiros 1996]{negreiros}
+\abntrefinfo{Negreiros}{NEGREIROS}{1996}
+{NEGREIROS, Marcos~José.
+\emph{{Contribuições para otimização em grafos e problemas de percurso de
+  Veículos: Sistema SisGRAFO}}.
+Tese (Doutorado) --- COPPE/UFRJ - Eng Sistemas - DSc Thesis, 1996.}
+
+\bibitem[Negreiros e Maculan 2014]{negreirosbook}
+\abntrefinfo{Negreiros e Maculan}{NEGREIROS; MACULAN}{2014}
+{NEGREIROS, Marcos~José; MACULAN, Nelson. \emph{{Otimização em Grafos}}.
+  [S.l.]: (Não Publicado), 2014.}
+
+\bibitem[Netto 1996]{boaventura}
+\abntrefinfo{Netto}{NETTO}{1996}
+{NETTO, P.~O. Boaventura. \emph{{Grafos - Teoria, Modelos, Algoritmos}}.
+  [S.l.]: 2a edição, Editora Edgard Blücher Ltda, 1996.}
+
+\bibitem[PEER e SHARMA 2007]{peer}
+\abntrefinfo{PEER e SHARMA}{PEER; SHARMA}{2007}
+{PEER, S.K.; SHARMA, D.K. {Finding the shortest path in stochastic networks}.
+\emph{Computers \& Mathematics with Applications}, v.~53, n.~5, p. 729--740,
+  2007.}
+
+\bibitem[Ziviani 2004]{ziviani}
+\abntrefinfo{Ziviani}{ZIVIANI}{2004}
+{ZIVIANI, N. \emph{{Projeto de algoritmos com implementação em pascal e C}}.
+  [S.l.]: 2a Edição, Editora Pioneira Thomson Learning, 2004.}
+
+\end{thebibliography}

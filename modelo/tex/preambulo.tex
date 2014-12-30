@@ -1,0 +1,82 @@
+\documentclass[pnumabnt,normaltoc,capchap,floatnumber=continuous]{abnt}		
+\usepackage[bibjustif,abnt-etal-cite=3,abnt-full-initials=yes]{abntcite}
+\usepackage{modelo/tex/uece}
+\usepackage[portuguese,brazilian,portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{abnt-alf}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage[notintoc,portuguese]{nomencl}
+\usepackage[section]{placeins}
+\bibliographystyle{abnt-alf}
+
+\usepackage{xcolor}
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+\definecolor{dkgreen}{rgb}{0,0.4,0}
+\definecolor{cinza}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\lstset{
+  language=Java,
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{jpurple}\bfseries,
+  stringstyle=\color{blue},
+  commentstyle=\color{cinza},
+  morecomment=[s][\color{blue}]{/**}{*/},
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  breaklines=true,
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  basicstyle=\ttfamily\scriptsize,
+  tabsize=4
+}
+
+\usepackage[T1]{fontenc}
+\errorstopmode
+
+\hyphenation{com-pu-ta-ção}
+\hyphenation{com-bi-na-tó-ria}
+
+\renewcommand{\nomname}{Lista de Siglas}
+\renewcommand{\nomlabel}[1]{\hfil #1\hfil}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\setlength{\topmargin}{-0.3in}
+
+\local{Fortaleza - Ceará}
+\cidade{Fortaleza}
+\data{2014}
+
+% Informações institucionais
+\centro{Centro de Ciências e Tecnologia}
+\curso{Graduação em Ciência da Computação}
+\cursosimples{Ciência da Computação}
+\instituicao{Universidade Estadual do Ceará}
+
+% Descrição para folha de rosto
+\comentario{
+Monografia apresentada no Curso de \ABNTcursodata\ do \ABNTcentrodata\ da
+\ABNTinstituicaodata, como requisito parcial para obtenção do grau de Bacharel
+em \UECEcursosimples. 
+}
+
+% Descrição um pouco simplificada (removendo o nome do curso ¬¬)
+\comentariosimplificado{
+Monografia apresentada no Curso de \ABNTcursodata\ do \ABNTcentrodata\ da
+\ABNTinstituicaodata, como requisito parcial para obtenção do grau de Bacharel.
+}
