@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {2.3.2}Gephi}{25}
 \contentsline {subsection}{\numberline {2.3.3}O modelo Dynagraph}{27}
 \contentsline {subsection}{\numberline {2.3.4}Compara\IeC {\c c}\IeC {\~a}o entre os softwares}{31}
-\contentsline {chapter}{\numberline {3}Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}{32}
+\contentsline {chapter}{\numberline {3}Caminhos em Redes Est\IeC {\'a}ticas e Din\IeC {\^a}micas}{32}
 \contentsline {section}{\numberline {3.1}Caminhos em Redes Est\IeC {\'a}ticas}{32}
 \contentsline {subsection}{\numberline {3.1.1}Problema de Caminho M\IeC {\'\i }nimo}{32}
 \contentsline {subsection}{\numberline {3.1.2}Algoritmo de Dijkstra}{32}

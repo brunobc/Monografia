@@ -1,4 +1,4 @@
-\chapter{Fundamentação Teórica}
+\chapter{Caminhos em Redes Estáticas e Dinâmicas}
 
 \section{Caminhos em Redes Estáticas}
 Dentre os diversos problemas que surgem em grafos, este é o mais fundamental de todos e
@@ -280,18 +280,20 @@ A Figura \ref{fig:codeRadix} apresenta o pseudocódigo do algoritmo Radix Heap.
 \FloatBarrier
 
 \section{Caminhos em Redes Dinâmicas}
-
+Embora o Problema de Caminho Mínimo seja um dos problemas de otimização combinatória mais bem estudados
+na literatura \cite{bookahuja}, Caminhos em Redes Dinâmicas tem recebido muito menos atenção ao longo dos anos.
+Segundo \cite{giacomo} 
 
 \subsection{Algoritmos de Caminho Mínimo Dinâmico}
 Essa seção aborda 3 tipos de estruturas:
 \begin{itemize}
 \item Topologia Estática e Atributos Dinâmicos: com Limite Superior \cite{leonard} e com Limite Inferior;
-\item Topologia Dinâmica e Atributos Estáticos: uma breve descrição;
-\item Topologia Dinâmica e Atributos Dinâmicos: com Limite Inferior;
+\item Topologia Dinâmica e Atributos Estáticos;
+\item Topologia Dinâmica e Atributos Dinâmicos com Limite Inferior;
 \end{itemize}
 
 \subsubsection{Topologia Estática e Atributos Dinâmicos}
-\cite{leonard} trata o problema de caminho mínimo com previsão de tempo utilizando um vetor de custos e
+\cite{leonard} trata o Problema de Caminho Mínimo com previsão de tempo utilizando um vetor de custos e
 através da aplicação do algoritmo Dijkstra modificado. O vetor de custos é composto por dados das passagens 
 dos veículos na via como instante da passagem, velocidade, tipo e placa do veículo, que são periodicamente calculados
 a cada 10 minutos para cada ligação ou aresta. O algoritmo de Dijkstra é modificado para que o mesmo atualize os custos
@@ -307,13 +309,13 @@ valor do custo do vértice for superior a 10. A figura \ref{fig:diMod} apresenta
 
 \fbox{\begin{minipage}{70ex}
 \noindent \phantom{} \hspace{0ex} {\bf Algoritmo Dijkstra Modificado}\\
-\vspace*{-1mm} \phantom{} \hspace{3ex} Início\\
+\vspace*{-1mm} \phantom{} \hspace{0ex} Início\\
 \vspace*{-1mm} \phantom{} \hspace{3ex} inicialize a distância para todos os nós em G = infinito\\
 \vspace*{-1mm} \phantom{} \hspace{3ex} inicialize o predecessor de todos os nós em G = vazio\\
 \vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Enquanto} H não estiver vazio faça\\
 \vspace*{-1mm} \phantom{} \hspace{6ex} u = o nó com menor rótulo extraído de H\\
 \vspace*{-1mm} \phantom{} \hspace{6ex} {\bf Para} cada v adjacente a u:\\
-\vspace*{-1mm} \phantom{} \hspace{9ex} {\bf Se} se rótulo[v] > rótulo[u] + distância[u, v][t]:\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} {\bf Se} rótulo[v] > rótulo[u] + distância[u, v][t]:\\
 \vspace*{-1mm} \phantom{} \hspace{12ex} rótulo[v] = rótulo[u] + distância[u, v][t];\\
 \vspace*{-1mm} \phantom{} \hspace{12ex} predecessor[v] = u;\\
 \vspace*{-1mm} \phantom{} \hspace{12ex} atualiza a posição de v em H\\
@@ -352,7 +354,7 @@ Outra característica do algoritmo é a necessidade de armazenar o vértice adja
 a $s$ neste caminho em path[$s$]. Selecionando o vértice com menor distância, entre todos os que ainda não pertencem
 a PERM, adiciona ele a PERM, chamando-o de $current$, e recalcula-se as distâncias (dist) para todos os vértices
 adjacentes a ele que não estejam em PERM, pois pode haver um caminho menor a partir de P1, passando por $current$, 
-doo que aquele que havia antes de $current$ ser agregado a PERM. É preciso atualizar path[$s$] se houver um caminho
+do que aquele que havia antes de $current$ ser agregado a PERM. É preciso atualizar path[$s$] se houver um caminho
 mais curto, e com isso indicar que $current$ é o vértice adjacente a $s$ pelo novo caminho mínimo \cite{leonard}.
 
 Para determinar o caminho mínimo é preciso definir o ponto de origem ou nó raiz. A partir disso, o algoritmo
@@ -444,7 +446,7 @@ Fonte: \cite{leonard}
 	Vértice & PERM & Distância & Predecessor\\
 	\midrule
 	P1 & Sim & 0 & - \\
-	P2 & Não & 8 & P1 \\
+	P2 & Sim & 8 & P1 \\
 	P3 & Não & 9 & P1 \\
 	P4 & Não & 14 & P2 \\
 	P5 & Não & $\infty$ & - \\
@@ -470,8 +472,8 @@ Fonte: \cite{leonard}
 	Vértice & PERM & Distância & Predecessor\\
 	\midrule
 	P1 & Sim & 0 & - \\
-	P2 & Não & 8 & P1 \\
-	P3 & Não & 9 & P1 \\
+	P2 & Sim & 8 & P1 \\
+	P3 & Sim & 9 & P1 \\
 	P4 & Não & 14 & P2 \\
 	P5 & Não & 17 & P3 \\
 	P6 & Não & $\infty$ & - \\
@@ -501,16 +503,57 @@ Fonte: \cite{leonard}
 	Vértice & PERM & Distância & Predecessor\\
 	\midrule
 	P1 & Sim & 0 & - \\
-	P2 & Não & 8 & P1 \\
-	P3 & Não & 9 & P1 \\
-	P4 & Não & 14 & P2 \\
+	P2 & Sim & 8 & P1 \\
+	P3 & Sim & 9 & P1 \\
+	P4 & Sim & 14 & P2 \\
 	P5 & Não & 16 & P4 \\
 	P6 & Não & 18 & P4 \\
 	\bottomrule
 	\end{tabular}
 \caption{Processo de determinação de caminho mínimo - Parte 5}
- \label{tab:leotab4}
+ \label{tab:leotab5}
 \end{table}
+
+P5 é adicionado a PERM e seu único vértice adjacente é P6. Logo temos:
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{chapters/fig/leo7.png}
+\caption{Processo de determinação de caminho mínimo - Parte 6}
+Fonte: \cite{leonard}
+\label{fig:leo7}
+\end{figure}
+\FloatBarrier
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{l l l l}
+	\toprule
+	Vértice & PERM & Distância & Predecessor\\
+	\midrule
+	P1 & Sim & 0 & - \\
+	P2 & Sim & 8 & P1 \\
+	P3 & Sim & 9 & P1 \\
+	P4 & Sim & 14 & P2 \\
+	P5 & Sim & 16 & P4 \\
+	P6 & Sim & 18 & P4 \\
+	\bottomrule
+	\end{tabular}
+\caption{Processo de determinação de caminho mínimo - Parte 6}
+ \label{tab:leotab5}
+\end{table}
+\FloatBarrier
+
+E finalmente temos a figura \ref{fig:leo8}, pois P6 não possui vértice adjacente. Logo, o 
+tempo para percorrer o caminho mínimo passando por P1, P2, P4 e P6 é 18 minutos.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{chapters/fig/leo8.png}
+\caption{Processo de determinação de caminho mínimo - Parte 7}
+Fonte: \cite{leonard}
+\label{fig:leo8}
+\end{figure}
+\FloatBarrier
 
 % Atributos dinamicos e topologia estáticos com limite inferior - monografia
 \subsubsection{Topologia Dinâmica e Atributos Estáticos}
