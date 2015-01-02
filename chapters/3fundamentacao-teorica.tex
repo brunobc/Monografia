@@ -649,16 +649,22 @@ A figura \ref{fig:radixMod} apresenta o pseudocódigo do algoritmo em questão.
 % Crítica ao algoritmo do Leonard
 
 \subsubsection{Topologia Dinâmica e Atributos Estáticos}
-Esse algoritmo segue a estrutura apresentada na seção \ref{subsec:topdinatribest}, onde vértices e arestas
-podem mudar ao longo do tempo e seus atributos são constantes. A figura \ref{fig:pathtopdyn} apresenta um 
-exemplo do uso desse algoritmo:
-% \FloatBarrier
-% \begin{figure}[htbp]
-% \centering
-%  \includegraphics[width=.50\textwidth]{chapters/fig/pathtopdyn.png}
-% \caption{Caminho Mínimo - Topologia Dinâmica e Atributos Estáticos}
-% \label{fig:pathtopdyn}
-% \end{figure}
+Esse algoritmo não foi implementado e segue a estrutura apresentada na seção \ref{subsec:topdinatribest},
+onde vértices e arestas podem mudar ao longo do tempo e seus atributos são constantes. A 
+figura \ref{fig:pathtopdyn} apresenta um exemplo do uso desse algoritmo:
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.80\textwidth]{chapters/fig/pathtopdyn.png}
+\caption{Caminho Mínimo - Topologia Dinâmica e Atributos Estáticos}
+\label{fig:pathtopdyn}
+\end{figure}
+\FloatBarrier
+O exemplo utiliza pontos representados através do grafo G(N=\{P1, P2, P3, P4, P5, P6\}, A), onde o 
+ponto de partida é P1 e o destino o ponto P6. No instante $t_1$ é possível observar vários caminhos
+até chegar ao objetivo. Já no instante $t_2$ o vértice P2 foi removido, e em $t_3$ a aresta que começa em
+P4 e vai até P5 é removida, e com isso reduzindo as possibilidades de chegar a P6. Diante disso,
+se faz necessário conhecer o tempo inicial e final de cada vértice e aresta para chegar a P6.
 
 \subsubsection{Topologia Dinâmica e Atributos Dinâmicos}
 Essa seção resolve o problema apresentado na seção \ref{subsec:limitesuperior} utilizando o Algoritmo de

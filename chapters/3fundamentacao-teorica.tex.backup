@@ -574,6 +574,7 @@ Fonte: \cite{leonard}
 A presente pesquisa resolve o mesmo problema utilizando o Algoritmo de Dijkstra com Radix Heap no Limite Inferior e Superior
 para Grafos Dinâmicos.
 
+% Algoritmo no Limite Superior
 O Algoritmo no Limite Superior utiliza um vetor de custos composto pelo tempo médio das passagens dos veículos, em intervalos
 de 10 minutos ao longo do dia, numa determinada ligação ou aresta. Por exemplo, entre 12 horas e 12 horas e 10 minutos um
 veículo demora em média 2 minutos para percorrer a aresta, entre 12 horas e 10 minutos e 12h e 20 minutos ele demora 3 minutos
@@ -642,19 +643,24 @@ A figura \ref{fig:radixMod} apresenta o pseudocódigo do algoritmo em questão.
 \end{figure}
 
 % Apresentar o funcionamento do algoritmo
+
+% Descrever algoritmo de Limite Inferior (Leonard)
+
 % Crítica ao algoritmo do Leonard
 
 \subsubsection{Topologia Dinâmica e Atributos Estáticos}
-Esse algoritmo segue a estrutura apresentada na seção \ref{subsec:topdinatribest}, onde vértices e arestas
-podem mudar ao longo do tempo e seus atributos são constantes. A figura \ref{fig:pathtopdyn} apresenta um 
-exemplo do uso desse algoritmo:
-% \FloatBarrier
-% \begin{figure}[htbp]
-% \centering
-%  \includegraphics[width=.50\textwidth]{chapters/fig/pathtopdyn.png}
-% \caption{Caminho Mínimo - Topologia Dinâmica e Atributos Estáticos}
-% \label{fig:pathtopdyn}
-% \end{figure}
+Esse algoritmo não foi implementado e segue a estrutura apresentada na seção \ref{subsec:topdinatribest},
+onde vértices e arestas podem mudar ao longo do tempo e seus atributos são constantes. A 
+figura \ref{fig:pathtopdyn} apresenta um exemplo do uso desse algoritmo:
+\FloatBarrier
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.80\textwidth]{chapters/fig/pathtopdyn.png}
+\caption{Caminho Mínimo - Topologia Dinâmica e Atributos Estáticos}
+\label{fig:pathtopdyn}
+\end{figure}
+
+
 
 \subsubsection{Topologia Dinâmica e Atributos Dinâmicos}
 Essa seção resolve o problema apresentado na seção \ref{subsec:limitesuperior} utilizando o Algoritmo de
