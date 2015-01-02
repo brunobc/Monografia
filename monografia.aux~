@@ -1,0 +1,78 @@
+\relax 
+\citation{abnt-nbr10520=2002}
+\citation{abnt-etal-cite=3}
+\citation{abnt-full-initials=yes}
+\catcode `"\active 
+\bibstyle{abnt-alf}
+\select@language{portuges}
+\@writefile{toc}{\select@language{portuges}}
+\@writefile{lof}{\select@language{portuges}}
+\@writefile{lot}{\select@language{portuges}}
+\citation{peer}
+\citation{boaventura}
+\citation{cormen}
+\citation{ziviani}
+\citation{leonard}
+\citation{leonard}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{13}}
+\citation{dynagraph}
+\citation{dynagraph}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Objetivos}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Objetivos Espec\IeC {\'\i }ficos}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Metodologia de Desenvolvimento}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do Trabalho}{15}}
+\citation{negreirosbook}
+\citation{goodrich}
+\citation{goodrich}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Grafos Est\IeC {\'a}ticos e Din\IeC {\^a}micos}{16}}
+\newlabel{grafoestdin}{{2}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Grafo Orientado ou Assim\IeC {\'e}trico}}{16}}
+\newlabel{fig:assimetrico}{{1}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Grafo n\IeC {\~a}o Orientado ou Sim\IeC {\'e}trico - $G(V,E)$}}{17}}
+\newlabel{fig:simetrico}{{2}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Grafo de co-autoria de alguns autores}}{17}}
+\newlabel{fig:goodrich}{{3}{17}}
+\citation{goodrich}
+\citation{negreiros}
+\citation{cormen}
+\citation{goodrich}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Grafo Misto - $G(V,E,A)$}}{18}}
+\newlabel{fig:misto}{{4}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Rede de Topologia Est\IeC {\'a}tica}{18}}
+\citation{goldbarg}
+\citation{goldbarg}
+\citation{goldbarg}
+\citation{negreirosbook}
+\citation{cormen}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Matriz de adjac\IeC {\^e}ncias de grafo n\IeC {\~a}o direcionado}}{19}}
+\newlabel{fig:matriznaodirecionada}{{5}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Matriz de adjac\IeC {\^e}ncia de grafo direcionado}}{19}}
+\newlabel{fig:matrizdirecionada}{{6}{19}}
+\citation{dynagraph}
+\citation{negreirosbook}
+\citation{negreirosbook}
+\citation{dynagraph}
+\citation{negreirosbook}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o em Listas Encadeadas de um grafo}}{20}}
+\newlabel{fig:listaencad}{{7}{20}}
+\citation{harary}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o de um grafo em Listas Duplamente Encadeadas}}{21}}
+\newlabel{fig:listdupla}{{8}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Redes Din\IeC {\^a}micas}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Grafo com Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}}{22}}
+\newlabel{fig:tead}{{9}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}{22}}
+\newlabel{subsec:topdinatribest}{{2.2.2}{22}}
+\citation{dynagraph}
+\citation{kim}
+\citation{gephi}
+\citation{dynagraph}
+\citation{kim}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Grafo com Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}}{23}}
+\newlabel{fig:tdae}{{10}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Topologia e Atributos Din\IeC {\^a}micos}{23}}
+\newlabel{subsec:topdinatridin}{{2.2.3}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {

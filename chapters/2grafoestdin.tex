@@ -199,6 +199,7 @@ A figura \ref{fig:tead} exemplifica este grafo.
 \end{figure}
 
 \subsection{Topologia Dinâmica e Atributos Estáticos}
+\label{subsec:topdinatribest}
 Nesta rede, ao longo do tempo, os vértices e as arestas podem ser removidos, adicionados e até mesmo
 modificados para outra posição, mas suas características como espessura, cor e tamanho são fixas.
 O grafo é definido como $G(V^t, L^t)$, onde $V^t$ e $L^t$ mudam no horizonte $H \in [T_i, T_k]$,
@@ -214,6 +215,7 @@ porém os atributos sempre serão os mesmos. A figura \ref{fig:tdae} mostra um e
 \FloatBarrier
 
 \subsection{Topologia e Atributos Dinâmicos}
+\label{subsec:topdinatridin}
 Nesta rede, o grafo é definido como $G(V^t, L^t)$, onde $V^t$ e $L^t$ mudam no horizonte $H \in [T_i, T_k]$, como
 visto na figura \ref{fig:tdat}
 Estas redes são mais complexas \cite{dynagraph}, pois lidam com grande volume de dados comparadas as redes anteriores descritas.
@@ -260,14 +262,14 @@ existe entre vértices $u$ e $v$ em um intervalo de tempo $[i,j]$, tal que $i \l
 Neste modelo, em uma rede dinâmica, o conjunto de vértices $V$ é sempre o mesmo, enquanto o conjunto de arestas existentes
 mudam ao longo do tempo.
 
-Para representar a duração de cada $snapshot$ (ou janela de tempo) é utilizado a letra $w$ para especificar, $T$/$n$,
+Para representar a duração de cada $snapshot$ (ou janela de tempo) a letra $w$ é utilizada para especificar, $T$/$n$,
 expresso em alguma unidade de tempo (como segundos ou horas).
 
 Conforme \cite{kim}, uma rede dinâmica pode ser representada como uma série de grafos estáticos
 $G_1, G_2, ..., G_N$. A notação $G_t(1 \leqslant t \leqslant n)$ representa o grafo agregado que consiste
 de um conjunto de vértices $V$ e um conjunto de arestas $E_t$ onde uma aresta $(u,v)$ $\in$ $E_t$ existe
 somente se uma aresta temporal $(u,v)_{i,j}$ $\in$ $E_{0,T}$ existe entre os vértices $v$ e $u$ no intervalo
-de tempo $[i,j]$ tal que $i \leqslant wt$ e $j > w(t-1)$. $G_t$ é o t-ésimo snapshot temporal de uma
+de tempo $[i,j]$ tal que $i \leqslant wt$ e $j > w(t-1)$. $G_t$ é o t-ésimo $snapshot$ temporal de uma
 rede dinâmica $G^D_{0,T}$ durante a t-ésima janela de tempo.
 
 \begin{table}[htbp]
@@ -288,7 +290,7 @@ rede dinâmica $G^D_{0,T}$ durante a t-ésima janela de tempo.
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.65\textwidth]{chapters/fig/grafoKim.png}
+ \includegraphics[width=.65\textwidth]{chapters/fig/kim.png}
 \caption{Comparação entre a representação de grafos agregados(esquerda) e representação de sequência temporal(direita)}
 Fonte: \cite{kim}
 \label{fig:grafoKim}
@@ -353,8 +355,8 @@ onde $O^{t_v} = \{O_{0_v}, O_{1_v},..., O_{i_v}\}$ e $O^{t_e} = \{O_{0_e}, O_{1_
 e $F^{t_v} = \{F^{t_v}_{0_v}, F^{t_v}_{1_v},..., F^{t_v}_{w_v}\}$ e $F^{t_e} = \{F^{t_e}_{0_e}, F^{t_e}_{1_e},..., F^{t_e}_{w_e}\}$ os
 conjuntos indexados de características modificáveis destes objetos \cite{dynagraph}.
 
-A estrutura de dados usada no Dynagraph segue a Notação de Objeto Javascript (JSON), que é um formato de texto leve de intercâmbio de dados \cite{douglas}.
-A figura \ref{fig:jsondyn} mostra como é essa estrutura seguindo três objetos principais: metadata, binding e data.
+A estrutura de dados usada no Dynagraph segue a Notação de Objeto Javascript (JSON), que é um formato de texto de intercâmbio de dados \cite{douglas}.
+A figura \ref{fig:jsondyn} mostra como é essa estrutura seguindo três objetos principais: ``metadata'', ``binding'' e ``data''.
 
 Em ``metadata'' são definidos os campos para utilização de qualquer identificador, por exemplo é possível utilizar ``ini'' e ``fim'' no
 lugar de ``start'' e ``end'' respectivamente.
@@ -374,10 +376,13 @@ A aresta, ou ``polyline'', segue uma estrutura semelhante a do ``vertex'', poré
 ao longo da aresta, e uma customização no campo ``path'' seguindo a notação
 SVG\footnote{\label{note} Scalable Vector Graphics - é uma forma de descrever de forma vetorial desenhos e gráficos bidimensionais}.
 
-Em ``data'' são definidos os elementos do grafo, o início e fim de cada elemento ou tempo de existência, no caso dos vértices a posição de cada elemento
-podendo ser no formato UTM ou latitude e longitude, o tipo de cada elemento descrito em ``binding'', e no caso das arestas são definidos os 
-pontos de origem e destino.
+Em ``data'' são definidos os elementos do grafo, os tempos de início e fim de cada elemento ou tempo de existência.
+No caso dos vértices, a posição de cada elemento pode ser escrita no formato UTM ou latitude e longitude.
+O tipo de cada elemento, descrito em ``binding'', e no caso das arestas, são definidos os pontos de origem e destino.
 
+Na figura \ref{fig:jsondyn} vemos a estrutura de construção de um grafo dinâmico.
+Os campos ``metadata'' e ``binding'' foram omitidos para evidenciar o objeto ``data''.
+\FloatBarrier
 \begin{center}
   \line(1,0){450}
 \end{center}
@@ -391,42 +396,17 @@ pontos de origem e destino.
   \label{fig:jsondyn}
 \end{figure}
 
-A figura \ref{fig:dynagraph} demonstra os dados do código da figura \ref{fig:jsondyn}. Os campos
-``metadata'' e ``binding'' da figura \ref{fig:jsondyn} foram omitidos para evidenciar o objeto ``data''.
+A figura \ref{fig:dynagraph} demonstra os dados do código da figura \ref{fig:jsondyn} sendo utilizados no software
+Dynagraph com variações temporais no Grafo e nas características de seus Vértices e Arestas.
 
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.45\textwidth]{chapters/fig/b1.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/b2.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/b3.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/b4.png}
+ \includegraphics[width=.45\textwidth]{chapters/fig/b1mod.png}
+ \includegraphics[width=.45\textwidth]{chapters/fig/b2mod.png}
+ \includegraphics[width=.45\textwidth]{chapters/fig/b3mod.png}
+ \includegraphics[width=.45\textwidth]{chapters/fig/b4mod.png}
 \caption{Capturas de tela do software Dynagraph}
 \label{fig:dynagraph}
 \end{figure}
-
-\FloatBarrier
-
-\subsection{Comparação entre os softwares}
-No modelo de \cite{kim}, em uma rede dinâmica, o conjunto de vértices $V$ não muda, enquanto o conjunto de arestas existentes
-mudam ao longo do tempo. Já no Dynagraph, vértices e arestas existentes mudam ao longo do tempo.
-
-Segundo \cite{dynagraph}, o software Gephi e o Dynagraph possui as seguintes diferenças:\\
-- Enquanto o Dynagraph permite a edição de todos os atributos e características dos vértices e arestas ao longo do tempo, o Gephi
-é mais rígido, pois só permite a edição dos atributos cor e posição.\\
-- O Gephi é uma aplicação Desktop, entretanto o Dynagraph é uma aplicação Web, e com isso acessado de qualquer lugar.\\
-- O Dynagraph foi desenvolvido em Javascript, enquanto o Gephi foi desenvolvido em Java.
-
-
-
-
-
-
-
-
-
-
-
-
-
 

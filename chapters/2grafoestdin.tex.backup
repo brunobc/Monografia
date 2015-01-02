@@ -114,7 +114,7 @@ guarda o rótulo do vértice que entrou primeiro e assim sucessivamente, como nu
 célula do vetor, podem ser construídas levando-se em conta as ligações de arcos/elos ao elemento vértice da célula
 que o gera. No índice de cada célula de lista, mantém-se pelo menos uma informação contendo o vértice de ligação,
 figura \ref{fig:listaencad}.
-
+\FloatBarrier
 \noindent $Type$\\
 Lista: $\string^$ Lta;\\
 $Lta$ = Record\\
@@ -131,8 +131,9 @@ Fonte: \cite{dynagraph} apud \cite{negreirosbook}
 \label{fig:listaencad}
 \end{figure}
 
-Estruturas de Listas Duplamente Encadeadas são da forma, representada na figura \ref{fig:listdupla}, segundo \cite{negreirosbook}:\\
-$Type$\\
+Estruturas de Listas Duplamente Encadeadas são da forma, representada na figura \ref{fig:listdupla}, segundo \cite{negreirosbook}:
+\FloatBarrier
+\noindent $Type$\\
 Lista: $\string^$ Lta;\\
 $Lta$ = Record\\
 $v$ : word; \{ Arco/elo ligado a VV\_i \}\\
@@ -198,11 +199,35 @@ A figura \ref{fig:tead} exemplifica este grafo.
 \end{figure}
 
 \subsection{Topologia Dinâmica e Atributos Estáticos}
+\label{subsec:topdinatribest}
 Nesta rede, ao longo do tempo, os vértices e as arestas podem ser removidos, adicionados e até mesmo
 modificados para outra posição, mas suas características como espessura, cor e tamanho são fixas.
+O grafo é definido como $G(V^t, L^t)$, onde $V^t$ e $L^t$ mudam no horizonte $H \in [T_i, T_k]$,
+porém os atributos sempre serão os mesmos. A figura \ref{fig:tdae} mostra um exemplo desse grafo.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.99\textwidth]{chapters/fig/tdae.png}
+\caption{Grafo com Topologia Dinâmica e Atributos Estáticos}
+\label{fig:tdae}
+\end{figure}
+
+\FloatBarrier
 
 \subsection{Topologia e Atributos Dinâmicos}
-Estas redes são mais complexas \cite{dynagraph}, pois lidam com grande volume de dados comparado as redes anteriores descritas.
+\label{subsec:topdinatridin}
+Nesta rede, o grafo é definido como $G(V^t, L^t)$, onde $V^t$ e $L^t$ mudam no horizonte $H \in [T_i, T_k]$, como
+visto na figura \ref{fig:tdat}
+Estas redes são mais complexas \cite{dynagraph}, pois lidam com grande volume de dados comparadas as redes anteriores descritas.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.99\textwidth]{chapters/fig/tdat.png}
+\caption{Grafo com Topologia e Atributos Dinâmicos}
+\label{fig:tdat}
+\end{figure}
+
+\FloatBarrier
 
 \section{Geração e manutenção de Redes Dinâmicas}
 Os seguintes trabalhos abordam grafos dinâmicos e são utilizados como base deste trabalho:
@@ -237,14 +262,14 @@ existe entre vértices $u$ e $v$ em um intervalo de tempo $[i,j]$, tal que $i \l
 Neste modelo, em uma rede dinâmica, o conjunto de vértices $V$ é sempre o mesmo, enquanto o conjunto de arestas existentes
 mudam ao longo do tempo.
 
-Para representar a duração de cada $snapshot$ (ou janela de tempo) é utilizado a letra $w$ para especificar, $T$/$n$,
+Para representar a duração de cada $snapshot$ (ou janela de tempo) a letra $w$ é utilizada para especificar, $T$/$n$,
 expresso em alguma unidade de tempo (como segundos ou horas).
 
 Conforme \cite{kim}, uma rede dinâmica pode ser representada como uma série de grafos estáticos
 $G_1, G_2, ..., G_N$. A notação $G_t(1 \leqslant t \leqslant n)$ representa o grafo agregado que consiste
 de um conjunto de vértices $V$ e um conjunto de arestas $E_t$ onde uma aresta $(u,v)$ $\in$ $E_t$ existe
 somente se uma aresta temporal $(u,v)_{i,j}$ $\in$ $E_{0,T}$ existe entre os vértices $v$ e $u$ no intervalo
-de tempo $[i,j]$ tal que $i \leqslant wt$ e $j > w(t-1)$. $G_t$ é o t-ésimo snapshot temporal de uma
+de tempo $[i,j]$ tal que $i \leqslant wt$ e $j > w(t-1)$. $G_t$ é o t-ésimo $snapshot$ temporal de uma
 rede dinâmica $G^D_{0,T}$ durante a t-ésima janela de tempo.
 
 \begin{table}[htbp]
@@ -297,7 +322,7 @@ As figuras \ref{fig:gephiUm} e \ref{fig:gephiDois} mostram a interface gráfica 
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.95\textwidth]{chapters/fig/gephiUm.png}
+ \includegraphics[width=.70\textwidth]{chapters/fig/gephiUm.png}
 \caption{Captura de tela do software Gephi}
 Fonte: gephi.github.io
 \label{fig:gephiUm}
@@ -305,11 +330,12 @@ Fonte: gephi.github.io
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.95\textwidth]{chapters/fig/gephiDois.png}
+ \includegraphics[width=.70\textwidth]{chapters/fig/gephiDois.png}
 \caption{Captura de tela do software Gephi}
 Fonte: gephi.github.io
 \label{fig:gephiDois}
 \end{figure}
+\FloatBarrier
 
 \pagebreak
 
@@ -329,8 +355,8 @@ onde $O^{t_v} = \{O_{0_v}, O_{1_v},..., O_{i_v}\}$ e $O^{t_e} = \{O_{0_e}, O_{1_
 e $F^{t_v} = \{F^{t_v}_{0_v}, F^{t_v}_{1_v},..., F^{t_v}_{w_v}\}$ e $F^{t_e} = \{F^{t_e}_{0_e}, F^{t_e}_{1_e},..., F^{t_e}_{w_e}\}$ os
 conjuntos indexados de características modificáveis destes objetos \cite{dynagraph}.
 
-A estrutura de dados usada no Dynagraph segue a Notação de Objeto Javascript (JSON), que é um formato de texto leve de intercâmbio de dados \cite{douglas}.
-A figura \ref{fig:jsondyn} mostra como é essa estrutura seguindo três objetos principais: metadata, binding e data.
+A estrutura de dados usada no Dynagraph segue a Notação de Objeto Javascript (JSON), que é um formato de texto de intercâmbio de dados \cite{douglas}.
+A figura \ref{fig:jsondyn} mostra como é essa estrutura seguindo três objetos principais: ``metadata'', ``binding'' e ``data''.
 
 Em ``metadata'' são definidos os campos para utilização de qualquer identificador, por exemplo é possível utilizar ``ini'' e ``fim'' no
 lugar de ``start'' e ``end'' respectivamente.
@@ -357,7 +383,7 @@ pontos de origem e destino.
 \begin{center}
   \line(1,0){450}
 \end{center}
-\lstinputlisting[language=Java]{chapters/ds.json}
+\lstinputlisting[language=Java]{chapters/new.json}
 \begin{figure}[htbp]
   \begin{center}
     \line(1,0){450}
@@ -370,15 +396,18 @@ pontos de origem e destino.
 A figura \ref{fig:dynagraph} demonstra os dados do código da figura \ref{fig:jsondyn}. Os campos
 ``metadata'' e ``binding'' da figura \ref{fig:jsondyn} foram omitidos para evidenciar o objeto ``data''.
 
+\FloatBarrier
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.45\textwidth]{chapters/fig/a1.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/a2.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/a3.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/a4.png}
+ \includegraphics[width=.45\textwidth]{chapters/fig/b1.png}
+ \includegraphics[width=.45\textwidth]{chapters/fig/b2.png}
+ \includegraphics[width=.45\textwidth]{chapters/fig/b3.png}
+ \includegraphics[width=.45\textwidth]{chapters/fig/b4.png}
 \caption{Capturas de tela do software Dynagraph}
 \label{fig:dynagraph}
 \end{figure}
+
+\FloatBarrier
 
 \subsection{Comparação entre os softwares}
 No modelo de \cite{kim}, em uma rede dinâmica, o conjunto de vértices $V$ não muda, enquanto o conjunto de arestas existentes

@@ -1,4 +1,4 @@
-\chapter{Caminhos em Redes Estáticas e Dinâmicas}
+\chapter{Caminhos em Grafos}
 
 \section{Caminhos em Redes Estáticas}
 Dentre os diversos problemas que surgem em grafos, este é o mais fundamental de todos e
@@ -25,14 +25,18 @@ de um grafo $G(V,L)$, onde, se $\exists$ $\Gamma (i,j)$, $i$, $j \in V$, então 
 de um caminho direto entre os vértices $i$ e $j$, e todo $i_1$, ..., $i_k \in V$, distintos de $i$, $j$, são ditos
 serem vértices do caminho, onde $i$ precede $i_1$ e assim por diante, nesta ordem \cite{negreirosbook}.
 
+O princípio de qualquer algoritmo de caminho mínimo está associado ao seguinte teorema:\\
+\FloatBarrier
+$C(\Gamma(s,t)) = C(\Gamma(s,k)) + C(\Gamma(k,t))$ é mínimo $\Longleftrightarrow$ $\Gamma(s,k)$ é mínimo e $\Gamma(k,t)$ é mínimo.
+
 \subsection{Algoritmo de Dijkstra}
 O algoritmo de Dijkstra foi proposto em 1959 e permite determinar a solução ótima através da adição de
 vértices à árvore de caminho mínimo pelo processo de relaxamento de uma aresta, que consiste em verificar
 se há a possibilidade de melhorar o caminho obtido até o momento \cite{boaventura}. Este algoritmo considera
 basicamente um processo de rotulação de vértices à medida que o mínimo caminho é encontrado passo a passo,
 interativamente, em vértices intermediários. O algoritmo requer que nenhum peso no grafo seja negativo. Abaixo
-é apresentado o pseudocódigo do algoritmo de Dijkstra segundo \cite{cormen}.
-
+é apresentado o pseudocódigo do algoritmo de Dijkstra.
+\FloatBarrier
 \fbox{\begin{minipage}{70ex}
 \noindent \phantom{} \hspace{0ex} {\bf AlgoritmoDijkstra}\\
 \vspace*{-1mm} \phantom{} \hspace{3ex} inicialize a distância para todos os nós em G = infinito\\
@@ -49,6 +53,12 @@ interativamente, em vértices intermediários. O algoritmo requer que nenhum pes
 \vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Fim Enquanto}\\
 \vspace*{-1mm} \phantom{} \hspace{0ex} {\bf Fim Dijkstra}\\
 \end{minipage}}
+\begin{figure}[htbp]
+\centering
+\caption{Algoritmo de Dijkstra}
+Fonte: \cite{cormen}
+\label{fig:codeRadix}
+\end{figure}
 
 \subsection{Algoritmo Radix Heap}
 O algoritmo Radix Heap é utilizado numa variação do algoritmo de Dijkstra e foi proposto inicialmente por
@@ -292,12 +302,13 @@ depois de um certo intervalo de tempo, mas o grafo é estático entre duas alter
 \subsection{Algoritmos de Caminho Mínimo Dinâmico}
 Essa seção aborda 3 tipos de estruturas:
 \begin{itemize}
-\item Topologia Estática e Atributos Dinâmicos: com Limite Superior \cite{leonard} e com Limite Inferior;
+\item Topologia Estática e Atributos Dinâmicos: com Limite Inferior \cite{leonard} e com Limite Superior;
 \item Topologia Dinâmica e Atributos Estáticos;
-\item Topologia Dinâmica e Atributos Dinâmicos com Limite Inferior.
+\item Topologia Dinâmica e Atributos Dinâmicos com Limite Superior.
 \end{itemize}
 
 \subsubsection{Topologia Estática e Atributos Dinâmicos}
+\label{subsec:limitesuperior}
 \cite{leonard} trata o Problema de Caminho Mínimo com previsão de tempo utilizando um vetor de custos e
 através da aplicação do algoritmo Dijkstra modificado. O vetor de custos é composto por dados das passagens 
 dos veículos na via como instante da passagem, velocidade, tipo e placa do veículo, que são periodicamente calculados
@@ -309,7 +320,7 @@ Por exemplo, se o tempo parcial até um determinado ponto for de 7 minutos, ent�
 é utilizado para o próximo cálculo o tempo de previsão no intervalo $t + 1$, mas se o tempo parcial for de 15 minutos, logo
 o período de previsão é ultrapassado, e com isso utiliza-se $t + 2$ para o cálculo do próximo trajeto. Se o tempo parcial
 estiver entre 30 e 40 minutos utiliza-se o intervalo $t + 4$, entre 40 e 50 minutos $t + 5$, e assim por diante.
-Essa abordagem é definida como Limite Superior, pois o intervalo de previsão só é alterado quando o 
+Essa abordagem é definida como Limite Inferior, pois o intervalo de previsão só é alterado quando o 
 valor do custo do vértice for superior a 10. A figura \ref{fig:diMod} apresenta o pseudocódigo do algoritmo Dijkstra Modificado.
 
 \fbox{\begin{minipage}{70ex}
@@ -560,11 +571,98 @@ Fonte: \cite{leonard}
 \end{figure}
 \FloatBarrier
 
-% Atributos dinamicos e topologia estáticos com limite inferior - monografia
+A presente pesquisa resolve o mesmo problema utilizando o Algoritmo de Dijkstra com Radix Heap no Limite Inferior e Superior
+para Grafos Dinâmicos.
+
+% Algoritmo no Limite Superior
+O Algoritmo no Limite Superior utiliza um vetor de custos composto pelo tempo médio das passagens dos veículos, em intervalos
+de 10 minutos ao longo do dia, numa determinada ligação ou aresta. Por exemplo, entre 12 horas e 12 horas e 10 minutos um
+veículo demora em média 2 minutos para percorrer a aresta, entre 12 horas e 10 minutos e 12h e 20 minutos ele demora 3 minutos
+para percorrer a mesma aresta, e assim por diante. Os dados do vetor de custo são armazenados em um arquivo no formato JSON
+como mostra a figura \ref{fig:tabelajson}. Cada aresta é um vetor de tamanho 24 para representar as horas, e cada elemento
+do vetor possui um vetor de tamanho 6 para representar os intervalos de 10 minutos ao longo de 1 hora.
+\FloatBarrier
+\begin{center}
+  \line(1,0){450}
+\end{center}
+\lstinputlisting[language=Java]{chapters/tabela.json}
+\begin{figure}[htbp]
+  \begin{center}
+    \line(1,0){450}
+  \end{center}
+  \centering
+  \caption{Estrutura JSON usada pelo vetor de custos}
+  \label{fig:tabelajson}
+\end{figure}
+
+Essa abordagem é definida como Limite Superior, pois o intervalo de previsão é alterado quando
+o valor do custo do vértice acrescido do valor do custo da aresta adjacente for superior a 10.
+Por exemplo, se o tempo parcial até um determinado ponto somado ao custo de travessia da aresta adjacente for de 8 minutos, então
+é utilizado para o próximo cálculo o tempo de previsão no intervalo $t + 1$, mas se a soma for de 13 minutos, logo
+o período de previsão é ultrapassado, e com isso utiliza-se $t + 2$ para o cálculo do próximo trajeto. Se a soma
+estiver entre 20 e 30 minutos utiliza-se o intervalo $t + 3$, entre 30 e 40 minutos $t + 4$, e assim por diante.
+A figura \ref{fig:radixMod} apresenta o pseudocódigo do algoritmo em questão.
+\FloatBarrier
+\fbox{\begin{minipage}{70ex}
+\noindent \phantom{} \hspace{0ex} {\bf Dijkstra com Radix Heap no Limite Superior}\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} buckets = [];\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} Inicializa o rótulo de distância dos vértices\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Para} i = 1 até i < vertices.length\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} vertices[i].rotulo = MAXINT\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Fim Para}\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} Inicializa os buckets e seus intervalos\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Para} i = 0 até i < buckets.length\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} iniBucket = $2^{k - 1}$\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} fimBucket = $2^k - 1$\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} adiciona Bucket(iniBucket, fimBucket) a buckets\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Fim Para}\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} Insere os vértices dentro dos buckets correspondentes\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Enquanto} todos os vértices não forem rotulados permanentemente\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} menorBucket = menor bucket não vazio\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} {\bf Se} (o menorBucket tem largura = 1 || menorBucket.size = 1)\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} verticeSelecionado = vértice do menorBucket\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} {\bf Se} verticeSelecionado não foi rotulado como permanentemente\\
+\vspace*{-1mm} \phantom{} \hspace{12ex} {\bf Para} i = 0 até i < verticeSelecionado.getArcos().size\\
+\vspace*{-1mm} \phantom{} \hspace{15ex} Atualiza o rótulo do vérticeDestino\\
+\vspace*{-1mm} \phantom{} \hspace{15ex} Insere o vértice no bucket correspondente\\
+\vspace*{-1mm} \phantom{} \hspace{12ex} {\bf Fim Para}\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} {\bf Fim Se}\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} Remove do bucket o verticeSelecionado\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} Marca o rótulo verticeSelecionado como permanentemente\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} {\bf Fim Se}\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} {\bf Senão}\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} Recalcula o intervalo dos buckets\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} Redistribui os vertices\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Fim Enquanto}\\
+\vspace*{-1mm} \phantom{} \hspace{0ex} {\bf Fim RadixHeap}\\
+\end{minipage}}
+\begin{figure}[htbp]
+\centering
+\caption{Dijkstra com Radix Heap no Limite Superior}
+\label{fig:radixMod}
+\end{figure}
+
+% Apresentar o funcionamento do algoritmo
+
+% Descrever algoritmo de Limite Inferior (Leonard)
+
+% Crítica ao algoritmo do Leonard
+
 \subsubsection{Topologia Dinâmica e Atributos Estáticos}
+Esse algoritmo segue a estrutura apresentada na seção \ref{subsec:topdinatribest}, onde vértices e arestas
+podem mudar ao longo do tempo e seus atributos são constantes. A figura \ref{fig:pathtopdyn} apresenta um 
+exemplo do uso desse algoritmo:
+% \FloatBarrier
+% \begin{figure}[htbp]
+% \centering
+%  \includegraphics[width=.50\textwidth]{chapters/fig/pathtopdyn.png}
+% \caption{Caminho Mínimo - Topologia Dinâmica e Atributos Estáticos}
+% \label{fig:pathtopdyn}
+% \end{figure}
 
 \subsubsection{Topologia Dinâmica e Atributos Dinâmicos}
-% Atributos dinamicos e topologia dinâmica com limite inferior - monografia
+Essa seção resolve o problema apresentado na seção \ref{subsec:limitesuperior} utilizando o Algoritmo de
+Dijkstra com Radix Heap no Limite Superior seguindo a estrutura da seção \ref{subsec:topdinatridin}.
 
 
 
