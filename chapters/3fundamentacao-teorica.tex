@@ -352,9 +352,8 @@ A seguir, é apresentado o funcionamento do algoritmo. O exemplo na figura \ref{
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.55\textwidth]{chapters/fig/leo1.png}
-\caption{Grafo Exemplo para determinação de caminho mínimo}
-Fonte: \cite{leonard}
+ \includegraphics[width=.65\textwidth]{chapters/fig/leo1.png}
+\caption{Grafo exemplo para determinação de caminho mínimo}
 \label{fig:leo1}
 \end{figure}
 
@@ -379,12 +378,11 @@ o ponto de saída o vértice P1.
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.55\textwidth]{chapters/fig/leo2.png}
+ \includegraphics[width=.65\textwidth]{chapters/fig/leo2.png}
 \caption{Processo de determinação de caminho mínimo - Parte 1}
-Fonte: \cite{leonard}
 \label{fig:leo2}
 \end{figure}
-\FloatBarrier
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{l l l l}
@@ -402,6 +400,7 @@ Fonte: \cite{leonard}
 \caption{Processo de determinação de caminho mínimo - Parte 1}
  \label{tab:leotab1}
 \end{table}
+\FloatBarrier
 
 A partir de P1 consulta-se os vértices adjacentes a ele, que são P2 e P3. Para todos os vértices
 adjacentes denonimados $s$, calcula-se o pseudocódigo da figura \ref{fig:diMod}.
@@ -417,15 +416,15 @@ adjacentes denonimados $s$, calcula-se o pseudocódigo da figura \ref{fig:diMod}
 \caption{Dijkstra Modificado - Trecho aplicado a vértices adjacentes}
 \label{fig:diMod}
 \end{figure}
+\FloatBarrier
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.50\textwidth]{chapters/fig/leo3.png}
+ \includegraphics[width=.65\textwidth]{chapters/fig/leo3.png}
 \caption{Processo de determinação de caminho mínimo - Parte 2}
-Fonte: \cite{leonard}
 \label{fig:leo3}
 \end{figure}
-\FloatBarrier
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{l l l l}
@@ -443,18 +442,18 @@ Fonte: \cite{leonard}
 \caption{Processo de determinação de caminho mínimo - Parte 2}
  \label{tab:leotab2}
 \end{table}
+\FloatBarrier
 
 P2 é selecionado de PERM, pois possui a menor distância dist[x] = 8. Então inclui-se x em PERM e consulta-se
 seus vértices adjacentes, que no caso são P3 e P4.
-
+\FloatBarrier
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.50\textwidth]{chapters/fig/leo4.png}
+ \includegraphics[width=.65\textwidth]{chapters/fig/leo4.png}
 \caption{Processo de determinação de caminho mínimo - Parte 3}
-Fonte: \cite{leonard}
 \label{fig:leo4}
 \end{figure}
-\FloatBarrier
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{l l l l}
@@ -472,15 +471,15 @@ Fonte: \cite{leonard}
 \caption{Processo de determinação de caminho mínimo - Parte 3}
  \label{tab:leotab3}
 \end{table}
+\FloatBarrier
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.50\textwidth]{chapters/fig/leo5.png}
+ \includegraphics[width=.65\textwidth]{chapters/fig/leo5.png}
 \caption{Processo de determinação de caminho mínimo - Parte 4}
-Fonte: \cite{leonard}
 \label{fig:leo5}
 \end{figure}
-\FloatBarrier
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{l l l l}
@@ -498,20 +497,20 @@ Fonte: \cite{leonard}
 \caption{Processo de determinação de caminho mínimo - Parte 4}
  \label{tab:leotab4}
 \end{table}
+\FloatBarrier
 
 Ao selecionar o vértice P4, não pertencente a PERM, o intervalo de previsão é ultrapassado
 de 10 minutos. Logo, é utilizada a segunda posição do vetor de custos $t + 2$. O custo do trajeto até
 o vértice P5 pelo P4 é menor do que o custo atual por P3, logo atualiza-se seu peso e predecessor
 para 16 e P4 respectivamente.
-
+\FloatBarrier
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.50\textwidth]{chapters/fig/leo6.png}
+ \includegraphics[width=.65\textwidth]{chapters/fig/leo6.png}
 \caption{Processo de determinação de caminho mínimo - Parte 5}
-Fonte: \cite{leonard}
 \label{fig:leo6}
 \end{figure}
-\FloatBarrier
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{l l l l}
@@ -531,15 +530,14 @@ Fonte: \cite{leonard}
 \end{table}
 
 P5 é adicionado a PERM e seu único vértice adjacente é P6. Logo temos:
-
+\FloatBarrier
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.50\textwidth]{chapters/fig/leo7.png}
+ \includegraphics[width=.65\textwidth]{chapters/fig/leo7.png}
 \caption{Processo de determinação de caminho mínimo - Parte 6}
-Fonte: \cite{leonard}
 \label{fig:leo7}
 \end{figure}
-\FloatBarrier
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{l l l l}
@@ -564,15 +562,18 @@ tempo para percorrer o caminho mínimo passando por P1, P2, P4 e P6 é 18 minuto
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.50\textwidth]{chapters/fig/leo8.png}
+ \includegraphics[width=.65\textwidth]{chapters/fig/leo8.png}
 \caption{Processo de determinação de caminho mínimo - Parte 7}
-Fonte: \cite{leonard}
 \label{fig:leo8}
 \end{figure}
 \FloatBarrier
 
 A presente pesquisa resolve o mesmo problema utilizando o Algoritmo de Dijkstra com Radix Heap no Limite Inferior e Superior
 para Grafos Dinâmicos.
+
+% Descrever algoritmo de Limite Inferior (semelhante ao de Leonard)
+O Algoritmo no Limite Inferior é semelhante ao Dijkstra Modificado \cite{leonard}, porém é utilizado o algoritmo
+de Dijkstra com Radix Heap e um vetor de custos descrito adiante, o mesmo utilizado pelo Algoritmo no Limite Superior.
 
 % Algoritmo no Limite Superior
 O Algoritmo no Limite Superior utiliza um vetor de custos composto pelo tempo médio das passagens dos veículos, em intervalos
@@ -621,14 +622,14 @@ A figura \ref{fig:radixMod} apresenta o pseudocódigo do algoritmo em questão.
 \vspace*{-1mm} \phantom{} \hspace{6ex} menorBucket = menor bucket não vazio\\
 \vspace*{-1mm} \phantom{} \hspace{6ex} {\bf Se} (o menorBucket tem largura = 1 || menorBucket.size = 1)\\
 \vspace*{-1mm} \phantom{} \hspace{9ex} verticeSelecionado = vértice do menorBucket\\
-\vspace*{-1mm} \phantom{} \hspace{9ex} {\bf Se} verticeSelecionado não foi rotulado como permanentemente\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} {\bf Se} verticeSelecionado não foi rotulado permanentemente\\
 \vspace*{-1mm} \phantom{} \hspace{12ex} {\bf Para} i = 0 até i < verticeSelecionado.getArcos().size\\
 \vspace*{-1mm} \phantom{} \hspace{15ex} Atualiza o rótulo do vérticeDestino\\
 \vspace*{-1mm} \phantom{} \hspace{15ex} Insere o vértice no bucket correspondente\\
 \vspace*{-1mm} \phantom{} \hspace{12ex} {\bf Fim Para}\\
 \vspace*{-1mm} \phantom{} \hspace{9ex} {\bf Fim Se}\\
 \vspace*{-1mm} \phantom{} \hspace{9ex} Remove do bucket o verticeSelecionado\\
-\vspace*{-1mm} \phantom{} \hspace{9ex} Marca o rótulo verticeSelecionado como permanentemente\\
+\vspace*{-1mm} \phantom{} \hspace{9ex} Marca o rótulo verticeSelecionado permanentemente\\
 \vspace*{-1mm} \phantom{} \hspace{6ex} {\bf Fim Se}\\
 \vspace*{-1mm} \phantom{} \hspace{6ex} {\bf Senão}\\
 \vspace*{-1mm} \phantom{} \hspace{9ex} Recalcula o intervalo dos buckets\\
@@ -642,16 +643,159 @@ A figura \ref{fig:radixMod} apresenta o pseudocódigo do algoritmo em questão.
 \label{fig:radixMod}
 \end{figure}
 
-% Apresentar o funcionamento do algoritmo
+A seguir, é apresentado o funcionamento do algoritmo utilizando o mesmo grafo da figura \ref{fig:leo1}
+e o mesmo ponto de origem. Para determinar o caminho mínimo, cada vértice armazena o identificador do vértice anterior.
+O algoritmo utiliza ``buckets'' para armazenar os vértices de acordo com seus rótulos.
+Inicialmente, os rótulos de todos os vértices recebem um custo de valor tendendo ao infinito exceto P1,
+que possui custo 0, da mesma forma que a figura \ref{fig:leo2}. A figura \ref{fig:buckets} exibe a disposição dos vértices em seus
+respectivos ``buckets''.
 
-% Descrever algoritmo de Limite Inferior (Leonard)
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/buckets.png}
+\caption{Disposição dos vértices nos buckets}
+\label{fig:buckets}
+\end{figure}
+\FloatBarrier
 
-% Crítica ao algoritmo do Leonard
+Após consultar os vértices adjacentes a P1, que são P2 e P3, o pseudocódigo da figura \ref{fig:janelatemporal}
+é executado e o mesmo resultado da figura \ref{fig:leo3} é encontrado. Em seguida, os ``buckets'' são atualizados
+como mostra a figura \ref{fig:buckets1}.
+
+\fbox{\begin{minipage}{70ex}
+\vspace*{-1mm} \phantom{} \hspace{3ex} custoAresta = horário até o momento\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Se} custoAresta + custoVerticeSelecionado > janelaTemporalAtual\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} custoAresta = tempo de previsão do próximo intervalo\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Fim Se}\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Se} custoAresta + custoVerticeSelecionado < rótulo do verticeDestino\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} custoAresta = custoAresta + custoVerticeSelecionado\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} identificador do verticeDestino recebe identificador vértice anterior\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Fim Se}\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Senão}\\
+\vspace*{-1mm} \phantom{} \hspace{6ex} custoAresta = rótulo do verticeDestino\\
+\vspace*{-1mm} \phantom{} \hspace{3ex} rótulo do verticeDestino = custoAresta\\
+\end{minipage}}
+\begin{figure}[htbp]
+\centering
+\caption{Radix Heap - Pseudocódigo para rotular os vértices adjacentes}
+\label{fig:janelatemporal}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/buckets1.png}
+\caption{Disposição dos vértices nos buckets - Parte 1}
+\label{fig:buckets1}
+\end{figure}
+\FloatBarrier
+
+Como o menor ``bucket'' não tem largura igual a 1 e possui mais de 1 elemento, o intervalo dos ``buckets''
+é atualizado:
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/buckets2.png}
+\caption{Disposição dos vértices nos buckets - Parte 2}
+\label{fig:buckets2}
+\end{figure}
+\FloatBarrier
+
+O vértice P2 é selecionado do menor ``bucket'' e em seguida consulta-se seus vértices adjacentes, que são P3 e P4.
+O intervalo de previsão é ultrapassado ao somar o rótulo de P2 com o custo da aresta, que segue até P3, no intervalo $t + 1$. Logo, 
+é utilizado a próxima posição do vetor de custos, que é $t + 2$. As figuras \ref{fig:limitesup1} e \ref{fig:buckets3} exibem o resultado.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/limitesup1.png}
+\caption{Radix Heap Limite Superior - Parte 1}
+\label{fig:limitesup1}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/buckets3.png}
+\caption{Disposição dos vértices nos buckets - Parte 3}
+\label{fig:buckets3}
+\end{figure}
+\FloatBarrier
+
+Em seguida, são exibidos os próximos passos até chegar no resultado final.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/limitesup2.png}
+\caption{Radix Heap Limite Superior - Parte 2}
+\label{fig:limitesup2}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/buckets4.png}
+\caption{Disposição dos vértices nos buckets - Parte 4}
+\label{fig:buckets4}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/limitesup3.png}
+\caption{Radix Heap Limite Superior - Parte 3}
+\label{fig:limitesup3}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/buckets5.png}
+\caption{Disposição dos vértices nos buckets - Parte 5}
+\label{fig:buckets5}
+\end{figure}
+\FloatBarrier
+
+Novamente o intervalo dos ``buckets'' é atualizado e P5 é selecionado.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/buckets6.png}
+\caption{Disposição dos vértices nos buckets - Parte 6}
+\label{fig:buckets6}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/limitesup4.png}
+\caption{Radix Heap Limite Superior - Parte 4}
+\label{fig:limitesup4}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/buckets7.png}
+\caption{Disposição dos vértices nos buckets - Parte 7}
+\label{fig:buckets7}
+\end{figure}
+\FloatBarrier
+
+Finalmente, P6 é selecionado, mas como não possui vértices adjcentes, o caminho mínimo é definido passando
+pelos vértices P1, P2, P4 e P6 como mosta a figura \ref{fig:limitesup5}.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{chapters/fig/limitesup5.png}
+\caption{Radix Heap Limite Superior - Parte 5}
+\label{fig:limitesup5}
+\end{figure}
+\FloatBarrier
+
+% Crítica ao algoritmo do Leonard exemplificando a falha
 
 \subsubsection{Topologia Dinâmica e Atributos Estáticos}
 Esse algoritmo não foi implementado e segue a estrutura apresentada na seção \ref{subsec:topdinatribest},
 onde vértices e arestas podem mudar ao longo do tempo e seus atributos são constantes. A 
-figura \ref{fig:pathtopdyn} apresenta um exemplo do uso desse algoritmo:
+figura \ref{fig:pathtopdyn} apresenta essa estrutura:
 
 \begin{figure}[htbp]
 \centering
@@ -669,13 +813,6 @@ se faz necessário conhecer o tempo inicial e final de cada vértice e aresta pa
 \subsubsection{Topologia Dinâmica e Atributos Dinâmicos}
 Essa seção resolve o problema apresentado na seção \ref{subsec:limitesuperior} utilizando o Algoritmo de
 Dijkstra com Radix Heap no Limite Superior seguindo a estrutura da seção \ref{subsec:topdinatridin}.
-
-
-
-
-
-
-
 
 
 
