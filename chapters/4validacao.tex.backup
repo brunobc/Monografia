@@ -1,0 +1,19 @@
+\chapter{Validação}
+
+Para validação dos algoritmos foram gerados alguns grafos hipotéticos com cenários distintos.
+Muitos deles utilizaram o mesmo vetor de custo, como dito na seção \ref{sec:pathdyn}, que representam
+o tempo médio das passagens dos veículos por uma aresta ao longo do dia, em intervalos de 10 minutos.
+
+% \subsection{Cenários de teste}
+
+\subsection{Ferramenta de simulação do caminho mínimo}
+Para determinar o caminho mínimo entre dois pontos conhecidos em grafos dinâmicos, foi criado
+uma extensão ao Dynagraph. Para isso, segue uma sequência de passos:
+\begin{itemize}
+\item Ler a estrutura de dados JSON;
+\item Exibir o grafo com todos os vértices e arestas;
+\item Selecionar um dos 3 algoritmos para exibição do caminho mínimo;
+\item Baixar o arquivo JSON, que contém os mesmos dados do grafo mais as arestas do caminho mínimo;
+\item Selecionar o dynagraph e abrir o arquivo baixado;
+\end{itemize}
+
