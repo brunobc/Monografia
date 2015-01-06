@@ -601,8 +601,12 @@ tempo para percorrer o caminho mínimo passando por P1, P2, P4 e P6 é 18 minuto
 \FloatBarrier
 
 A presente pesquisa resolve o mesmo problema utilizando o Algoritmo de Dijkstra com Radix Heap para Grafos Dinâmicos.
-Além disso, o algoritmo indica um intervalo de limite inferior e superior.
-Ele utiliza um vetor de custos composto pelo tempo médio das passagens dos veículos, em intervalos
+Foram implementados dois algoritmos nesse contexto: o primeiro segue a mesma abordagem do Dijkstra Modificado \cite{leonard},
+em relação a mudança do tempo de previsão ao exceder 10 minutos; e o segundo altera o intervalo de previsão quando o valor
+do custo do vértice acrescido do valor do custo da aresta adjacente for superior a 10. Os dois usados em conjunto indicam
+um intervalo de limite inferior e superior para determinação do caminho mínimo.
+
+Os dois algoritmos utilizam um vetor de custos composto pelo tempo médio das passagens dos veículos, em intervalos
 de 10 minutos ao longo do dia, numa determinada ligação ou aresta. Por exemplo, entre 12 horas e 12 horas e 10 minutos um
 veículo demora em média 2 minutos para percorrer a aresta, entre 12 horas e 10 minutos e 12h e 20 minutos ele demora 3 minutos
 para percorrer a mesma aresta, e assim por diante. Os dados do vetor de custo são armazenados em um arquivo no formato JSON
@@ -622,12 +626,11 @@ do vetor possui um vetor de tamanho 6 para representar os intervalos de 10 minut
 \end{figure}
 \FloatBarrier
 
-Nesse algoritmo, o intervalo de previsão é alterado quando o valor do custo do vértice acrescido
-do valor do custo da aresta adjacente for superior a 10.
-Por exemplo, se o tempo parcial até um determinado ponto somado ao custo de travessia da aresta adjacente for de 8 minutos, então
-é utilizado para o próximo cálculo o tempo de previsão no intervalo $t + 1$, mas se a soma for de 13 minutos, logo
-o período de previsão é ultrapassado, e com isso utiliza-se $t + 2$ para o cálculo do próximo trajeto. Se a soma
-estiver entre 20 e 30 minutos utiliza-se o intervalo $t + 3$, entre 30 e 40 minutos $t + 4$, e assim por diante.
+A mudança de intervalo de previsão do segundo algoritmo segue o seguinte exemplo: se o tempo parcial até um determinado 
+ponto somado ao custo de travessia da aresta adjacente for de 8 minutos, então é utilizado para o próximo cálculo o tempo
+de previsão no intervalo $t + 1$, mas se a soma for de 13 minutos, logo o período de previsão é ultrapassado, e com isso
+utiliza-se $t + 2$ para o cálculo do próximo trajeto. Se a soma estiver entre 20 e 30 minutos utiliza-se o intervalo
+$t + 3$, entre 30 e 40 minutos $t + 4$, e assim por diante.
 A figura \ref{fig:radixMod} apresenta o pseudocódigo do algoritmo em questão.
 \FloatBarrier
 \fbox{\begin{minipage}{70ex}
@@ -812,6 +815,15 @@ pelos vértices P1, P2, P4 e P6 com tempo de percurso de 19 minutos, como mosta 
 \end{figure}
 \FloatBarrier
 
+O exemplo da figura \ref{fig:intervalo} exibe a resolução dos caminhos mínimos de dois grafos de vetor de custo distintos,
+usando os dois algoritmos implementados nesta pesquisa. 
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.60\textwidth]{chapters/fig/intervalo.png}
+\caption{Grafo exemplo para indicar o Intervalo de Previsão}
+\label{fig:intervalo}
+\end{figure}
+\FloatBarrier
 
 \subsubsection{Topologia Dinâmica e Atributos Estáticos}
 Esse algoritmo não foi implementado e segue a estrutura apresentada na seção \ref{subsec:topdinatribest},
@@ -882,7 +894,6 @@ A seguir, é apresentada a sequência de instantes utilizando o dynagraph após 
 \caption{Radix Heap Dinâmico - Parte 2 e 3}
 \label{fig:dyndyn2}
 \end{figure}
-\FloatBarrier
 
 \begin{figure}[htbp]
 \centering
@@ -891,7 +902,7 @@ A seguir, é apresentada a sequência de instantes utilizando o dynagraph após 
 \caption{Radix Heap Dinâmico - Parte 4 e 5}
 \label{fig:dyndyn3}
 \end{figure}
-\FloatBarrier
+
 
 \begin{figure}[htbp]
 \centering
@@ -900,13 +911,6 @@ A seguir, é apresentada a sequência de instantes utilizando o dynagraph após 
 \caption{Radix Heap Dinâmico - Parte 6 e 7}
 \label{fig:dyndyn4}
 \end{figure}
-\FloatBarrier
-
-
-
-
-
-
 
 
 

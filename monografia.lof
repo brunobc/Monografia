@@ -45,13 +45,23 @@
 \contentsline {figure}{\numberline {44}{\ignorespaces Radix Heap - Parte 4}}{50}
 \contentsline {figure}{\numberline {45}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 7}}{50}
 \contentsline {figure}{\numberline {46}{\ignorespaces Radix Heap - Parte 5}}{51}
-\contentsline {figure}{\numberline {47}{\ignorespaces Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}}{51}
-\contentsline {figure}{\numberline {48}{\ignorespaces Estrutura JSON do tempo de exist\IeC {\^e}ncia dos v\IeC {\'e}rtices e arestas}}{52}
-\contentsline {figure}{\numberline {49}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 1}}{53}
-\contentsline {figure}{\numberline {50}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 2 e 3}}{53}
-\contentsline {figure}{\numberline {51}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 4 e 5}}{54}
-\contentsline {figure}{\numberline {52}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 6 e 7}}{54}
-\contentsline {figure}{\numberline {53}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Din\IeC {\^a}micos}}{56}
-\contentsline {figure}{\numberline {54}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}}{56}
-\contentsline {figure}{\numberline {55}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: mesma abordagem em \cite {leonard}}}{57}
-\contentsline {figure}{\numberline {56}{\ignorespaces Estrutura JSON - Exemplo 1}}{58}
+\contentsline {figure}{\numberline {47}{\ignorespaces Grafo exemplo para indicar o Intervalo de Previs\IeC {\~a}o}}{51}
+\contentsline {figure}{\numberline {48}{\ignorespaces Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}}{52}
+\contentsline {figure}{\numberline {49}{\ignorespaces Estrutura JSON do tempo de exist\IeC {\^e}ncia dos v\IeC {\'e}rtices e arestas}}{53}
+\contentsline {figure}{\numberline {50}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 1}}{53}
+\contentsline {figure}{\numberline {51}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 2 e 3}}{54}
+\contentsline {figure}{\numberline {52}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 4 e 5}}{54}
+\contentsline {figure}{\numberline {53}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 6 e 7}}{54}
+\contentsline {figure}{\numberline {54}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Din\IeC {\^a}micos}}{55}
+\contentsline {figure}{\numberline {55}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}}{56}
+\contentsline {figure}{\numberline {56}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: mesma abordagem em \cite {leonard}}}{56}
+\contentsline {figure}{\numberline {57}{\ignorespaces Estrutura JSON - Exemplo 1}}{58}
+\contentsline {figure}{\numberline {58}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 1}}{58}
+\contentsline {figure}{\numberline {59}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 1}}{59}
+\contentsline {figure}{\numberline {60}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 1}}{60}
+\contentsline {figure}{\numberline {61}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 2}}{61}
+\contentsline {figure}{\numberline {62}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 2}}{61}
+\contentsline {figure}{\numberline {63}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 2}}{62}
+\contentsline {figure}{\numberline {64}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 3}}{63}
+\contentsline {figure}{\numberline {65}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 3}}{63}
+\contentsline {figure}{\numberline {66}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 3}}{64}

@@ -6,15 +6,15 @@ o tempo médio das passagens dos veículos por uma aresta ao longo do dia, em in
 
 % \subsection{Cenários de teste}
 
-\subsection{Ferramenta de simulação do caminho mínimo}
+\section{Ferramenta de simulação do caminho mínimo}
 Para determinar o caminho mínimo entre dois pontos conhecidos em grafos dinâmicos, foi criado
-uma extensão ao Dynagraph, que simula o caminho mínimo. Para isso, segue uma sequência de passos:
+uma extensão ao Dynagraph, que simula o caminho mínimo. Para isso, segue a sequência:
 \begin{itemize}
 \item Ler a estrutura de dados JSON;
 \item Exibir o grafo com todos os vértices e arestas;
-\item Selecionar um dos 3 algoritmos para exibição do caminho mínimo;
-\item Baixar o arquivo JSON, que contém os mesmos dados do grafo mais as arestas do caminho mínimo;
-\item Selecionar o dynagraph e abrir o arquivo baixado;
+\item Selecionar um dos 3 algoritmos para cálculo e exibição do caminho mínimo;
+\item Baixar o arquivo JSON ou ir para a aplicação Dynagraph, que contém os mesmos dados do grafo mais as arestas do caminho mínimo;
+\item Selecionar o dynagraph e abrir o arquivo baixado ();
 \end{itemize}
 
 As figuras \ref{fig:shortestpath}, \ref{fig:upperlimit} e \ref{fig:downlimit} mostram captura de telas
@@ -22,24 +22,24 @@ da ferramenta exibindo exemplos de caminho mínimo dos 3 algoritmos e os seus da
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.90\textwidth]{chapters/fig/shortestpath.png}
-\caption{Simulador de Caminho Mínimo - Topologia Dinâmica e Atributos Dinâmicos: Limite Superior}
+ \includegraphics[width=.90\textwidth]{chapters/fig/validacao/shortestpath.png}
+\caption{Simulador de Caminho Mínimo - Topologia Dinâmica e Atributos Dinâmicos}
 \label{fig:shortestpath}
 \end{figure}
 \FloatBarrier
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.90\textwidth]{chapters/fig/upperlimit.png}
-\caption{Simulador de Caminho Mínimo - Topologia Estática e Atributos Dinâmicos: Limite Superior}
+ \includegraphics[width=.90\textwidth]{chapters/fig/validacao/upperlimit.png}
+\caption{Simulador de Caminho Mínimo - Topologia Estática e Atributos Dinâmicos}
 \label{fig:upperlimit}
 \end{figure}
 \FloatBarrier
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.90\textwidth]{chapters/fig/downlimit.png}
-\caption{Simulador de Caminho Mínimo - Topologia estática e Atributos Dinâmicos: Limite Inferior}
+ \includegraphics[width=.90\textwidth]{chapters/fig/validacao/downlimit.png}
+\caption{Simulador de Caminho Mínimo - Topologia Estática e Atributos Dinâmicos: mesma abordagem em \cite{leonard}}
 \label{fig:downlimit}
 \end{figure}
 \FloatBarrier
@@ -53,9 +53,117 @@ da ferramenta exibindo exemplos de caminho mínimo dos 3 algoritmos e os seus da
     \line(1,0){450}
   \end{center}
   \centering
-  \caption{Estrutura JSON usada pelo Dynagraph}
+  \caption{Estrutura JSON - Exemplo 1}
   \label{fig:jsondyn}
 \end{figure}
 \FloatBarrier
 
-A seguir, serão apresentados os grafos gerados pela ferramenta de simulação com seus respectivos dados.
+A seguir, são apresentados os grafos gerados pela ferramenta de simulação com seus respectivos dados,
+e a exibição do caminho mínimo no Dynagraph. As figuras seguem a ordem da esquerda para a direita e
+de cima para baixo.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.70\textwidth]{chapters/fig/validacao/ex1.png}
+\caption{Simulador de Caminho Mínimo - Exemplo 1}
+\label{fig:ex1}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn1a.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn1b.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn1c.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn1d.png}
+\caption{Caminho Mínimo no Dynagraph - Exemplo 1}
+\label{fig:dyn1}
+\end{figure}
+\FloatBarrier
+
+\begin{center}
+  \line(1,0){450}
+\end{center}
+\lstinputlisting[language=Java]{chapters/fig/validacao/dyn1.json}
+\begin{figure}[htbp]
+  \begin{center}
+    \line(1,0){450}
+  \end{center}
+  \centering
+  \caption{Simulador de Caminho Mínimo: Estrutura JSON - Exemplo 1}
+  \label{fig:jsondyn1}
+\end{figure}
+\FloatBarrier
+
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.70\textwidth]{chapters/fig/validacao/ex2.png}
+\caption{Simulador de Caminho Mínimo - Exemplo 2}
+\label{fig:ex2}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn2a.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn2b.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn2c.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn2d.png}
+\caption{Caminho Mínimo no Dynagraph - Exemplo 2}
+\label{fig:dyn2}
+\end{figure}
+\FloatBarrier
+
+\begin{center}
+  \line(1,0){450}
+\end{center}
+\lstinputlisting[language=Java]{chapters/fig/validacao/dyn2.json}
+\begin{figure}[htbp]
+  \begin{center}
+    \line(1,0){450}
+  \end{center}
+  \centering
+  \caption{Simulador de Caminho Mínimo: Estrutura JSON - Exemplo 2}
+  \label{fig:jsondyn2}
+\end{figure}
+\FloatBarrier
+
+A seguir, o mesmo exemplo do grafo anterior, mas com o horário de início do percurso diferente.
+Percebe-se que a hora é ultrapassada, pois o percurso inicia às 23 horas e 50 minutos.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.70\textwidth]{chapters/fig/validacao/ex3.png}
+\caption{Simulador de Caminho Mínimo - Exemplo 3}
+\label{fig:ex2}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn3a.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn3b.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn3c.png}
+\caption{Caminho Mínimo no Dynagraph - Exemplo 3}
+\label{fig:dyn3}
+\end{figure}
+\FloatBarrier
+
+\begin{center}
+  \line(1,0){450}
+\end{center}
+\lstinputlisting[language=Java]{chapters/fig/validacao/dyn3.json}
+\begin{figure}[htbp]
+  \begin{center}
+    \line(1,0){450}
+  \end{center}
+  \centering
+  \caption{Simulador de Caminho Mínimo: Estrutura JSON - Exemplo 3}
+  \label{fig:jsondyn3}
+\end{figure}
+\FloatBarrier
+
+
+
+
