@@ -19,38 +19,39 @@
 \contentsline {figure}{\numberline {18}{\ignorespaces Algoritmo de Dijkstra}}{32}
 \contentsline {figure}{\numberline {19}{\ignorespaces Grafo - Caminho M\IeC {\'\i }nimo}}{35}
 \contentsline {figure}{\numberline {20}{\ignorespaces Radix Heap - Pseudoc\IeC {\'o}digo do algoritmo}}{38}
-\contentsline {figure}{\numberline {21}{\ignorespaces Dijkstra Modificado - Pseudoc\IeC {\'o}digo do algoritmo}}{40}
-\contentsline {figure}{\numberline {22}{\ignorespaces Grafo exemplo para determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo}}{40}
-\contentsline {figure}{\numberline {23}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 1}}{41}
+\contentsline {figure}{\numberline {21}{\ignorespaces Dijkstra Modificado - Pseudoc\IeC {\'o}digo do algoritmo}}{39}
+\contentsline {figure}{\numberline {22}{\ignorespaces Grafo exemplo para determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo}}{39}
+\contentsline {figure}{\numberline {23}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 1}}{40}
 \contentsline {figure}{\numberline {24}{\ignorespaces Dijkstra Modificado - Trecho aplicado a v\IeC {\'e}rtices adjacentes}}{41}
-\contentsline {figure}{\numberline {25}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 2}}{42}
+\contentsline {figure}{\numberline {25}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 2}}{41}
 \contentsline {figure}{\numberline {26}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 3}}{42}
-\contentsline {figure}{\numberline {27}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 4}}{43}
-\contentsline {figure}{\numberline {28}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 5}}{44}
+\contentsline {figure}{\numberline {27}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 4}}{42}
+\contentsline {figure}{\numberline {28}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 5}}{43}
 \contentsline {figure}{\numberline {29}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 6}}{44}
-\contentsline {figure}{\numberline {30}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 7}}{45}
-\contentsline {figure}{\numberline {31}{\ignorespaces Estrutura JSON usada pelo vetor de custos}}{46}
-\contentsline {figure}{\numberline {32}{\ignorespaces Dijkstra com Radix Heap no Limite Superior}}{47}
-\contentsline {figure}{\numberline {33}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets}}{48}
-\contentsline {figure}{\numberline {34}{\ignorespaces Radix Heap - Pseudoc\IeC {\'o}digo para rotular os v\IeC {\'e}rtices adjacentes}}{48}
-\contentsline {figure}{\numberline {35}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 1}}{48}
-\contentsline {figure}{\numberline {36}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 2}}{49}
-\contentsline {figure}{\numberline {37}{\ignorespaces Radix Heap Limite Superior - Parte 1}}{49}
-\contentsline {figure}{\numberline {38}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 3}}{49}
-\contentsline {figure}{\numberline {39}{\ignorespaces Radix Heap Limite Superior - Parte 2}}{50}
-\contentsline {figure}{\numberline {40}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 4}}{50}
-\contentsline {figure}{\numberline {41}{\ignorespaces Radix Heap Limite Superior - Parte 3}}{50}
-\contentsline {figure}{\numberline {42}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 5}}{50}
-\contentsline {figure}{\numberline {43}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 6}}{51}
-\contentsline {figure}{\numberline {44}{\ignorespaces Radix Heap Limite Superior - Parte 4}}{51}
-\contentsline {figure}{\numberline {45}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 7}}{51}
-\contentsline {figure}{\numberline {46}{\ignorespaces Radix Heap Limite Superior - Parte 5}}{52}
-\contentsline {figure}{\numberline {47}{\ignorespaces Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}}{52}
-\contentsline {figure}{\numberline {48}{\ignorespaces Estrutura JSON do tempo de exist\IeC {\^e}ncia dos v\IeC {\'e}rtices e arestas}}{53}
-\contentsline {figure}{\numberline {49}{\ignorespaces Radix Heap Limite Superior Din\IeC {\~a}mico - Parte 1}}{54}
-\contentsline {figure}{\numberline {50}{\ignorespaces Radix Heap Limite Superior Din\IeC {\~a}mico - Parte 2 e 3}}{54}
-\contentsline {figure}{\numberline {51}{\ignorespaces Radix Heap Limite Superior Din\IeC {\~a}mico - Parte 4 e 5}}{55}
-\contentsline {figure}{\numberline {52}{\ignorespaces Radix Heap Limite Superior Din\IeC {\~a}mico - Parte 6 e 7}}{55}
-\contentsline {figure}{\numberline {53}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Din\IeC {\^a}micos: Limite Superior}}{57}
-\contentsline {figure}{\numberline {54}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: Limite Superior}}{57}
-\contentsline {figure}{\numberline {55}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: Limite Inferior}}{58}
+\contentsline {figure}{\numberline {30}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 7}}{44}
+\contentsline {figure}{\numberline {31}{\ignorespaces Estrutura JSON usada pelo vetor de custos}}{45}
+\contentsline {figure}{\numberline {32}{\ignorespaces Dijkstra com Radix Heap}}{46}
+\contentsline {figure}{\numberline {33}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets}}{47}
+\contentsline {figure}{\numberline {34}{\ignorespaces Radix Heap - Pseudoc\IeC {\'o}digo para rotular os v\IeC {\'e}rtices adjacentes}}{47}
+\contentsline {figure}{\numberline {35}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 1}}{47}
+\contentsline {figure}{\numberline {36}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 2}}{48}
+\contentsline {figure}{\numberline {37}{\ignorespaces Radix Heap - Parte 1}}{48}
+\contentsline {figure}{\numberline {38}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 3}}{48}
+\contentsline {figure}{\numberline {39}{\ignorespaces Radix Heap - Parte 2}}{49}
+\contentsline {figure}{\numberline {40}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 4}}{49}
+\contentsline {figure}{\numberline {41}{\ignorespaces Radix Heap - Parte 3}}{49}
+\contentsline {figure}{\numberline {42}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 5}}{49}
+\contentsline {figure}{\numberline {43}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 6}}{50}
+\contentsline {figure}{\numberline {44}{\ignorespaces Radix Heap - Parte 4}}{50}
+\contentsline {figure}{\numberline {45}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 7}}{50}
+\contentsline {figure}{\numberline {46}{\ignorespaces Radix Heap - Parte 5}}{51}
+\contentsline {figure}{\numberline {47}{\ignorespaces Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}}{51}
+\contentsline {figure}{\numberline {48}{\ignorespaces Estrutura JSON do tempo de exist\IeC {\^e}ncia dos v\IeC {\'e}rtices e arestas}}{52}
+\contentsline {figure}{\numberline {49}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 1}}{53}
+\contentsline {figure}{\numberline {50}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 2 e 3}}{53}
+\contentsline {figure}{\numberline {51}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 4 e 5}}{54}
+\contentsline {figure}{\numberline {52}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 6 e 7}}{54}
+\contentsline {figure}{\numberline {53}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Din\IeC {\^a}micos}}{56}
+\contentsline {figure}{\numberline {54}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}}{56}
+\contentsline {figure}{\numberline {55}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: mesma abordagem em \cite {leonard}}}{57}
+\contentsline {figure}{\numberline {56}{\ignorespaces Estrutura JSON - Exemplo 1}}{58}

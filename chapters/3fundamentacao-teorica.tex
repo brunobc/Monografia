@@ -10,7 +10,7 @@ que os vértices explorados são atingidos, tem-se uma proximidade da solução 
 \subsection{Problema de Caminho Mínimo}
 Uma rede de transporte (que pode ser uma malha viária, rodoviária, etc.) pode ser
 representada por uma grafo $G = (N, A)$, onde $N$ é o conjunto de nós e A é o conjunto de arcos
-os quais interligam estes nós. Considerado o número de nós $|N| = n$ e o número de arcos $|A| = m;$ para
+os quais interligam estes nós. Considerado o número de nós $|N| = n;$ e o número de arcos $|A| = m;$ para
 cada arco $(i, j) \in A$ está associado um custo unitário $c_{ij}$. O caminho entre um
 nó origem $(s)$ e um nó destino $(t)$ é definido por uma sequência de
 arcos: $(s,i),...(k,l),...(j,t)$. O Problema de Caminho Mínimo (PCM) consiste em determinar
@@ -109,14 +109,15 @@ pode-se armazenar todos os vértices com $d[v]$ dentro do intervalo [100$k$ para
 
 Para o bucket[k] é definido um intervalo de valores denotado por intervalo(k). O número de inteiros
 no intervalo é chamado de largura do intervalo e denotado por largura(k).
-No exemplo anterior, o intervalo do bucket $k$ é [100$k$, 100$k$ + 99] e sua largura é de 100. 
+No exemplo anterior, o intervalo do bucket $k$ é [100$k$, 100$k$ + 99] e sua largura é 100. 
 
 Usar larguras de tamanho $k$ permite reduzir o número de buckets necessários por um fator de $k$.
 Mas para encontrar o rótulo de menor distância, é preciso procurar todos os elementos no bucket não vazio de menor índice.
 Para superar isso, o algoritmo radix heap considera usar larguras variáveis e altera os intervalos de forma dinâmica. 
 O Radix Heap segue as propriedades:
 
-1. As larguras dos buckets são 1, 1, 2, 4, 8, 16, ..., de modo que o número de buckets necessários é somente $O(log(NC))$.
+1. As larguras dos buckets são 1, 1, 2, 4, 8, 16, ..., de modo que o número de buckets necessários é somente $O(log(NC))$,
+onde N é o número de vértice e C o custo da maior aresta.
 
 2.  Os intervalos dos buckets são modificados dinamicamente e são realocados os vértices de menor rótulo temporário
 para um único bucket, cuja largura é 1.
@@ -146,16 +147,12 @@ para além das suas larguras iniciais \cite{bookahuja}.
 Determinar qual intervalo contém um dado valor pode ser feito percorrendo o vetor de buckets com complexidade $O(lognC)$.
 Logo, inserir um vértice na estrutura, tem complexidade $O(K)$, pois $O(K) = O(lognC)$
 
-A operação que diminui a chave de um elemento $v$ é executada da seguinte forma: no tempo $O(K)$ determina-se
-o bucket k tal que $d[v] \in intervalo(k)$. Logo após diminuir $d[v]$ basta determinar o novo bucket que vai conter
-$v$, que pode ser feito em tempo $O(K)$.
-
 Para descrever a operação de retirar o item da fila de prioridades que contém o menor valor chave considere o seguinte exemplo:
 Supondo que o rótulo temporário de um vértice de conteudo(4) é 9, cujo intervalo é [8, 15].
 O algoritmo irá examinar cada vértice em conteudo(4) para identificar um vértice com o rótulo de menor distância.
 Segundo \cite{bookahuja}, os rótulos de distância que o algoritmo de Dijkstra designa como permanente não são decrescentes,
 isso implica que nenhum rótulo temporário de distância jamais voltará
-a ser inferior a 9 e, conseqüentemente, não precisará mais dos buckets de 0 a 3.
+a ser inferior a 9 e, consequentemente, não precisará mais dos buckets de 0 a 3.
 
 Em vez de deixar estes buckets inativos, o algoritmo redistribui o intervalo[9, 15]
 para os buckets anteriores, resultando nos intervalos intervalo(0) = [9], intervalo(1) = [10],
@@ -209,7 +206,7 @@ após análise do vértice 1.
  \label{tab:initialradixheap}
 \end{table}
 
-Para selecionar o vértice com o rótulo de menor distância, os buckets 0, 1, 2, ..., K são varridos para encontrar o
+Para selecionar o vértice com o rótulo de menor distância, os buckets 0, 1, 2, ..., K são percorridos para encontrar o
 primeiro bucket não vazio. No exemplo, o bucket 0 é não vazio. Uma vez que o bucket 0 tem largura 1,
 cada vértice neste bucket tem o mesmo (no mínimo) rótulo de distância. Assim, o algoritmo determina o vértice 3 como permanente,
 exclui o vértice 3 do radix heap, e verifica o arco (3, 5) para alterar o rótulo de distância do vértice 5 de 20 para 9.
@@ -274,7 +271,7 @@ A redistribuição do intervalo segue atribuindo o primeiro inteiro para bucket 
 os próximos dois inteiros para bucket 2, nos próximos quatro inteiros para bucket 3, e assim por diante.
 Uma vez que o bucket $k$ tem uma largura inferior a $2^{k - 1}$, e uma vez que as larguras dos primeiros $k$ buckets
 pode ser tão grande como $1, 1, 2, ..., 2^{k - 2}$ até uma largura total de potencial $2^{k - 1}$,
-o intervalo útil do bucket k sobre os buckets $0, 1, ..., k - 1$ é redistribuido.
+o intervalo útil do bucket k sobre os buckets $0, 1, ..., k - 1$ é redistribuído.
 Esta redistribuição dos intevalos e re-inserções subsequentes de vértices esvazia o bucket k e move os vértices com
 os rótulos de menor distância para o bucket 0 \cite{bookahuja}.
 Portanto, como $k = [log(nC)]$, o tempo de execução do algoritmo de Dijkstra com Radix Heap é $O(m + nk) = O(m + n log(nC))$.
@@ -335,9 +332,9 @@ depois de um certo intervalo de tempo, mas o grafo é estático entre duas alter
 \subsection{Algoritmos de Caminho Mínimo Dinâmico}
 Essa seção aborda 3 tipos de estruturas:
 \begin{itemize}
-\item Topologia Estática e Atributos Dinâmicos: com Limite Inferior \cite{leonard} e com Limite Superior;
+\item Topologia Estática e Atributos Dinâmicos;
 \item Topologia Dinâmica e Atributos Estáticos;
-\item Topologia Dinâmica e Atributos Dinâmicos com Limite Superior.
+\item Topologia Dinâmica e Atributos Dinâmicos.
 \end{itemize}
 
 \subsubsection{Topologia Estática e Atributos Dinâmicos}
@@ -353,8 +350,8 @@ Por exemplo, se o tempo parcial até um determinado ponto for de 7 minutos, ent�
 é utilizado para o próximo cálculo o tempo de previsão no intervalo $t + 1$, mas se o tempo parcial for de 15 minutos, logo
 o período de previsão é ultrapassado, e com isso utiliza-se $t + 2$ para o cálculo do próximo trajeto. Se o tempo parcial
 estiver entre 30 e 40 minutos utiliza-se o intervalo $t + 4$, entre 40 e 50 minutos $t + 5$, e assim por diante.
-Essa abordagem é definida como Limite Inferior, pois o intervalo de previsão só é alterado quando o 
-valor do custo do vértice for superior a 10. A figura \ref{fig:diMod} apresenta o pseudocódigo do algoritmo Dijkstra Modificado.
+Essa abordagem só altera o intervalo de previsão quando o valor do custo do vértice for superior a 10.
+A figura \ref{fig:diMod} apresenta o pseudocódigo do algoritmo Dijkstra Modificado.
 
 \fbox{\begin{minipage}{70ex}
 \noindent \phantom{} \hspace{0ex} {\bf Algoritmo Dijkstra Modificado}\\
@@ -385,8 +382,9 @@ A seguir, é apresentado o funcionamento do algoritmo. O exemplo na figura \ref{
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.50\textwidth]{chapters/fig/leo1.png}
+ \includegraphics[width=.60\textwidth]{chapters/fig/leo1.png}
 \caption{Grafo exemplo para determinação de caminho mínimo}
+Fonte: Elaboração própria, baseada em \cite{leonard}
 \label{fig:leo1}
 \end{figure}
 
@@ -407,7 +405,7 @@ mais curto, e com isso indicar que $current$ é o vértice adjacente a $s$ pelo 
 
 Para determinar o caminho mínimo é preciso definir o ponto de origem ou nó raiz. A partir disso, o algoritmo
 aplica custo de valor tendendo ao infinito a todos os vértices exceto P1, que possui custo 0. A figura \ref{fig:leo2} exibe
-o ponto de saída o vértice P1.
+o vértice P1 como ponto de saída .
 
 \begin{figure}[htbp]
 \centering
@@ -479,13 +477,14 @@ adjacentes denonimados $s$, calcula-se o pseudocódigo da figura \ref{fig:diMod}
 
 P2 é selecionado de PERM, pois possui a menor distância dist[x] = 8. Então inclui-se x em PERM e consulta-se
 seus vértices adjacentes, que no caso são P3 e P4.
-\FloatBarrier
+
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/leo4.png}
 \caption{Processo de determinação de caminho mínimo - Parte 3}
 \label{fig:leo4}
 \end{figure}
+\FloatBarrier
 
 \begin{table}[htbp]
 	\centering
@@ -601,19 +600,13 @@ tempo para percorrer o caminho mínimo passando por P1, P2, P4 e P6 é 18 minuto
 \end{figure}
 \FloatBarrier
 
-A presente pesquisa resolve o mesmo problema utilizando o Algoritmo de Dijkstra com Radix Heap no Limite Inferior e Superior
-para Grafos Dinâmicos.
-
-% Descrever algoritmo de Limite Inferior (semelhante ao de Leonard)
-O Algoritmo no Limite Inferior é semelhante ao Dijkstra Modificado \cite{leonard}, porém é utilizado o algoritmo
-de Dijkstra com Radix Heap e um vetor de custos descrito adiante, o mesmo utilizado pelo Algoritmo no Limite Superior.
-
-% Algoritmo no Limite Superior
-O Algoritmo no Limite Superior utiliza um vetor de custos composto pelo tempo médio das passagens dos veículos, em intervalos
+A presente pesquisa resolve o mesmo problema utilizando o Algoritmo de Dijkstra com Radix Heap para Grafos Dinâmicos.
+Além disso, o algoritmo indica um intervalo de limite inferior e superior.
+Ele utiliza um vetor de custos composto pelo tempo médio das passagens dos veículos, em intervalos
 de 10 minutos ao longo do dia, numa determinada ligação ou aresta. Por exemplo, entre 12 horas e 12 horas e 10 minutos um
 veículo demora em média 2 minutos para percorrer a aresta, entre 12 horas e 10 minutos e 12h e 20 minutos ele demora 3 minutos
 para percorrer a mesma aresta, e assim por diante. Os dados do vetor de custo são armazenados em um arquivo no formato JSON
-como mostra a figura \ref{fig:tabelajson}. Cada aresta é um vetor de tamanho 24 para representar as horas, e cada elemento
+como mostra a figura \ref{fig:tabelajson}. Cada aresta possui um vetor de tamanho 24 para representar as horas, e cada elemento
 do vetor possui um vetor de tamanho 6 para representar os intervalos de 10 minutos ao longo de 1 hora.
 \begin{center}
   \line(1,0){450}
@@ -629,8 +622,8 @@ do vetor possui um vetor de tamanho 6 para representar os intervalos de 10 minut
 \end{figure}
 \FloatBarrier
 
-Essa abordagem é definida como Limite Superior, pois o intervalo de previsão é alterado quando
-o valor do custo do vértice acrescido do valor do custo da aresta adjacente for superior a 10.
+Nesse algoritmo, o intervalo de previsão é alterado quando o valor do custo do vértice acrescido
+do valor do custo da aresta adjacente for superior a 10.
 Por exemplo, se o tempo parcial até um determinado ponto somado ao custo de travessia da aresta adjacente for de 8 minutos, então
 é utilizado para o próximo cálculo o tempo de previsão no intervalo $t + 1$, mas se a soma for de 13 minutos, logo
 o período de previsão é ultrapassado, e com isso utiliza-se $t + 2$ para o cálculo do próximo trajeto. Se a soma
@@ -638,7 +631,7 @@ estiver entre 20 e 30 minutos utiliza-se o intervalo $t + 3$, entre 30 e 40 minu
 A figura \ref{fig:radixMod} apresenta o pseudocódigo do algoritmo em questão.
 \FloatBarrier
 \fbox{\begin{minipage}{70ex}
-\noindent \phantom{} \hspace{0ex} {\bf Dijkstra com Radix Heap no Limite Superior}\\
+\noindent \phantom{} \hspace{0ex} {\bf Dijkstra com Radix Heap em Grafos Dinâmicos}\\
 \vspace*{-1mm} \phantom{} \hspace{3ex} buckets = [];\\
 \vspace*{-1mm} \phantom{} \hspace{3ex} Inicializa o rótulo de distância dos vértices\\
 \vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Para} i = 1 até i < vertices.length\\
@@ -672,7 +665,7 @@ A figura \ref{fig:radixMod} apresenta o pseudocódigo do algoritmo em questão.
 \end{minipage}}
 \begin{figure}[htbp]
 \centering
-\caption{Dijkstra com Radix Heap no Limite Superior}
+\caption{Dijkstra com Radix Heap}
 \label{fig:radixMod}
 \end{figure}
 
@@ -741,7 +734,7 @@ O intervalo de previsão é ultrapassado ao somar o rótulo de P2 com o custo da
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/limitesup1.png}
-\caption{Radix Heap Limite Superior - Parte 1}
+\caption{Radix Heap - Parte 1}
 \label{fig:limitesup1}
 \end{figure}
 
@@ -758,7 +751,7 @@ Em seguida, são exibidos os próximos passos até chegar no resultado final.
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/limitesup2.png}
-\caption{Radix Heap Limite Superior - Parte 2}
+\caption{Radix Heap - Parte 2}
 \label{fig:limitesup2}
 \end{figure}
 
@@ -772,7 +765,7 @@ Em seguida, são exibidos os próximos passos até chegar no resultado final.
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/limitesup3.png}
-\caption{Radix Heap Limite Superior - Parte 3}
+\caption{Radix Heap - Parte 3}
 \label{fig:limitesup3}
 \end{figure}
 
@@ -796,7 +789,7 @@ Novamente o intervalo dos ``buckets'' é atualizado e P5 é selecionado.
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/limitesup4.png}
-\caption{Radix Heap Limite Superior - Parte 4}
+\caption{Radix Heap - Parte 4}
 \label{fig:limitesup4}
 \end{figure}
 
@@ -809,33 +802,15 @@ Novamente o intervalo dos ``buckets'' é atualizado e P5 é selecionado.
 \FloatBarrier
 
 Finalmente, P6 é selecionado, mas como não possui vértices adjcentes, o caminho mínimo é definido passando
-pelos vértices P1, P2, P4 e P6 como mosta a figura \ref{fig:limitesup5}.
+pelos vértices P1, P2, P4 e P6 com tempo de percurso de 19 minutos, como mosta a figura \ref{fig:limitesup5}.
 
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/limitesup5.png}
-\caption{Radix Heap Limite Superior - Parte 5}
+\caption{Radix Heap - Parte 5}
 \label{fig:limitesup5}
 \end{figure}
 \FloatBarrier
-
-% Crítica ao algoritmo do Leonard exemplificando a falha
-% O algoritmo de Dijkstra Modificado de \cite{leonard} possui uma falha no momento em que modifica o
-% intervalo de previsão, pois ele só é alterado quando o tempo parcial é ultrapassado de 10 minutos,
-% e com isso, o rótulo do vértice destino é alterado após percorrer a aresta.
-% O grafo G(N=\{B1, B2, B3\}, A) apresentado na figura \ref{fig:critica}, é utilizado para demonstrar essa falha.
-% 
-% \begin{figure}[htbp]
-% \centering
-%  \includegraphics[width=.60\textwidth]{chapters/fig/critica.png}
-% \caption{Grafo exemplo - Algoritmo de Dijkstra Modificado}
-% \label{fig:critica}
-% \end{figure}
-% \FloatBarrier
-% 
-% Inicialmente, o vértice B1 é selecionado como nó raiz para determinar o caminho mínimo. Ele possui o vértice B2
-% como adjacente, que em seguida é rotulado com o valor 8.
-
 
 
 \subsubsection{Topologia Dinâmica e Atributos Estáticos}
@@ -858,9 +833,9 @@ se faz necessário conhecer o tempo inicial e final de cada vértice e aresta pa
 
 \subsubsection{Topologia Dinâmica e Atributos Dinâmicos}
 Essa seção resolve o problema apresentado na seção \ref{subsec:limitesuperior} utilizando o Algoritmo de
-Dijkstra com Radix Heap no Limite Superior seguindo a estrutura da seção \ref{subsec:topdinatridin}.
+Dijkstra com Radix Heap seguindo a estrutura da seção \ref{subsec:topdinatridin}.
 
-Ao executar o exemplo da figura \ref{fig:leo1}, com o mesmo vetor de custo de Limite Superior e ponto de origem, tem-se
+Ao executar o exemplo da figura \ref{fig:leo1}, com o mesmo vetor de custo e ponto de origem, tem-se
 os vértices adjacentes P2 e P3. Ao atualizar o rótulo dos vértices adjacentes, é necessário executar o mesmo
 pseudocódigo apresentado na figura \ref{fig:janelatemporal}. Além disso, é levado em consideração o tempo
 inicial e final dos vértices e arestas para determinar o caminho mínimo. Para isso,
@@ -893,18 +868,18 @@ que ligam P1 a P2 e P4 a P5 ainda não existem.
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.55\textwidth]{chapters/fig/dyndyn1.png}
-\caption{Radix Heap Limite Superior Dinãmico - Parte 1}
+\caption{Radix Heap Dinâmico - Parte 1}
 \label{fig:dyndyn1}
 \end{figure}
 \FloatBarrier
 
-A seguir, é apresentada a sequência de instantes após resolução do algoritmo utilizando o dynagraph.
+A seguir, é apresentada a sequência de instantes utilizando o dynagraph após resolução do algoritmo.
 
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn2.png}
  \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn3.png}
-\caption{Radix Heap Limite Superior Dinãmico - Parte 2 e 3}
+\caption{Radix Heap Dinâmico - Parte 2 e 3}
 \label{fig:dyndyn2}
 \end{figure}
 \FloatBarrier
@@ -913,7 +888,7 @@ A seguir, é apresentada a sequência de instantes após resolução do algoritm
 \centering
  \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn4.png}
  \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn5.png}
-\caption{Radix Heap Limite Superior Dinãmico - Parte 4 e 5}
+\caption{Radix Heap Dinâmico - Parte 4 e 5}
 \label{fig:dyndyn3}
 \end{figure}
 \FloatBarrier
@@ -922,7 +897,7 @@ A seguir, é apresentada a sequência de instantes após resolução do algoritm
 \centering
  \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn6.png}
  \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn7.png}
-\caption{Radix Heap Limite Superior Dinãmico - Parte 6 e 7}
+\caption{Radix Heap Dinâmico - Parte 6 e 7}
 \label{fig:dyndyn4}
 \end{figure}
 \FloatBarrier

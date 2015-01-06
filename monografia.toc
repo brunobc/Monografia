@@ -25,11 +25,11 @@
 \contentsline {subsubsection}{\numberline {3.1.3.2}Funcionamento do Algoritmo de Dijkstra com Radix Heap}{34}
 \contentsline {subsubsection}{\numberline {3.1.3.3}Complexidade do Algoritmo de Dijkstra com Radix Heap}{36}
 \contentsline {section}{\numberline {3.2}Caminhos em Redes Din\IeC {\^a}micas}{38}
-\contentsline {subsection}{\numberline {3.2.1}Algoritmos de Caminho M\IeC {\'\i }nimo Din\IeC {\^a}mico}{39}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}{39}
-\contentsline {subsubsection}{\numberline {3.2.1.2}Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}{52}
-\contentsline {subsubsection}{\numberline {3.2.1.3}Topologia Din\IeC {\^a}mica e Atributos Din\IeC {\^a}micos}{52}
-\contentsline {chapter}{\numberline {4}Valida\IeC {\c c}\IeC {\~a}o}{56}
-\contentsline {subsection}{\numberline {4.0.2}Ferramenta de simula\IeC {\c c}\IeC {\~a}o do caminho m\IeC {\'\i }nimo}{56}
+\contentsline {subsection}{\numberline {3.2.1}Algoritmos de Caminho M\IeC {\'\i }nimo Din\IeC {\^a}mico}{38}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}{38}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}{51}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Topologia Din\IeC {\^a}mica e Atributos Din\IeC {\^a}micos}{51}
+\contentsline {chapter}{\numberline {4}Valida\IeC {\c c}\IeC {\~a}o}{55}
+\contentsline {section}{\numberline {4.1}Ferramenta de simula\IeC {\c c}\IeC {\~a}o do caminho m\IeC {\'\i }nimo}{55}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o e Trabalhos Futuros}{59}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografia}{60}

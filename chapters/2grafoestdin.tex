@@ -154,14 +154,14 @@ Em \cite{harary}, são definidas três tipos de redes: rede de nodos, rede de el
 de vértices, $E$ é um conjunto de arestas $\{u,v\}$, e $f$ é uma função, $f: V \rightarrow N$ onde $N$
 é um sistema numérico, atribuição de um valor ou um peso.
 \item Uma rede de elos (ou grafo de arestas ponderadas) é uma tripla $(V, E, g)$, definida de forma semelhante.
-\item Uma rede Ponderada (ou grafo totalmente ponderado) tem pesos atribuídos a ambos nós e arestas.
+\item Uma rede ponderada (ou grafo totalmente ponderado) tem pesos atribuídos a ambos nós e arestas.
 \end{itemize}
 
 Outro tipo de rede é chamada de rede genérica, que contém atributos e características.
 
 Grafo Dinâmico $G^t(V^t, L^t)$ é todo grafo que modifica seus vértices ($V^t$) e/ou ligações ($L^t$)
-ao longo de um período de tempo ($H \in [T_i, T_k]$). Ou seja, as entidades $V$(um conjunto de nodos),
-$E$(um conjunto de elos), $f$(mapeamento de vértices para números) e $g$(mapeamento de arestas para números)
+ao longo de um período de tempo ($H \in [T_i, T_k]$). Ou seja, as entidades $V$ (um conjunto de nodos),
+$E$ (um conjunto de elos), $f$ (mapeamento de vértices para números) e $g$ (mapeamento de arestas para números)
 podem se modificar dentro do intervalo H.
 Logo, existem cinco tipos básicos de Grafos Dinâmicos.
 
@@ -334,7 +334,7 @@ O Dynagraph é capaz de visualizar o comportamento do grafo ao longo de um perí
 visualizar previsões e processos dinâmicos em vários contextos e realizar simulações preditivas sobre estes eventos \cite{dynagraph}.
 
 Um grafo dinâmico é definido por $G^t$, que ocorre no intervalo $t = [t_s,t_f]$, onde $t_s$ é o tempo inicial e $t_f$ é o tempo final.
-$G^t = (V^{t_v}, E^{t_e})$, onde $t_v \subseteq t$ e $t_e \subseteq t$, e $V^{t_v}$ e $E^{t_e}$ funções que geram vértices e arestas
+$G^t = (V^{t_v}, E^{t_e})$, onde $t_v \subseteq t$ e $t_e \subseteq t$, e $V^{t_v}$ e $E^{t_e}$ são funções que geram vértices e arestas
 respectivamente, em função do intervalo $t=t_v \cup t_e$.
 
 As estruturas $V^{t_v} = \{O^{t_v}, F^{t_v}\}$ para vértices e $E^{t_e} = \{O^{t_e}, F^{t_e}\}$ para arestas são semelhantes,
@@ -345,8 +345,8 @@ conjuntos indexados de características modificáveis destes objetos \cite{dynag
 A estrutura de dados usada no Dynagraph segue a Notação de Objeto Javascript (JSON), que é um formato de texto de intercâmbio de dados \cite{douglas}.
 A figura \ref{fig:jsondyn} mostra como é essa estrutura seguindo três objetos principais: ``metadata'', ``binding'' e ``data''.
 
-Em ``metadata'' são definidos os campos para utilização de qualquer identificador, por exemplo é possível utilizar ``ini'' e ``fim'' no
-lugar de ``start'' e ``end'' respectivamente.
+Em ``metadata'' são definidos os campos para utilização de qualquer identificador, por exemplo é possível utilizar ``ini'' e ``fim'',
+que representam o tempo inicial e final de um elemento, no lugar de ``start'' e ``end'' respectivamente.
 
 Em ``binding'' são definidas as características dos vértices e arestas. Seguindo o exemplo da figura \ref{fig:jsondyn}, ``vertex'' poderá
 ser do tipo ``v1'', ``v2'' e ``v3'', onde cada tipo contém informações da forma do vértice. Essa forma pode ser uma imagem no formato
@@ -384,7 +384,7 @@ Os campos ``metadata'' e ``binding'' foram omitidos para evidenciar o objeto ``d
 \end{figure}
 
 A figura \ref{fig:dynagraph} demonstra os dados do código da figura \ref{fig:jsondyn} sendo utilizados no software
-Dynagraph com variações temporais no Grafo e nas características de seus Vértices e Arestas.
+Dynagraph com variações temporais no grafo e nas características de seus vértices e arestas.
 
 \FloatBarrier
 \begin{figure}[htbp]
