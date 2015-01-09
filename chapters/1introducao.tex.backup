@@ -67,9 +67,8 @@ numa rede de topologia dinâmica, utilizando o software Dynagraph \cite{dynagrap
  \item Seguir o modelo computacional Dynagraph \cite{dynagraph} para redes dinâmicas para criacão de um modelo composto
  que aborde redes de topologia estática e dinâmica;
  \item Desenvolver uma ferramenta capaz de sugerir um trajeto com menor tempo
- de percurso entre dois pontos conhecidos, e que recalcula o caminho ótimo em trechos
- intermediários, caso o tempo realizado num determinado trecho seja diferente do proposto,
- e caso a rede seja alterada ao longo do caminho.
+ de percurso entre dois pontos conhecidos, baseada no tempo médio de percurso em trechos
+ intermediários, numa rede que pode ser alterada ao longo do tempo.
 \end{itemize}
 
 \section{Metodologia de Desenvolvimento}
@@ -85,7 +84,7 @@ O trabalho foi dividido em 3 etapas, que são descritas à seguir:
  \item Empregar modelos de caminhos mínimos: adaptar a aplicação para sistemas que usam 
  previsão dos tempos de percurso;
 
- \item Efetuar testes: elaborar relatórios e métricas através de testes que possam ser analisados pelo
+ \item Efetuar testes: elaborar relatórios através de testes que possam ser analisados pelo
  software de visualização e edição Dynagraph.
 \end{itemize}
 
@@ -95,9 +94,8 @@ Este trabalho está organizado em cinco capítulos:
 O Capítulo 1 apresenta soluções tecnológicas para resolução de problemas de caminho mínimo,
 além das motivações e metodologia para o desenvolvimento da pesquisa.
 O Capítulo 2 apresenta uma revisão bibliográfica sobre redes de Topologia Estática, redes Dinâmicas e
-sua geração e manutenção, descrevendo e comparando algumas soluções.
+sua geração e manutenção, descrevendo algumas soluções.
 O Capítulo 3 apresenta a fundamentação teórica para a compreensão do trabalho desenvolvido, abordando
-algoritmos de caminho mínimo em grafos estáticos e dinâmicos.
-O Capítulo 4 apresenta os resultados obtidos pelos testes de desempenho, utilizando o Dynagraph
-como ferramenta de avalição através das métricas utilizadas por ele.
+caminhos em grafos estáticos e dinâmicos, e descrevendo os algoritmos desenvolvidos nesta pesquisa.
+O Capítulo 4 apresenta os resultados obtidos pelos testes realizados no Dynagraph.
 No Capítulo 5 são apresentadas as conclusões deste trabalho e propostas para trabalhos futuros.

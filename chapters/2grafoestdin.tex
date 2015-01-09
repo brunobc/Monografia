@@ -207,14 +207,14 @@ porém os atributos sempre serão os mesmos. A figura \ref{fig:tdae} mostra um e
 \subsection{Topologia e Atributos Dinâmicos}
 \label{subsec:topdinatridin}
 Nesta rede, o grafo é definido como $G(V^t, L^t)$, onde $V^t$ e $L^t$ mudam no horizonte $H \in [T_i, T_k]$, como
-visto na figura \ref{fig:tdat}.
+visto na figura \ref{fig:tdad}.
 Estas redes são mais complexas \cite{dynagraph}, pois lidam com grande volume de dados comparadas as redes anteriores descritas.
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.80\textwidth]{chapters/fig/tdat.png}
+ \includegraphics[width=.80\textwidth]{chapters/fig/tdad.png}
 \caption{Grafo com Topologia e Atributos Dinâmicos}
-\label{fig:tdat}
+\label{fig:tdad}
 \end{figure}
 
 \FloatBarrier
@@ -233,8 +233,8 @@ A ideia central de \cite{kim} é modelar uma rede dinâmica como digrafos orient
 ao tempo (time-ordered graph), que é gerada através da ligação de instantes temporais com arestas
 direcionadas que unem cada nó ao seu sucessor no tempo. Com isso, transformar uma rede dinâmica
 em um grafo maior, mas facilmente analisável. Isto permite não só a utilização dos algoritmos
-desenvolvidos para gráficos estáticos, mas também para melhor definir métricas para
-gráficos dinâmicos.
+desenvolvidos para grafos estáticos, mas também para melhor definir métricas para
+grafos dinâmicos.
 
 Segundo \cite{kim} um sistema de grafos dinâmicos é um objeto de representação visual que pode descrever
 melhor o comportamento dinâmico de objetos relacionados a eventos dinâmicos e introduzir
@@ -246,17 +246,16 @@ em um conjunto de vértices e arestas temporais existentes no intervalo de tempo
 os vértices $V$ e conjunto de arestas temporais $E_{0,T}$, onde uma aresta $(u,v)_{i,j}$ $\in$ $E_{0,T}$
 existe entre vértices $u$ e $v$ em um intervalo de tempo $[i,j]$, tal que $i \leqslant T$ e $j \geqslant 0$ \cite{kim}.
 
-Neste modelo, em uma rede dinâmica, o conjunto de vértices $V$ é sempre o mesmo, enquanto o conjunto de arestas existentes
-muda ao longo do tempo.
+Uma das principais características desse modelo é que o conjunto de vértices $V$ não muda,
+enquanto o conjunto de arestas muda ao longo do tempo.
 
 A letra $w$ representa a duração de cada $snapshot$ (ou janela de tempo) e expressa em alguma unidade de tempo (como segundos ou horas).
-
-Conforme \cite{kim}, uma rede dinâmica pode ser representada como uma série de grafos estáticos
-$G_1, G_2, ..., G_N$. A notação $G_t(1 \leqslant t \leqslant n)$ representa o grafo agregado que consiste
+Uma rede dinâmica pode ser representada como uma série de grafos estáticos $G_1, G_2, ..., G_N$.
+A notação $G_t(1 \leqslant t \leqslant n)$ representa o grafo agregado que consiste
 de um conjunto de vértices $V$ e um conjunto de arestas $E_t$, onde uma aresta $(u,v)$ $\in$ $E_t$ existe
 somente se uma aresta temporal $(u,v)_{i,j}$ $\in$ $E_{0,T}$ existe entre os vértices $v$ e $u$ no intervalo
 de tempo $[i,j]$, tal que $i \leqslant wt$ e $j > w(t-1)$. $G_t$ é o t-ésimo $snapshot$ temporal de uma
-rede dinâmica $G^D_{0,T}$ durante a t-ésima janela de tempo.
+rede dinâmica $G^D_{0,T}$ durante a t-ésima janela de tempo \cite{kim}.
 
 A tabela \ref{tab:kim} mostra uma relação de arestas e seus intervalos de existência. A figura \ref{fig:grafoKim} mostra os mesmos
 dados desta tabela, em uma série de grafos estáticos e representação agredada.
