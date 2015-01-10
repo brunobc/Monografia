@@ -50,7 +50,7 @@ Fonte: Elaboração própria, baseada em \cite{goodrich}
 
 
 \cite{goodrich} diz que se todas as arestas em um grafo forem não-dirigidas,
-então diz-se que o grafo é um grafo não-dirigido. De forma similar, um grafo dirigido, ou dígrafo, é um grafo em
+então diz-se que o grafo é um grafo não-dirigido. De forma similar, um grafo dirigido, ou digrafo, é um grafo em
 que todas as arestas são dirigidas. Um grafo que tem arestas dirigidas e não-dirigidas é chamado de grafo misto, 
 como mostra a figura \ref{fig:misto}.
 Um mapa viário de uma cidade pode ser modelado como um grafo cujos vértices são cruzamentos ou finais de ruas, e cujas arestas
@@ -81,13 +81,13 @@ Segundo \cite{goldbarg}, uma matriz $A = |a_{ij}|$ quadrada de ordem $n$ é deno
 \indent $a_{ij}$ = 0 em caso contrário.
 
 As figuras \ref{fig:matriznaodirecionada} e \ref{fig:matrizdirecionada} apresentam exemplos de matrizes de adjacências para
-grafos não direcionados e direcionados, respectivamente.
+grafos não orientados e orientados, respectivamente.
 
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.20\textwidth]{chapters/fig/cal_fig_091a.jpg}
  \includegraphics[width=.25\textwidth]{chapters/fig/cal_fig_091b.jpg}
-\caption{Matriz de adjacências de grafo não direcionado}
+\caption{Matriz de adjacências de grafo não orientado}
 Fonte: \cite{goldbarg}
 \label{fig:matriznaodirecionada}
 \end{figure}
@@ -96,7 +96,7 @@ Fonte: \cite{goldbarg}
 \centering
  \includegraphics[width=.20\textwidth]{chapters/fig/cal_fig_092a.jpg}
  \includegraphics[width=.25\textwidth]{chapters/fig/cal_fig_092b.jpg}
-\caption{Matriz de adjacência de grafo direcionado}
+\caption{Matriz de adjacência de grafo orientado}
 Fonte: \cite{goldbarg}
 \label{fig:matrizdirecionada}
 \end{figure}
@@ -168,8 +168,8 @@ Logo, existem cinco tipos básicos de Grafos Dinâmicos:
 \begin{itemize}
 \item Em um grafo ou digrafo com nós dinâmicos, o conjunto $V$ varia com o tempo. Assim, alguns nós podem
 ser adicionados ou removidos. Quando os nós são removidos, as arestas ligadas a eles também são removidas; 
-\item Em um grafo ou dígrafo com elos ou arcos dinâmicos, o conjunto $L$ varia com o tempo. Assim, as arestas ou arcos podem
-ser adicionados ou removidos a partir do grafo ou dígrafo;
+\item Em um grafo ou digrafo com elos ou arcos dinâmicos, o conjunto $L$ varia com o tempo. Assim, as arestas ou arcos podem
+ser adicionados ou removidos a partir do grafo ou digrafo;
 \item Em um grafo ou digrafo dinâmico de nodos ponderados, a função $f$ varia com o tempo. Assim, os pesos nos nós também variam;
 \item Em um grafo ou digrafo dinâmico de elos ou arcos ponderados, a função $g$ varia com o tempo;
 \item Em um grafo ou digrafo dinâmico totalmente ponderado (ou grafo com topologia e atributos dinâmicos), ambas as funções $f$ e $g$
@@ -206,8 +206,8 @@ porém os atributos sempre serão os mesmos. A figura \ref{fig:tdae} mostra um e
 
 \subsection{Topologia e Atributos Dinâmicos}
 \label{subsec:topdinatridin}
-Nesta rede, o grafo é definido como $G(V^t, L^t)$, onde $V^t$ e $L^t$ mudam no horizonte $H \in [T_i, T_k]$, como
-visto na figura \ref{fig:tdad}.
+Nesta rede os atributos podem ser alterados ao longo do tempo, e o grafo é definido como $G(V^t, L^t)$,
+onde $V^t$ e $L^t$ mudam no horizonte $H \in [T_i, T_k]$, como visto na figura \ref{fig:tdad}.
 Estas redes são mais complexas \cite{dynagraph}, pois lidam com grande volume de dados comparadas às redes anteriormente descritas.
 
 \begin{figure}[htbp]
@@ -349,7 +349,8 @@ A figura \ref{fig:jsondynagraph} mostra como é essa estrutura seguindo três ob
 Em ``metadata'' são definidos os campos para utilização de qualquer identificador, por exemplo é possível utilizar ``ini'' e ``fim'',
 que representam o tempo inicial e final de um elemento, no lugar de ``start'' e ``end'' respectivamente.
 
-Na figura \ref{fig:jsondynagraph} ``binding'' são definidas as características dos vértices e arestas. Seguindo o exemplo da figura \ref{fig:jsondynagraph}, ``vertex'' poderá
+Na figura \ref{fig:jsondynagraph}, em ``binding'' são definidas as características dos vértices e arestas.
+Seguindo o exemplo da mesma figura, ``vertex'' poderá
 ser do tipo ``v1'', ``v2'' e ``v3'', onde cada tipo contém informações da forma do vértice. Essa forma pode ser uma imagem no formato
 ``png'' ou ``jpg'' ou customizada com as seguintes características:
 \begin{itemize}
@@ -390,10 +391,10 @@ Dynagraph com variações temporais no grafo e nas características de seus vér
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.24\textwidth]{chapters/fig/b1mod.png}
- \includegraphics[width=.24\textwidth]{chapters/fig/b2mod.png}
- \includegraphics[width=.24\textwidth]{chapters/fig/b3mod.png}
- \includegraphics[width=.24\textwidth]{chapters/fig/b4mod.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/b1mod.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/b2mod.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/b3mod.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/b4mod.png}
 \caption{Capturas de tela do software Dynagraph no modo de edição de um Grafo Dinâmico}
 \label{fig:dynagraph}
 \end{figure}

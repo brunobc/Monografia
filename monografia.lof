@@ -3,8 +3,8 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Grafo n\IeC {\~a}o Orientado ou Sim\IeC {\'e}trico - $G(V,E)$}}{19}
 \contentsline {figure}{\numberline {3}{\ignorespaces Grafo de co-autoria de alguns autores}}{20}
 \contentsline {figure}{\numberline {4}{\ignorespaces Grafo Misto - $G(V,E,A)$}}{20}
-\contentsline {figure}{\numberline {5}{\ignorespaces Matriz de adjac\IeC {\^e}ncias de grafo n\IeC {\~a}o direcionado}}{21}
-\contentsline {figure}{\numberline {6}{\ignorespaces Matriz de adjac\IeC {\^e}ncia de grafo direcionado}}{21}
+\contentsline {figure}{\numberline {5}{\ignorespaces Matriz de adjac\IeC {\^e}ncias de grafo n\IeC {\~a}o orientado}}{21}
+\contentsline {figure}{\numberline {6}{\ignorespaces Matriz de adjac\IeC {\^e}ncia de grafo orientado}}{21}
 \contentsline {figure}{\numberline {7}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o em Listas Encadeadas de um grafo}}{22}
 \contentsline {figure}{\numberline {8}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o de um grafo em Listas Duplamente Encadeadas}}{22}
 \contentsline {figure}{\numberline {9}{\ignorespaces Grafo com Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}}{24}
@@ -15,7 +15,7 @@
 \contentsline {figure}{\numberline {14}{\ignorespaces Captura de tela do software Gephi}}{28}
 \contentsline {figure}{\numberline {15}{\ignorespaces Estrutura JSON usada pelo Dynagraph}}{30}
 \contentsline {figure}{\numberline {16}{\ignorespaces Capturas de tela do software Dynagraph no modo de edi\IeC {\c c}\IeC {\~a}o de um Grafo Din\IeC {\^a}mico}}{31}
-\contentsline {figure}{\numberline {17}{\ignorespaces Teorema - Princ\IeC {\'\i }pio do algoritmo de caminho m\IeC {\'\i }nimo}}{33}
+\contentsline {figure}{\numberline {17}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o das propriedades do princ\IeC {\'\i }pio do algoritmo de caminho m\IeC {\'\i }nimo}}{33}
 \contentsline {figure}{\numberline {18}{\ignorespaces Grafo - Caminho M\IeC {\'\i }nimo}}{36}
 \contentsline {figure}{\numberline {19}{\ignorespaces Grafo exemplo para determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo}}{41}
 \contentsline {figure}{\numberline {20}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o do intervalo de previs\IeC {\~a}o em uma liga\IeC {\c c}\IeC {\~a}o}}{41}
@@ -43,18 +43,18 @@
 \contentsline {figure}{\numberline {42}{\ignorespaces Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos}}{52}
 \contentsline {figure}{\numberline {43}{\ignorespaces Estrutura JSON do tempo de exist\IeC {\^e}ncia dos v\IeC {\'e}rtices e arestas}}{54}
 \contentsline {figure}{\numberline {44}{\ignorespaces Dynagraph - Captura de tela}}{55}
-\contentsline {figure}{\numberline {45}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 1}}{55}
+\contentsline {figure}{\numberline {45}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 1}}{56}
 \contentsline {figure}{\numberline {46}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 2 e 3}}{56}
-\contentsline {figure}{\numberline {47}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 4 e 5}}{56}
+\contentsline {figure}{\numberline {47}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 4 e 5}}{57}
 \contentsline {figure}{\numberline {48}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 6 e 7}}{57}
 \contentsline {figure}{\numberline {49}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Din\IeC {\^a}micos}}{58}
-\contentsline {figure}{\numberline {50}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos}}{59}
-\contentsline {figure}{\numberline {51}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: mesma abordagem em \cite {leonard}}}{59}
+\contentsline {figure}{\numberline {50}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: sem permiss\IeC {\~a}o adiante}}{59}
+\contentsline {figure}{\numberline {51}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: com permiss\IeC {\~a}o adiante}}{59}
 \contentsline {figure}{\numberline {52}{\ignorespaces Estrutura JSON - Exemplo 1}}{60}
 \contentsline {figure}{\numberline {53}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 1}}{61}
 \contentsline {figure}{\numberline {54}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 1}}{62}
 \contentsline {figure}{\numberline {55}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 1}}{63}
-\contentsline {figure}{\numberline {56}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 2}}{64}
+\contentsline {figure}{\numberline {56}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 2}}{63}
 \contentsline {figure}{\numberline {57}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 2}}{64}
 \contentsline {figure}{\numberline {58}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 2}}{65}
 \contentsline {figure}{\numberline {59}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 3}}{66}

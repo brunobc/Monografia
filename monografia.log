@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.23)  10 JAN 2015 06:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.23)  10 JAN 2015 14:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1032,10 +1032,10 @@ o de Ob-jeto Ja-vas-cript (JSON),
 
 [28 <./chapters/fig/gephiDois.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 365.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 366.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 365.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 377.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 366.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 378.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -1053,29 +1053,29 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 File: chapters/fig/b1mod.png Graphic file (type png)
 
 <use chapters/fig/b1mod.png>
-Package pdftex.def Info: chapters/fig/b1mod.png used on input line 393.
-(pdftex.def)             Requested size: 109.26108pt x 163.268pt.
+Package pdftex.def Info: chapters/fig/b1mod.png used on input line 394.
+(pdftex.def)             Requested size: 159.33821pt x 238.10423pt.
 
 <chapters/fig/b2mod.png, id=138, 332.74312pt x 495.35063pt>
 File: chapters/fig/b2mod.png Graphic file (type png)
 
 <use chapters/fig/b2mod.png>
-Package pdftex.def Info: chapters/fig/b2mod.png used on input line 394.
-(pdftex.def)             Requested size: 109.26108pt x 162.6499pt.
+Package pdftex.def Info: chapters/fig/b2mod.png used on input line 395.
+(pdftex.def)             Requested size: 159.33821pt x 237.20628pt.
 
 <chapters/fig/b3mod.png, id=139, 333.49594pt x 495.35063pt>
 File: chapters/fig/b3mod.png Graphic file (type png)
 
 <use chapters/fig/b3mod.png>
-Package pdftex.def Info: chapters/fig/b3mod.png used on input line 395.
-(pdftex.def)             Requested size: 109.26108pt x 162.2871pt.
+Package pdftex.def Info: chapters/fig/b3mod.png used on input line 396.
+(pdftex.def)             Requested size: 159.33821pt x 236.66963pt.
 
 <chapters/fig/b4mod.png, id=140, 332.74312pt x 496.10344pt>
 File: chapters/fig/b4mod.png Graphic file (type png)
 
 <use chapters/fig/b4mod.png>
-Package pdftex.def Info: chapters/fig/b4mod.png used on input line 396.
-(pdftex.def)             Requested size: 109.26108pt x 162.89708pt.
+Package pdftex.def Info: chapters/fig/b4mod.png used on input line 397.
+(pdftex.def)             Requested size: 159.33821pt x 237.56676pt.
 ) (./chapters/3fundamentacao-teorica.tex [31 <./chapters/fig/b1mod.png> <./chap
 ters/fig/b2mod.png> <./chapters/fig/b3mod.png> <./chapters/fig/b4mod.png>]
 Cap\'{\i }tulo 3.
@@ -1087,7 +1087,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
 [32
 
 ]
-Overfull \hbox (4.69637pt too wide) in paragraph at lines 41--43
+Overfull \hbox (4.69637pt too wide) in paragraph at lines 40--42
 []\T1/ptm/m/n/12 Prova das pro-pri-e-da-des pode ser en-con-trada em (AHUJA; MA
 G-NANTI; OR-LIN, 1993).
  []
@@ -1097,21 +1097,21 @@ G-NANTI; OR-LIN, 1993).
 File: chapters/fig/teorema.png Graphic file (type png)
 
 <use chapters/fig/teorema.png>
-Package pdftex.def Info: chapters/fig/teorema.png used on input line 52.
+Package pdftex.def Info: chapters/fig/teorema.png used on input line 51.
 (pdftex.def)             Requested size: 204.85846pt x 49.94295pt.
  [33 <./chapters/fig/teorema.png>] [34] [35]
 <chapters/fig/grafoRadix.png, id=164, 432.86719pt x 244.66406pt>
 File: chapters/fig/grafoRadix.png Graphic file (type png)
 
 <use chapters/fig/grafoRadix.png>
-Package pdftex.def Info: chapters/fig/grafoRadix.png used on input line 169.
+Package pdftex.def Info: chapters/fig/grafoRadix.png used on input line 168.
 (pdftex.def)             Requested size: 295.90588pt x 167.25786pt.
  [36 <./chapters/fig/grafoRadix.png>] [37]
 [38] [39] [40] <chapters/fig/leo1.png, id=182, 845.1575pt x 435.6275pt>
 File: chapters/fig/leo1.png Graphic file (type png)
 
 <use chapters/fig/leo1.png>
-Package pdftex.def Info: chapters/fig/leo1.png used on input line 371.
+Package pdftex.def Info: chapters/fig/leo1.png used on input line 370.
 (pdftex.def)             Requested size: 273.14923pt x 140.7929pt.
 
 <chapters/fig/intervalotemporal.png, id=183, 468.75125pt x 97.36375pt>
@@ -1119,56 +1119,56 @@ File: chapters/fig/intervalotemporal.png Graphic file (type png)
 
 <use chapters/fig/intervalotemporal.png>
 Package pdftex.def Info: chapters/fig/intervalotemporal.png used on input line 
-388.
+387.
 (pdftex.def)             Requested size: 273.14923pt x 56.73544pt.
  [41 <./chapters/fig/leo1.png> <./chapters/fig/intervalotemporal.png>]
 <chapters/fig/leo2.png, id=189, 845.1575pt x 435.6275pt>
 File: chapters/fig/leo2.png Graphic file (type png)
 
 <use chapters/fig/leo2.png>
-Package pdftex.def Info: chapters/fig/leo2.png used on input line 407.
+Package pdftex.def Info: chapters/fig/leo2.png used on input line 406.
 (pdftex.def)             Requested size: 227.62206pt x 117.32187pt.
 
 <chapters/fig/leo3.png, id=190, 845.1575pt x 435.6275pt>
 File: chapters/fig/leo3.png Graphic file (type png)
 
 <use chapters/fig/leo3.png>
-Package pdftex.def Info: chapters/fig/leo3.png used on input line 449.
+Package pdftex.def Info: chapters/fig/leo3.png used on input line 448.
 (pdftex.def)             Requested size: 227.62206pt x 117.32187pt.
  [42 <./chapters/fig/leo2.png>]
 <chapters/fig/leo4.png, id=196, 845.1575pt x 435.6275pt>
 File: chapters/fig/leo4.png Graphic file (type png)
 
 <use chapters/fig/leo4.png>
-Package pdftex.def Info: chapters/fig/leo4.png used on input line 478.
+Package pdftex.def Info: chapters/fig/leo4.png used on input line 477.
 (pdftex.def)             Requested size: 227.62206pt x 117.32187pt.
  [43 <./chapters/fig/leo3.png> <./chapters/fig/leo4.png>] <chapters/fig/leo5.pn
 g, id=202, 845.1575pt x 438.63875pt>
 File: chapters/fig/leo5.png Graphic file (type png)
 
 <use chapters/fig/leo5.png>
-Package pdftex.def Info: chapters/fig/leo5.png used on input line 505.
+Package pdftex.def Info: chapters/fig/leo5.png used on input line 504.
 (pdftex.def)             Requested size: 227.62206pt x 118.13284pt.
 
 <chapters/fig/leo6.png, id=203, 845.1575pt x 438.63875pt>
 File: chapters/fig/leo6.png Graphic file (type png)
 
 <use chapters/fig/leo6.png>
-Package pdftex.def Info: chapters/fig/leo6.png used on input line 536.
+Package pdftex.def Info: chapters/fig/leo6.png used on input line 535.
 (pdftex.def)             Requested size: 227.62206pt x 118.13284pt.
  [44 <./chapters/fig/leo5.png>]
 <chapters/fig/leo7.png, id=208, 845.1575pt x 438.63875pt>
 File: chapters/fig/leo7.png Graphic file (type png)
 
 <use chapters/fig/leo7.png>
-Package pdftex.def Info: chapters/fig/leo7.png used on input line 563.
+Package pdftex.def Info: chapters/fig/leo7.png used on input line 562.
 (pdftex.def)             Requested size: 227.62206pt x 118.13284pt.
  [45 <./chapters/fig/leo6.png> <./chapters/fig/leo7.png>] <chapters/fig/leo8.pn
 g, id=214, 847.165pt x 438.63875pt>
 File: chapters/fig/leo8.png Graphic file (type png)
 
 <use chapters/fig/leo8.png>
-Package pdftex.def Info: chapters/fig/leo8.png used on input line 592.
+Package pdftex.def Info: chapters/fig/leo8.png used on input line 591.
 (pdftex.def)             Requested size: 227.62206pt x 117.85175pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
@@ -1178,35 +1178,35 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 File: chapters/fig/buckets.png Graphic file (type png)
 
 <use chapters/fig/buckets.png>
-Package pdftex.def Info: chapters/fig/buckets.png used on input line 660.
+Package pdftex.def Info: chapters/fig/buckets.png used on input line 659.
 (pdftex.def)             Requested size: 227.62206pt x 52.90462pt.
 
 <chapters/fig/buckets1.png, id=223, 513.92pt x 119.44624pt>
 File: chapters/fig/buckets1.png Graphic file (type png)
 
 <use chapters/fig/buckets1.png>
-Package pdftex.def Info: chapters/fig/buckets1.png used on input line 672.
+Package pdftex.def Info: chapters/fig/buckets1.png used on input line 671.
 (pdftex.def)             Requested size: 227.62206pt x 52.90462pt.
 
 <chapters/fig/buckets2.png, id=224, 513.92pt x 119.44624pt>
 File: chapters/fig/buckets2.png Graphic file (type png)
 
 <use chapters/fig/buckets2.png>
-Package pdftex.def Info: chapters/fig/buckets2.png used on input line 683.
+Package pdftex.def Info: chapters/fig/buckets2.png used on input line 682.
 (pdftex.def)             Requested size: 227.62206pt x 52.90462pt.
 
 <chapters/fig/limitesup1.png, id=225, 845.1575pt x 435.6275pt>
 File: chapters/fig/limitesup1.png Graphic file (type png)
 
 <use chapters/fig/limitesup1.png>
-Package pdftex.def Info: chapters/fig/limitesup1.png used on input line 695.
+Package pdftex.def Info: chapters/fig/limitesup1.png used on input line 694.
 (pdftex.def)             Requested size: 227.62206pt x 117.32187pt.
 
 <chapters/fig/buckets3.png, id=226, 513.92pt x 119.44624pt>
 File: chapters/fig/buckets3.png Graphic file (type png)
 
 <use chapters/fig/buckets3.png>
-Package pdftex.def Info: chapters/fig/buckets3.png used on input line 702.
+Package pdftex.def Info: chapters/fig/buckets3.png used on input line 701.
 (pdftex.def)             Requested size: 227.62206pt x 52.90462pt.
  [48 <./chapters/fig/buckets.png> <./chapters/fig/buckets1.png> <./chapters/fig
 /buckets2.png>]
@@ -1214,14 +1214,14 @@ Package pdftex.def Info: chapters/fig/buckets3.png used on input line 702.
 File: chapters/fig/limitesup2.png Graphic file (type png)
 
 <use chapters/fig/limitesup2.png>
-Package pdftex.def Info: chapters/fig/limitesup2.png used on input line 711.
+Package pdftex.def Info: chapters/fig/limitesup2.png used on input line 710.
 (pdftex.def)             Requested size: 227.62206pt x 118.13284pt.
 
 <chapters/fig/buckets4.png, id=235, 513.92pt x 119.44624pt>
 File: chapters/fig/buckets4.png Graphic file (type png)
 
 <use chapters/fig/buckets4.png>
-Package pdftex.def Info: chapters/fig/buckets4.png used on input line 718.
+Package pdftex.def Info: chapters/fig/buckets4.png used on input line 717.
 (pdftex.def)             Requested size: 227.62206pt x 52.90462pt.
  [49 <./chapters/fig/limitesup1.png> <./chapters/fig/buckets3.png> <./chapters/
 fig/limitesup2.png>]
@@ -1275,15 +1275,10 @@ File: chapters/fig/pathtopdyn.png Graphic file (type png)
 <use chapters/fig/pathtopdyn.png>
 Package pdftex.def Info: chapters/fig/pathtopdyn.png used on input line 796.
 (pdftex.def)             Requested size: 364.19667pt x 142.13316pt.
- [52 <./chapters/fig/limitesup5.png> <./chapters/fig/pathtopdyn.png>]
-
-LaTeX Warning: Reference `fig:janelatemporal' on page 53 undefined on input lin
-e 813.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+ [52 <./chapters/fig/limitesup5.png> <./chapters/fig/pathtopdyn.png>] (/usr/sha
+re/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-(./chapters/datatime.json [53])
+) (./chapters/datatime.json [53])
 <chapters/fig/explicacaoDyn1.png, id=270, 406.51875pt x 407.5225pt>
 File: chapters/fig/explicacaoDyn1.png Graphic file (type png)
 
@@ -1315,60 +1310,60 @@ File: chapters/fig/explicacaoDyn4.png Graphic file (type png)
 Package pdftex.def Info: chapters/fig/explicacaoDyn4.png used on input line 879
 .
 (pdftex.def)             Requested size: 204.85846pt x 205.36507pt.
-
-<chapters/fig/dyndyn1.png, id=274, 631.35875pt x 441.65pt>
+ [54] [55 <./chapters/fig/explicacaoDyn1.png> <./chapters/fig/explicacaoDyn2.pn
+g> <./chapters/fig/explicacaoDyn3.png> <./chapters/fig/explicacaoDyn4.png>]
+<chapters/fig/dyndyn1.png, id=285, 631.35875pt x 441.65pt>
 File: chapters/fig/dyndyn1.png Graphic file (type png)
 
 <use chapters/fig/dyndyn1.png>
-Package pdftex.def Info: chapters/fig/dyndyn1.png used on input line 890.
+Package pdftex.def Info: chapters/fig/dyndyn1.png used on input line 891.
 (pdftex.def)             Requested size: 250.38564pt x 175.15405pt.
- [54] [55 <./chapters/fig/explicacaoDyn1.png> <./chapters/fig/explicacaoDyn2.pn
-g> <./chapters/fig/explicacaoDyn3.png> <./chapters/fig/explicacaoDyn4.png> <./c
-hapters/fig/dyndyn1.png>]
+
 <chapters/fig/dyndyn2.png, id=286, 631.35875pt x 441.65pt>
 File: chapters/fig/dyndyn2.png Graphic file (type png)
 
 <use chapters/fig/dyndyn2.png>
-Package pdftex.def Info: chapters/fig/dyndyn2.png used on input line 900.
-(pdftex.def)             Requested size: 204.85846pt x 143.30542pt.
+Package pdftex.def Info: chapters/fig/dyndyn2.png used on input line 901.
+(pdftex.def)             Requested size: 191.20169pt x 133.74947pt.
 
 <chapters/fig/dyndyn3.png, id=287, 630.355pt x 442.65375pt>
 File: chapters/fig/dyndyn3.png Graphic file (type png)
 
 <use chapters/fig/dyndyn3.png>
-Package pdftex.def Info: chapters/fig/dyndyn3.png used on input line 901.
-(pdftex.def)             Requested size: 204.85846pt x 143.854pt.
+Package pdftex.def Info: chapters/fig/dyndyn3.png used on input line 902.
+(pdftex.def)             Requested size: 191.20169pt x 134.26283pt.
 
 <chapters/fig/dyndyn4.png, id=288, 629.35126pt x 441.65pt>
 File: chapters/fig/dyndyn4.png Graphic file (type png)
 
 <use chapters/fig/dyndyn4.png>
-Package pdftex.def Info: chapters/fig/dyndyn4.png used on input line 908.
-(pdftex.def)             Requested size: 204.85846pt x 143.75693pt.
+Package pdftex.def Info: chapters/fig/dyndyn4.png used on input line 909.
+(pdftex.def)             Requested size: 191.20169pt x 134.17403pt.
 
 <chapters/fig/dyndyn5.png, id=289, 630.355pt x 441.65pt>
 File: chapters/fig/dyndyn5.png Graphic file (type png)
 
 <use chapters/fig/dyndyn5.png>
-Package pdftex.def Info: chapters/fig/dyndyn5.png used on input line 909.
-(pdftex.def)             Requested size: 204.85846pt x 143.5278pt.
+Package pdftex.def Info: chapters/fig/dyndyn5.png used on input line 910.
+(pdftex.def)             Requested size: 191.20169pt x 133.95839pt.
 
 <chapters/fig/dyndyn6.png, id=290, 629.35126pt x 441.65pt>
 File: chapters/fig/dyndyn6.png Graphic file (type png)
 
 <use chapters/fig/dyndyn6.png>
 Package pdftex.def Info: chapters/fig/dyndyn6.png used on input line 917.
-(pdftex.def)             Requested size: 204.85846pt x 143.75693pt.
+(pdftex.def)             Requested size: 191.20169pt x 134.17403pt.
 
 <chapters/fig/dyndyn7.png, id=291, 631.35875pt x 442.65375pt>
 File: chapters/fig/dyndyn7.png Graphic file (type png)
 
 <use chapters/fig/dyndyn7.png>
 Package pdftex.def Info: chapters/fig/dyndyn7.png used on input line 918.
-(pdftex.def)             Requested size: 204.85846pt x 143.6311pt.
-) (./chapters/4validacao.tex [56 <./chapters/fig/dyndyn2.png> <./chapters/fig/d
-yndyn3.png> <./chapters/fig/dyndyn4.png> <./chapters/fig/dyndyn5.png>] [57 <./c
-hapters/fig/dyndyn6.png> <./chapters/fig/dyndyn7.png>]
+(pdftex.def)             Requested size: 191.20169pt x 134.05345pt.
+) (./chapters/4validacao.tex [56 <./chapters/fig/dyndyn1.png> <./chapters/fig/d
+yndyn2.png> <./chapters/fig/dyndyn3.png>]
+[57 <./chapters/fig/dyndyn4.png> <./chapters/fig/dyndyn5.png> <./chapters/fig/d
+yndyn6.png> <./chapters/fig/dyndyn7.png>]
 Cap\'{\i }tulo 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
@@ -1380,7 +1375,7 @@ File: chapters/fig/validacao/shortestpath.png Graphic file (type png)
 
 <use chapters/fig/validacao/shortestpath.png>
 Package pdftex.def Info: chapters/fig/validacao/shortestpath.png used on input 
-line 24.
+line 22.
 (pdftex.def)             Requested size: 409.71692pt x 230.3483pt.
 
 <chapters/fig/validacao/upperlimit.png, id=299, 1371.1225pt x 770.88pt>
@@ -1388,7 +1383,7 @@ File: chapters/fig/validacao/upperlimit.png Graphic file (type png)
 
 <use chapters/fig/validacao/upperlimit.png>
 Package pdftex.def Info: chapters/fig/validacao/upperlimit.png used on input li
-ne 32.
+ne 30.
 (pdftex.def)             Requested size: 409.71692pt x 230.3483pt.
  [58
 
@@ -1398,7 +1393,7 @@ File: chapters/fig/validacao/downlimit.png Graphic file (type png)
 
 <use chapters/fig/validacao/downlimit.png>
 Package pdftex.def Info: chapters/fig/validacao/downlimit.png used on input lin
-e 40.
+e 38.
 (pdftex.def)             Requested size: 409.71692pt x 230.3483pt.
  [59 <./chapters/fig/validacao/upperlimit.png> <./chapters/fig/validacao/downli
 mit.png>]
@@ -1412,89 +1407,88 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 File: chapters/fig/validacao/ex1.png Graphic file (type png)
 
 <use chapters/fig/validacao/ex1.png>
-Package pdftex.def Info: chapters/fig/validacao/ex1.png used on input line 66.
+Package pdftex.def Info: chapters/fig/validacao/ex1.png used on input line 64.
 (pdftex.def)             Requested size: 318.66948pt x 179.15717pt.
 
 <chapters/fig/validacao/dyn1a.png, id=312, 481.8pt x 662.475pt>
 File: chapters/fig/validacao/dyn1a.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn1a.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn1a.png used on input line 74
+Package pdftex.def Info: chapters/fig/validacao/dyn1a.png used on input line 72
 .
-(pdftex.def)             Requested size: 159.33821pt x 219.08241pt.
+(pdftex.def)             Requested size: 113.81102pt x 156.49033pt.
 
 <chapters/fig/validacao/dyn1b.png, id=313, 481.8pt x 662.475pt>
 File: chapters/fig/validacao/dyn1b.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn1b.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn1b.png used on input line 75
+Package pdftex.def Info: chapters/fig/validacao/dyn1b.png used on input line 73
 .
-(pdftex.def)             Requested size: 159.33821pt x 219.08241pt.
+(pdftex.def)             Requested size: 113.81102pt x 156.49033pt.
 
 <chapters/fig/validacao/dyn1c.png, id=314, 481.8pt x 662.475pt>
 File: chapters/fig/validacao/dyn1c.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn1c.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn1c.png used on input line 76
+Package pdftex.def Info: chapters/fig/validacao/dyn1c.png used on input line 74
 .
-(pdftex.def)             Requested size: 159.33821pt x 219.08241pt.
+(pdftex.def)             Requested size: 113.81102pt x 156.49033pt.
 
 <chapters/fig/validacao/dyn1d.png, id=315, 481.8pt x 662.475pt>
 File: chapters/fig/validacao/dyn1d.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn1d.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn1d.png used on input line 77
+Package pdftex.def Info: chapters/fig/validacao/dyn1d.png used on input line 75
 .
-(pdftex.def)             Requested size: 159.33821pt x 219.08241pt.
+(pdftex.def)             Requested size: 113.81102pt x 156.49033pt.
  [61 <./chapters/fig/validacao/ex1.png>]
-[62 <./chapters/fig/validacao/dyn1a.png> <./chapters/fig/validacao/dyn1b.png> <
-./chapters/fig/validacao/dyn1c.png> <./chapters/fig/validacao/dyn1d.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
-(./chapters/fig/validacao/dyn1.json)
+(./chapters/fig/validacao/dyn1.json [62 <./chapters/fig/validacao/dyn1a.png> <.
+/chapters/fig/validacao/dyn1b.png> <./chapters/fig/validacao/dyn1c.png> <./chap
+ters/fig/validacao/dyn1d.png>])
 <chapters/fig/validacao/ex2.png, id=326, 1371.1225pt x 770.88pt>
 File: chapters/fig/validacao/ex2.png Graphic file (type png)
 
 <use chapters/fig/validacao/ex2.png>
-Package pdftex.def Info: chapters/fig/validacao/ex2.png used on input line 100.
-
+Package pdftex.def Info: chapters/fig/validacao/ex2.png used on input line 98.
 (pdftex.def)             Requested size: 318.66948pt x 179.15717pt.
- [63]
-<chapters/fig/validacao/dyn2a.png, id=330, 437.635pt x 602.25pt>
+
+<chapters/fig/validacao/dyn2a.png, id=327, 437.635pt x 602.25pt>
 File: chapters/fig/validacao/dyn2a.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn2a.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn2a.png used on input line 10
-8.
+6.
 (pdftex.def)             Requested size: 159.33821pt x 219.27263pt.
 
-<chapters/fig/validacao/dyn2b.png, id=331, 437.635pt x 602.25pt>
+<chapters/fig/validacao/dyn2b.png, id=328, 437.635pt x 602.25pt>
 File: chapters/fig/validacao/dyn2b.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn2b.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn2b.png used on input line 10
-9.
+7.
 (pdftex.def)             Requested size: 159.33821pt x 219.27263pt.
 
-<chapters/fig/validacao/dyn2c.png, id=332, 437.635pt x 602.25pt>
+<chapters/fig/validacao/dyn2c.png, id=329, 437.635pt x 602.25pt>
 File: chapters/fig/validacao/dyn2c.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn2c.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn2c.png used on input line 11
-0.
+Package pdftex.def Info: chapters/fig/validacao/dyn2c.png used on input line 10
+8.
 (pdftex.def)             Requested size: 159.33821pt x 219.27263pt.
 
-<chapters/fig/validacao/dyn2d.png, id=333, 437.635pt x 602.25pt>
+<chapters/fig/validacao/dyn2d.png, id=330, 437.635pt x 602.25pt>
 File: chapters/fig/validacao/dyn2d.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn2d.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn2d.png used on input line 11
-1.
+Package pdftex.def Info: chapters/fig/validacao/dyn2d.png used on input line 10
+9.
 (pdftex.def)             Requested size: 159.33821pt x 219.27263pt.
- [64 <./chapters/fig/validacao/ex2.png> <./chapters/fig/validacao/dyn2a.png> <.
-/chapters/fig/validacao/dyn2b.png> <./chapters/fig/validacao/dyn2c.png> <./chap
-ters/fig/validacao/dyn2d.png>]
+ [63 <./chapters/fig/validacao/ex2.png>]
+[64 <./chapters/fig/validacao/dyn2a.png> <./chapters/fig/validacao/dyn2b.png> <
+./chapters/fig/validacao/dyn2c.png> <./chapters/fig/validacao/dyn2d.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
@@ -1503,18 +1497,16 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 File: chapters/fig/validacao/ex3.png Graphic file (type png)
 
 <use chapters/fig/validacao/ex3.png>
-Package pdftex.def Info: chapters/fig/validacao/ex3.png used on input line 137.
+Package pdftex.def Info: chapters/fig/validacao/ex3.png used on input line 135.
 
 (pdftex.def)             Requested size: 318.66948pt x 179.15717pt.
- [65
-
-]
+ [65]
 <chapters/fig/validacao/dyn3a.png, id=345, 437.635pt x 602.25pt>
 File: chapters/fig/validacao/dyn3a.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn3a.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn3a.png used on input line 14
-5.
+3.
 (pdftex.def)             Requested size: 159.33821pt x 219.27263pt.
 
 <chapters/fig/validacao/dyn3b.png, id=346, 437.635pt x 602.25pt>
@@ -1522,7 +1514,7 @@ File: chapters/fig/validacao/dyn3b.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn3b.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn3b.png used on input line 14
-6.
+4.
 (pdftex.def)             Requested size: 159.33821pt x 219.27263pt.
 
 <chapters/fig/validacao/dyn3c.png, id=347, 437.635pt x 602.25pt>
@@ -1530,7 +1522,7 @@ File: chapters/fig/validacao/dyn3c.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn3c.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn3c.png used on input line 14
-7.
+5.
 (pdftex.def)             Requested size: 159.33821pt x 219.27263pt.
  [66 <./chapters/fig/validacao/ex3.png> <./chapters/fig/validacao/dyn3a.png> <.
 /chapters/fig/validacao/dyn3b.png> <./chapters/fig/validacao/dyn3c.png>]
@@ -1542,7 +1534,7 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 File: chapters/fig/validacao/ex4.png Graphic file (type png)
 
 <use chapters/fig/validacao/ex4.png>
-Package pdftex.def Info: chapters/fig/validacao/ex4.png used on input line 171.
+Package pdftex.def Info: chapters/fig/validacao/ex4.png used on input line 169.
 
 (pdftex.def)             Requested size: 318.66948pt x 179.15717pt.
 
@@ -1551,23 +1543,23 @@ File: chapters/fig/validacao/dyn4a.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn4a.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn4a.png used on input line 17
-9.
+7.
 (pdftex.def)             Requested size: 159.33821pt x 167.20407pt.
 
 <chapters/fig/validacao/dyn4b.png, id=357, 406.51875pt x 426.59375pt>
 File: chapters/fig/validacao/dyn4b.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn4b.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn4b.png used on input line 18
-0.
+Package pdftex.def Info: chapters/fig/validacao/dyn4b.png used on input line 17
+8.
 (pdftex.def)             Requested size: 159.33821pt x 167.20407pt.
 
 <chapters/fig/validacao/dyn4c.png, id=358, 406.51875pt x 426.59375pt>
 File: chapters/fig/validacao/dyn4c.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn4c.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn4c.png used on input line 18
-1.
+Package pdftex.def Info: chapters/fig/validacao/dyn4c.png used on input line 17
+9.
 (pdftex.def)             Requested size: 159.33821pt x 167.20407pt.
 
 <chapters/fig/validacao/dyn4d.png, id=359, 406.51875pt x 426.59375pt>
@@ -1575,7 +1567,7 @@ File: chapters/fig/validacao/dyn4d.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn4d.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn4d.png used on input line 18
-2.
+0.
 (pdftex.def)             Requested size: 159.33821pt x 167.20407pt.
 
 <chapters/fig/validacao/dyn4e.png, id=360, 406.51875pt x 426.59375pt>
@@ -1583,7 +1575,7 @@ File: chapters/fig/validacao/dyn4e.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn4e.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn4e.png used on input line 18
-3.
+1.
 (pdftex.def)             Requested size: 159.33821pt x 167.20407pt.
 
 <chapters/fig/validacao/dyn4f.png, id=361, 406.51875pt x 426.59375pt>
@@ -1591,7 +1583,7 @@ File: chapters/fig/validacao/dyn4f.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn4f.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn4f.png used on input line 18
-4.
+2.
 (pdftex.def)             Requested size: 159.33821pt x 167.20407pt.
 
 <chapters/fig/validacao/dyn4g.png, id=362, 406.51875pt x 426.59375pt>
@@ -1599,7 +1591,7 @@ File: chapters/fig/validacao/dyn4g.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn4g.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn4g.png used on input line 18
-5.
+3.
 (pdftex.def)             Requested size: 159.33821pt x 167.20407pt.
 
 <chapters/fig/validacao/dyn4h.png, id=363, 406.51875pt x 426.59375pt>
@@ -1607,11 +1599,11 @@ File: chapters/fig/validacao/dyn4h.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn4h.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn4h.png used on input line 18
-6.
+4.
 (pdftex.def)             Requested size: 159.33821pt x 167.20407pt.
 
 
-LaTeX Warning: Float too large for page by 1.82156pt on input line 189.
+LaTeX Warning: Float too large for page by 1.82156pt on input line 187.
 
 [67
 
@@ -1626,7 +1618,7 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 File: chapters/fig/validacao/ex5.png Graphic file (type png)
 
 <use chapters/fig/validacao/ex5.png>
-Package pdftex.def Info: chapters/fig/validacao/ex5.png used on input line 208.
+Package pdftex.def Info: chapters/fig/validacao/ex5.png used on input line 206.
 
 (pdftex.def)             Requested size: 318.66948pt x 179.15717pt.
 
@@ -1635,7 +1627,7 @@ File: chapters/fig/validacao/dyn5a.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn5a.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn5a.png used on input line 21
-6.
+4.
 (pdftex.def)             Requested size: 159.33821pt x 180.18698pt.
 
 <chapters/fig/validacao/dyn5b.png, id=380, 406.51875pt x 459.7175pt>
@@ -1643,7 +1635,7 @@ File: chapters/fig/validacao/dyn5b.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn5b.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn5b.png used on input line 21
-7.
+5.
 (pdftex.def)             Requested size: 159.33821pt x 180.18698pt.
 
 <chapters/fig/validacao/dyn5c.png, id=381, 406.51875pt x 459.7175pt>
@@ -1651,7 +1643,7 @@ File: chapters/fig/validacao/dyn5c.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn5c.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn5c.png used on input line 21
-8.
+6.
 (pdftex.def)             Requested size: 159.33821pt x 180.18698pt.
 
 <chapters/fig/validacao/dyn5d.png, id=382, 406.51875pt x 459.7175pt>
@@ -1659,23 +1651,23 @@ File: chapters/fig/validacao/dyn5d.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn5d.png>
 Package pdftex.def Info: chapters/fig/validacao/dyn5d.png used on input line 21
-9.
+7.
 (pdftex.def)             Requested size: 159.33821pt x 180.18698pt.
 
 <chapters/fig/validacao/dyn5e.png, id=383, 406.51875pt x 459.7175pt>
 File: chapters/fig/validacao/dyn5e.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn5e.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn5e.png used on input line 22
-0.
+Package pdftex.def Info: chapters/fig/validacao/dyn5e.png used on input line 21
+8.
 (pdftex.def)             Requested size: 159.33821pt x 180.18698pt.
 
 <chapters/fig/validacao/dyn5f.png, id=384, 406.51875pt x 459.7175pt>
 File: chapters/fig/validacao/dyn5f.png Graphic file (type png)
 
 <use chapters/fig/validacao/dyn5f.png>
-Package pdftex.def Info: chapters/fig/validacao/dyn5f.png used on input line 22
-1.
+Package pdftex.def Info: chapters/fig/validacao/dyn5f.png used on input line 21
+9.
 (pdftex.def)             Requested size: 159.33821pt x 180.18698pt.
  [69 <./chapters/fig/validacao/ex5.png>]
 [70 <./chapters/fig/validacao/dyn5a.png> <./chapters/fig/validacao/dyn5b.png> <
@@ -1704,9 +1696,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
 AED: lastpage setting LastPage
 [74] (./monografia.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  )
@@ -1715,10 +1704,10 @@ LaTeX Warning: There were multiply-defined labels.
 ### semi simple group (level 1) entered at line 59 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8299 strings out of 493304
- 118597 string characters out of 6139871
+ 8298 strings out of 493304
+ 118577 string characters out of 6139871
  397364 words of memory out of 5000000
- 11309 multiletter control sequences out of 15000+600000
+ 11308 multiletter control sequences out of 15000+600000
  78705 words of font info for 139 fonts, out of 8000000 for 9000
  959 hyphenation exceptions out of 8191
  38i,9n,41p,340b,2255s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1734,7 +1723,7 @@ usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on monografia.pdf (75 pages, 7616637 bytes).
+Output written on monografia.pdf (75 pages, 7601067 bytes).
 PDF statistics:
  452 PDF objects out of 1000 (max. 8388607)
  204 compressed objects within 3 object streams

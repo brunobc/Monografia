@@ -1,23 +1,21 @@
 \chapter{Validação}
 
 Para validação dos algoritmos foram gerados alguns grafos hipotéticos com cenários distintos.
-Alguns deles utilizaram o mesmo vetor de custo, como dito na seção \ref{sec:pathdyn}, que representam
-o tempo médio das passagens dos veículos por uma aresta ao longo do dia, em intervalos de 10 minutos.
+Alguns deles utilizam o mesmo vetor de custo, como dito na seção \ref{sec:pathdyn}, que representam
+o tempo médio das passagens dos veículos por uma aresta ao longo do dia, em intervalos padrões (10 minutos para nosso caso).
 
-% \subsection{Cenários de teste}
-
-\section{Ferramenta de simulação do caminho mínimo}
-Para determinar o caminho mínimo entre dois pontos conhecidos em grafos dinâmicos, foi criado
-uma extensão ao Dynagraph, que simula o caminho mínimo. Para isso, segue a sequência:
+\section{Ferramenta de cálculo do caminho mínimo}
+Para determinar o caminho mínimo entre dois vértices conhecidos em grafos dinâmicos, foi construída uma ferramenta (\textit{software})
+extendida do Dynagraph, que calcula o caminho mínimo. Para isso, em um grafo dinâmico segue a sequência:
 \begin{itemize}
 \item Ler a estrutura de dados JSON;
 \item Exibir o grafo com todos os vértices e arestas;
-\item Selecionar um dos 3 algoritmos para cálculo e exibição do caminho mínimo;
+\item Selecionar um dos algoritmos para cálculo e exibição do caminho mínimo;
 \item Baixar o arquivo JSON ou ir para a aplicação Dynagraph, que contém os mesmos dados do grafo mais as arestas do caminho mínimo;
 \end{itemize}
 
 As figuras \ref{fig:shortestpath}, \ref{fig:upperlimit} e \ref{fig:downlimit} mostram captura de telas
-da ferramenta exibindo exemplos de caminho mínimo dos 3 algoritmos e os seus dados:
+da ferramenta exibindo exemplos de caminho mínimo dos algoritmos e os seus dados em um determinado tipo de rede:
 
 \begin{figure}[htbp]
 \centering
@@ -30,7 +28,7 @@ da ferramenta exibindo exemplos de caminho mínimo dos 3 algoritmos e os seus da
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.90\textwidth]{chapters/fig/validacao/upperlimit.png}
-\caption{Simulador de Caminho Mínimo - Topologia Estática e Atributos Dinâmicos}
+\caption{Simulador de Caminho Mínimo - Topologia Estática e Atributos Dinâmicos: sem permissão adiante}
 \label{fig:upperlimit}
 \end{figure}
 \FloatBarrier
@@ -38,7 +36,7 @@ da ferramenta exibindo exemplos de caminho mínimo dos 3 algoritmos e os seus da
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.90\textwidth]{chapters/fig/validacao/downlimit.png}
-\caption{Simulador de Caminho Mínimo - Topologia Estática e Atributos Dinâmicos: mesma abordagem em \cite{leonard}}
+\caption{Simulador de Caminho Mínimo - Topologia Estática e Atributos Dinâmicos: com permissão adiante}
 \label{fig:downlimit}
 \end{figure}
 \FloatBarrier
@@ -57,7 +55,7 @@ da ferramenta exibindo exemplos de caminho mínimo dos 3 algoritmos e os seus da
 \end{figure}
 \FloatBarrier
 
-A seguir, são apresentados os grafos gerados pela ferramenta de simulação com seus respectivos dados,
+A seguir, são apresentados os grafos gerados pela ferramenta com seus respectivos dados,
 e a exibição do caminho mínimo no Dynagraph. As figuras seguem a ordem da esquerda para a direita e
 de cima para baixo.
 
@@ -71,10 +69,10 @@ de cima para baixo.
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn1a.png}
- \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn1b.png}
- \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn1c.png}
- \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn1d.png}
+ \includegraphics[width=.25\textwidth]{chapters/fig/validacao/dyn1a.png}
+ \includegraphics[width=.25\textwidth]{chapters/fig/validacao/dyn1b.png}
+ \includegraphics[width=.25\textwidth]{chapters/fig/validacao/dyn1c.png}
+ \includegraphics[width=.25\textwidth]{chapters/fig/validacao/dyn1d.png}
 \caption{Caminho Mínimo no Dynagraph - Exemplo 1}
 \label{fig:dyn1}
 \end{figure}

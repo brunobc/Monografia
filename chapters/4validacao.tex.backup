@@ -1,7 +1,7 @@
 \chapter{Validação}
 
 Para validação dos algoritmos foram gerados alguns grafos hipotéticos com cenários distintos.
-Muitos deles utilizaram o mesmo vetor de custo, como dito na seção \ref{sec:pathdyn}, que representam
+Alguns deles utilizaram o mesmo vetor de custo, como dito na seção \ref{sec:pathdyn}, que representam
 o tempo médio das passagens dos veículos por uma aresta ao longo do dia, em intervalos de 10 minutos.
 
 % \subsection{Cenários de teste}
@@ -14,7 +14,6 @@ uma extensão ao Dynagraph, que simula o caminho mínimo. Para isso, segue a seq
 \item Exibir o grafo com todos os vértices e arestas;
 \item Selecionar um dos 3 algoritmos para cálculo e exibição do caminho mínimo;
 \item Baixar o arquivo JSON ou ir para a aplicação Dynagraph, que contém os mesmos dados do grafo mais as arestas do caminho mínimo;
-\item Selecionar o dynagraph e abrir o arquivo baixado ();
 \end{itemize}
 
 As figuras \ref{fig:shortestpath}, \ref{fig:upperlimit} e \ref{fig:downlimit} mostram captura de telas
@@ -131,12 +130,13 @@ de cima para baixo.
 
 A seguir, o mesmo exemplo do grafo anterior, mas com o horário de início do percurso diferente.
 Percebe-se que a hora é ultrapassada, pois o percurso inicia às 23 horas e 50 minutos.
+% Considerando o grafo G(N=\{P1, P2, P3, P4, P5, P6\}, A), o caminho determinado parte de P1, passa por P4 e chega em P6.
 
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.70\textwidth]{chapters/fig/validacao/ex3.png}
 \caption{Simulador de Caminho Mínimo - Exemplo 3}
-\label{fig:ex2}
+\label{fig:ex3}
 \end{figure}
 \FloatBarrier
 
@@ -164,6 +164,76 @@ Percebe-se que a hora é ultrapassada, pois o percurso inicia às 23 horas e 50 
 \end{figure}
 \FloatBarrier
 
+Logo abaixo, um exemplo usando o mesmo vetor de custo do exemplo 3.
 
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.70\textwidth]{chapters/fig/validacao/ex4.png}
+\caption{Simulador de Caminho Mínimo - Exemplo 4}
+\label{fig:ex4}
+\end{figure}
+\FloatBarrier
 
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn4a.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn4b.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn4c.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn4d.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn4e.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn4f.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn4g.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn4h.png}
+\caption{Caminho Mínimo no Dynagraph - Exemplo 4}
+\label{fig:dyn4}
+\end{figure}
+\FloatBarrier
 
+\begin{center}
+  \line(1,0){450}
+\end{center}
+\lstinputlisting[language=Java]{chapters/fig/validacao/dyn4.json}
+\begin{figure}[htbp]
+  \begin{center}
+    \line(1,0){450}
+  \end{center}
+  \centering
+  \caption{Simulador de Caminho Mínimo: Estrutura JSON - Exemplo 4}
+  \label{fig:jsondyn4}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.70\textwidth]{chapters/fig/validacao/ex5.png}
+\caption{Simulador de Caminho Mínimo - Exemplo 5}
+\label{fig:ex5}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn5a.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn5b.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn5c.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn5d.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn5e.png}
+ \includegraphics[width=.35\textwidth]{chapters/fig/validacao/dyn5f.png}
+\caption{Caminho Mínimo no Dynagraph - Exemplo 5}
+\label{fig:dyn5}
+\end{figure}
+\FloatBarrier
+
+\begin{center}
+  \line(1,0){450}
+\end{center}
+\lstinputlisting[language=Java]{chapters/fig/validacao/dyn5.json}
+\begin{figure}[htbp]
+  \begin{center}
+    \line(1,0){450}
+  \end{center}
+  \centering
+  \caption{Simulador de Caminho Mínimo: Estrutura JSON - Exemplo 5}
+  \label{fig:jsondyn5}
+\end{figure}
+\FloatBarrier

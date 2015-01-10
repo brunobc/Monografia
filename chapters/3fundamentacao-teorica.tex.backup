@@ -843,7 +843,10 @@ O algoritmo, fica, pois do seguinte modo:
 \State isValidVerticeOrigem $\leftarrow$ isValidPath(verticeOrigem, horarioDestino)
 \State isValidVerticeDestino $\leftarrow$ isValidPath(verticeDestino, horarioDestino, horarioOrigem)
 
-\If {!isValidLigacao \|\| isValidVerticeOrigem \|\| isValidVerticeDestino}
+\If {!isValidLigacao $\|\|$ !isValidVerticeOrigem $\|\|$ !isValidVerticeDestino}
+  \State custoVerticeDestino $\leftarrow$ custoOriginal
+  \State predecessor[v] $\leftarrow$ predecessor anterior
+\EndIf
 \end{algorithmic}
 \label{algtudodinamico}
 \end{algorithm}

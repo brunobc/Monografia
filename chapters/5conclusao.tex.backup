@@ -3,25 +3,27 @@
 O presente trabalho utilizou algoritmos de caminho mínimo em grafos dinâmicos
 para determinação de percusos com tempo mínimo em grafos hipotéticos.
 A aplicação destes algoritmos resultou na formulação de um modelo computacional em grafos
-de topologia dinâmica e atributos dinâmicos. Também foi construído uma ferramenta ($software$)
-extendida do Dynagraph, que exibe o caminho mínimo entre dois pontos conhecidos.
+de topologia dinâmica e atributos dinâmicos. Também foi construída uma ferramenta (\textit{software})
+extendida do Dynagraph, que calcula e exibe o caminho mínimo entre dois vértices conhecidos.
 
 Inicialmente foram apresentados os algoritmos de topologia estática e atributos dinâmicos com
-limite inferior e superior.
-Dentre os algoritmos implementados, o algoritmo que altera o custo de previsão antes de ultrapassar o tempo
-de previsão foi utilizado no algoritmo de topologia dinâmica e atributos dinâmicos.
+limite inferior e superior. Em seguida, esses mesmos algoritmos foram utilizados no algoritmo
+de topologia dinâmica e atributos dinâmicos.
 
 Pode-se concluir que o algoritmo utilizado em grafos de topologia dinâmica e atributos dinâmicos
 é eficiente ao ponto de garantir a resolução do problema dentro dos objetivos propostos, pois ele
-garante um intervalo de previsão para travessia de cada aresta.
+garante um intervalo de previsão para travessia de cada aresta e intervalo para o caminho mínimo.
 Mesmo sabendo que o modelo não é o mais eficiente, pois o mesmo é implementado usando o
 algoritmo de Dijkstra com Radix Heap, e poderia usar a estrutura de dados Fibonacci heap com a
 implementação do radix heap, e com isso reduzir ainda mais a complexidade.
 
-Para trabalhos futuros, pretende-se integrar a ferramenta ao Dynagraph enviando o grafo
-com o caminho mínimo diretamente, evitando baixar o arquivo JSON.
-A aplicação ainda se limita em determinar o caminho mínimo atráves do primeiro ponto até o último
-ponto do grafo, pois não é possivel selecionar os vértices origem e destino. Outra limitação é a
-seleção de um grafo em arquivo externo, pois o mesmo seleciona um grafo na implementação.
+Esta pesquisa também contribuiu com a integração da ferramenta implementada com a ferramenta Dynagraph.
+Essa integração permite através do Dynagraph solicitar o caminho mínimo do grafo em análise. Para isso, ele faz 
+uma chamada ao \textit{software} deselvolvido. Este, por sua vez, analisa o grafo enviado, calcula o caminho mínimo
+e envia para o Dynagraph o mesmo grafo acrescido das arestas do caminho mínimo gerado.
+
+Para trabalho futuros, pretende-se 
+Para trabalhos futuros na ferramenta, pretende-se resolver alguns detalhes para garantir o funcionamento da ferramenta.
+A aplicação ainda limita-se ao selecionar um grafo em arquivo externo, pois o mesmo seleciona um grafo na implementação.
 Pretende-se disponibilizar uma opção na ferramenta que indique o horário inicial de partida
-do caminho mínimo.
+do caminho mínimo. E por fim, aperfeiçoar o Editor de Características extendendo a edição para arestas.
