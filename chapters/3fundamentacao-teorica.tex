@@ -348,15 +348,15 @@ do método na linha \ref{trechoradix} do algoritmo \ref{codeRadix}.
 \begin{algorithm}
 \caption{Com Permissão Adiante}
 \begin{algorithmic}[1]
-\State janela temporal $\leftarrow$ 10
-\If {custoVerticeSelecionado > janela temporal}
-  \State custoAresta $\leftarrow$ período de previsão do custoVerticeSelecionado
+\State custoAresta $\leftarrow$ horário até o momento
+\If {custoVerticeSelecionado > janelaTemporalAtual}
+  \State custoAresta $\leftarrow$ tempo de previsão do próximo intervalo
 \EndIf
+
 \If {custoAresta + custoVerticeSelecionado < custoVerticeDestino}
-  \State custoAresta $\leftarrow$ custoAresta + 	
-  \State predecessor[v] $\leftarrow$ u
+  \State custoVerticeDestino $\leftarrow$ custoAresta + custoVerticeSelecionado
+  \State predecessor verticeDestino $\leftarrow$ verticeSelecionado \Comment{predecessor[v] $\leftarrow$ u}
 \EndIf
-\State custoVerticeSelecionado $\leftarrow$ custoAresta
 \end{algorithmic}
 \label{compermissaoadiante}
 \end{algorithm}
@@ -637,11 +637,11 @@ algoritmo \ref{codeRadix}.
 \If {custoAresta + custoVerticeSelecionado > janelaTemporalAtual}
   \State custoAresta $\leftarrow$ tempo de previsão do próximo intervalo
 \EndIf
+
 \If {custoAresta + custoVerticeSelecionado < custoVerticeDestino}
-  \State custoAresta $\leftarrow$ custoAresta + custoVerticeSelecionado
-  \State predecessor[v] $\leftarrow$ u
+  \State custoVerticeDestino $\leftarrow$ custoAresta + custoVerticeSelecionado
+  \State predecessor verticeDestino $\leftarrow$ verticeSelecionado \Comment{predecessor[v] $\leftarrow$ u}
 \EndIf
-\State custoVerticeSelecionado $\leftarrow$ custoAresta
 \end{algorithmic}
 \label{sempermissaoadiante}
 \end{algorithm}
@@ -834,7 +834,7 @@ O algoritmo, fica, pois do seguinte modo:
   \State fim $\leftarrow$ data final do elemento
   \State\Return (fim > horarioDestino $\&\&$ horarioDestino > ini)
 \EndIf
-\Return horarioDestino > ini
+\State\Return horarioDestino > ini
 \EndFunction
 
 \State horarioOrigem $\leftarrow$ horário de referência

@@ -14,8 +14,7 @@ os quais interligam estes nós. Considerado o número de nós $|V| = n;$ e o nú
 cada arco $(i, j) \in A$ está associado um custo unitário $c_{ij}$. O caminho entre um
 nó origem $(s)$ e um nó destino $(t)$ é definido por uma sequência de
 arcos: $(s,i),...(k,l),...(j,t) = \Gamma(s,t)$. O Problema de Caminho Mínimo (PCM) consiste em determinar
-um caminho entre $s$ e $t$ tal que a somatória dos custos unitários dos arcos (ou alguma
-outra medida de impedância) que compõem este caminho seja o mínimo \cite{cunha}.
+um caminho entre $s$ e $t$ tal que a somatória dos custos unitários dos arcos que compõem este caminho seja o mínimo \cite{cunha}.
 
 Dada uma rede $G$ com $m$ nós e $n$ arcos, associando a cada arco $(i,j)$ o custo $c_{ij}$, o Problema
 de Caminho Mínimo é encontrar o menor caminho entre o nó 1 e o nó $m$ em $G$ (caminho mínimo de menor valor).
@@ -50,7 +49,7 @@ $C(\Gamma(s,t)) = C(\Gamma(s,k)) + C(\Gamma(k,t))$ é mínimo $\Longleftrightarr
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.45\textwidth]{chapters/fig/teorema.png}
-\caption{Teorema - Princípio do algoritmo de caminho mínimo}
+\caption{Representação das propriedades do princípio do algoritmo de caminho mínimo}
 \label{fig:teorema}
 \end{figure}
 \FloatBarrier
@@ -108,10 +107,10 @@ Mas para encontrar o rótulo de menor distância, é preciso procurar todos os e
 Para superar isso, o algoritmo radix heap considera usar larguras variáveis e altera os intervalos de forma dinâmica. 
 O Radix Heap segue as pro\-prie\-dades:
 
-Propriedade 3. As larguras dos \textit{buckets} são 1, 1, 2, 4, 8, 16, ..., de modo que o número de \textit{buckets} necessários é somente $O(log(NC))$,
+Propriedade 3: As larguras dos \textit{buckets} são 1, 1, 2, 4, 8, 16, ..., de modo que o número de \textit{buckets} necessários é somente $O(log(NC))$,
 onde N é o número de vértice e C o custo da maior aresta.
 
-Propriedade 4.  Os intervalos dos \textit{buckets} são modificados dinamicamente e são realocados os vértices de menor rótulo temporário
+Propriedade 4: Os intervalos dos \textit{buckets} são modificados dinamicamente e são realocados os vértices de menor rótulo temporário
 para um único \textit{bucket}, cuja largura é 1.
 
 A Propriedade 3 nos permite manter apenas $O(log(NC))$ \textit{buckets} e, assim, supera a desvantagem do algoritmo
@@ -136,8 +135,8 @@ Esses intervalos mudam à medida que o algoritmo prossegue. No entanto, a largur
 para além das suas larguras iniciais \cite{bookahuja}.
 
 \subsubsection{Operações sobre o Radix Heap}
-Determinar qual intervalo contém um dado valor pode ser feito percorrendo o vetor de \textit{buckets} com complexidade $O(lognC)$.
-Logo, inserir um vértice na estrutura, tem complexidade $O(K)$, pois $O(K) = O(log nC)$
+Determinar qual intervalo contém um dado valor pode ser feito percorrendo o vetor de \textit{buckets} com complexidade $O(log \hspace*{1mm} nC)$.
+Logo, inserir um vértice na estrutura, tem complexidade $O(K)$, pois $O(K) = O(log \hspace*{1mm} nC)$
 
 Para descrever a operação de retirar o item da fila de prioridades que contém o menor valor chave considere o seguinte exemplo:
 Supondo que o rótulo temporário de um vértice de conteudo(4) é 9, cujo intervalo é [8, 15].
@@ -349,15 +348,13 @@ do método na linha \ref{trechoradix} do algoritmo \ref{codeRadix}.
 \begin{algorithm}
 \caption{Com Permissão Adiante}
 \begin{algorithmic}[1]
-\State janela temporal $\leftarrow$ 10
-\If {custoVerticeSelecionado > janela temporal}
+\If {custoVerticeSelecionado > janelaTemporalAtual}
   \State custoAresta $\leftarrow$ período de previsão do custoVerticeSelecionado
 \EndIf
 \If {custoAresta + custoVerticeSelecionado < custoVerticeDestino}
-  \State custoAresta $\leftarrow$ custoAresta + 	
-  \State predecessor[v] $\leftarrow$ u
+  \State custoVerticeDestino $\leftarrow$ custoAresta + custoVerticeSelecionado
+  \State predecessor verticeDestino $\leftarrow$ verticeSelecionado \Comment{predecessor[v] $\leftarrow$ u}
 \EndIf
-\State custoVerticeSelecionado $\leftarrow$ custoAresta
 \end{algorithmic}
 \label{compermissaoadiante}
 \end{algorithm}
@@ -712,7 +709,7 @@ Em seguida, são exibidos os próximos passos até chegar no resultado final.
 \caption{Radix Heap - Parte 2}
 \label{fig:limitesup2}
 \end{figure}
-\FloatBarrier
+
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/buckets4.png}
@@ -720,13 +717,14 @@ Em seguida, são exibidos os próximos passos até chegar no resultado final.
 \label{fig:buckets4}
 \end{figure}
 \FloatBarrier
+
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/limitesup3.png}
 \caption{Radix Heap - Parte 3}
 \label{fig:limitesup3}
 \end{figure}
-\FloatBarrier
+
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=.50\textwidth]{chapters/fig/buckets5.png}
@@ -810,7 +808,7 @@ Dijkstra com Radix Heap seguindo a estrutura da seção \ref{subsec:topdinatridi
 
 Ao executar o exemplo da figura \ref{fig:leo1}, com o mesmo vetor de custo e ponto de origem, tem-se
 os vértices adjacentes P2 e P3. Ao atualizar o rótulo dos vértices adjacentes, é necessário executar o mesmo
-pseudocódigo apresentado na figura \ref{fig:janelatemporal}. Além disso, é levado em consideração o tempo
+pseudocódigo \ref{sempermissaoadiante}. Além disso, é levado em consideração o tempo
 inicial e final dos vértices e arestas para determinar o caminho mínimo. Para isso,
 verifica-se as seguintes questões:
 \begin{itemize}
@@ -834,7 +832,7 @@ O algoritmo, fica, pois do seguinte modo:
   \State fim $\leftarrow$ data final do elemento
   \State\Return (fim > horarioDestino $\&\&$ horarioDestino > ini)
 \EndIf
-\Return horarioDestino > ini
+\State\Return horarioDestino > ini
 \EndFunction
 
 \State horarioOrigem $\leftarrow$ horário de referência
@@ -869,7 +867,7 @@ exibe o tempo de existência de cada elemento do grafo.
 \end{figure}
 \FloatBarrier
 
-A seguir, a visualização do grafo dinâmico da figura \ref{fig:datatime} para acompanhar o exemplo.
+A seguir, é exibido o grafo dinâmico na figura \ref{fig:datatime} para acompanhar o exemplo.
 
 \begin{figure}[htbp]
 \centering
@@ -880,6 +878,7 @@ A seguir, a visualização do grafo dinâmico da figura \ref{fig:datatime} para 
 \caption{Dynagraph - Captura de tela}
 \label{fig:explicacaodyn}
 \end{figure}
+\FloatBarrier
 
 A figura \ref{fig:dyndyn1} exibe o início da solução do caminho sobre o grafo dinâmico.
 Tomando os vértices adjacentes a P1, observa-se o grafo da figura \ref{fig:dyndyn1}, onde as arestas
@@ -897,25 +896,24 @@ A seguir, é apresentada a sequência de instantes utilizando o Dynagraph após 
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn2.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn3.png}
+ \includegraphics[width=.42\textwidth]{chapters/fig/dyndyn2.png}
+ \includegraphics[width=.42\textwidth]{chapters/fig/dyndyn3.png}
 \caption{Radix Heap Dinâmico - Parte 2 e 3}
 \label{fig:dyndyn2}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn4.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn5.png}
+ \includegraphics[width=.42\textwidth]{chapters/fig/dyndyn4.png}
+ \includegraphics[width=.42\textwidth]{chapters/fig/dyndyn5.png}
 \caption{Radix Heap Dinâmico - Parte 4 e 5}
 \label{fig:dyndyn3}
 \end{figure}
 
-
 \begin{figure}[htbp]
 \centering
- \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn6.png}
- \includegraphics[width=.45\textwidth]{chapters/fig/dyndyn7.png}
+ \includegraphics[width=.42\textwidth]{chapters/fig/dyndyn6.png}
+ \includegraphics[width=.42\textwidth]{chapters/fig/dyndyn7.png}
 \caption{Radix Heap Dinâmico - Parte 6 e 7}
 \label{fig:dyndyn4}
 \end{figure}
