@@ -13,17 +13,27 @@
 
 \bibitem[AHUJA et al. 1990]{ahuja}
 \abntrefinfo{AHUJA et al.}{AHUJA et al.}{1990}
-{AHUJA, R.K. et al. {Faster algorithms for the shortest path problem}.
+{AHUJA, R.K.; MEHLHORN, Kurt; ORLIN, James~B.; TARJAN, Robert~E. {Faster
+  algorithms for the shortest path problem}.
 \emph{Journal of the Association for Computing Machinery}, v.~37, n.~2, p.
   213--223, 1990.}
 
 \bibitem[ATZINGEN et al. 2007]{cunha}
 \abntrefinfo{ATZINGEN et al.}{ATZINGEN et al.}{2007}
-{ATZINGEN, J.~V. et al. {Análise Comparativa de Algoritmos Eficientes para o
-  Problema de Caminho Mínimo}. In:  \emph{XXI ANPET: Congresso de Pesquisa e
-  Ensino em Transportes, Panorama Nacional da Pesquisa em Transportes.
-  Associação Nacional de Ensino e Pesquisa em Transportes}. [S.l.]: Rio de
-  Janeiro, Brasil, 2007. p. 1--12.}
+{ATZINGEN, J.~V.; CUNHA, C.~B.; NAKAMOTO, F.~Y.; RIBEIRO, F.~R.; SCHARDONG, A.
+  {Análise Comparativa de Algoritmos Eficientes para o Problema de Caminho
+  Mínimo}. In:  \emph{XXI ANPET: Congresso de Pesquisa e Ensino em
+  Transportes, Panorama Nacional da Pesquisa em Transportes. Associação
+  Nacional de Ensino e Pesquisa em Transportes}. [S.l.]: Rio de Janeiro,
+  Brasil, 2007. p. 1--12.}
+
+\bibitem[Augusto 2013]{leonard}
+\abntrefinfo{Augusto}{AUGUSTO}{2013}
+{AUGUSTO, Leonard~C.S.
+\emph{{Uma Metodologia para Previsão On-line de Tempos de Viagem e Rotas
+  Ótimas em Redes Viárias Urbanas}}.
+Disserta\c{c}\~ao (Mestrado) --- Mestrado Profissional em Computa\c{c}\~ao
+  Aplicada (MPCOMP), Universidade Estadual do Ceará, 2013.}
 
 \bibitem[BASTIAN, HEYMANN e JACOMY 2009]{gephi}
 \abntrefinfo{BASTIAN, HEYMANN e JACOMY}{BASTIAN; HEYMANN; JACOMY}{2009}
@@ -43,14 +53,14 @@
 {CALIXTO, Anderson; NEGREIROS, Marcos.
 \emph{{DYNAGRAPH: Um Modelo de Edição e Representação de Grafos
   Dinâmicos}}.
-Disserta\c{c}\~ao (Mestrado) --- Mestrado Acadêmico em Ciência da
-  Computa\c{c}\~ao (MACC), Universidade Estadual do Ceará, 2013.}
+Disserta\c{c}\~ao (Mestrado) --- Mestrado Profissional em Computa\c{c}\~ao
+  Aplicada (MPCOMP), Universidade Estadual do Ceará, 2013.}
 
 \bibitem[CORMEN et al. 2001]{cormen}
 \abntrefinfo{CORMEN et al.}{CORMEN et al.}{2001}
-{CORMEN, Thomas~H. et al. \emph{{Introduction to Algorithms}}. [S.l.]:
-  Cambridge and NewYork: The MIT Press and McGraw-Hill Book Company, 2nd.
-  Edition, 2001.}
+{CORMEN, Thomas~H.; LEISERSON, Charles~E.; RIVEST, Ronald~L.; STEIN, Clifford.
+  \emph{{Introduction to Algorithms}}. [S.l.]: Cambridge and NewYork: The MIT
+  Press and McGraw-Hill Book Company, 2nd. Edition, 2001.}
 
 \bibitem[CROCKFORD 2008]{douglas}
 \abntrefinfo{CROCKFORD}{CROCKFORD}{2008}
@@ -78,14 +88,6 @@ Disserta\c{c}\~ao (Mestrado) --- Mestrado Acadêmico em Ciência da
   networks}.
 1 ed. PHYSICAL REVIEW, p.~8, 2012.}
 
-\bibitem[Leonard 2013]{leonard}
-\abntrefinfo{Leonard}{LEONARD}{2013}
-{LEONARD, Augusto~C.S.
-\emph{{Uma Metodologia para Previsão On-line de Tempos de Viagem e Rotas
-  Ótimas em Redes Viárias Urbanas}}.
-Disserta\c{c}\~ao (Mestrado) --- Mestrado Acadêmico em Ciência da
-  Computa\c{c}\~ao (MACC), Universidade Estadual do Ceará, 2013.}
-
 \bibitem[NANNICINI e LIBERTI 2008]{giacomo}
 \abntrefinfo{NANNICINI e LIBERTI}{NANNICINI; LIBERTI}{2008}
 {NANNICINI, G.; LIBERTI, L. {Shortest paths on dynamic graphs}.
@@ -94,15 +96,15 @@ Disserta\c{c}\~ao (Mestrado) --- Mestrado Acadêmico em Ciência da
 
 \bibitem[Negreiros 1996]{negreiros}
 \abntrefinfo{Negreiros}{NEGREIROS}{1996}
-{NEGREIROS, Marcos~José.
+{NEGREIROS, Marcos.
 \emph{{Contribuições para otimização em grafos e problemas de percurso de
   Veículos: Sistema SisGRAFO}}.
 Tese (Doutorado) --- COPPE/UFRJ - Eng Sistemas - DSc Thesis, 1996.}
 
 \bibitem[Negreiros e Maculan 2014]{negreirosbook}
 \abntrefinfo{Negreiros e Maculan}{NEGREIROS; MACULAN}{2014}
-{NEGREIROS, Marcos~José; MACULAN, Nelson. \emph{{Otimização em Grafos}}.
-  [S.l.]: (Não Publicado), 2014.}
+{NEGREIROS, Marcos; MACULAN, Nelson. \emph{{Otimização em Grafos}}. [S.l.]:
+  (Não Publicado), 2014.}
 
 \bibitem[Netto 1996]{boaventura}
 \abntrefinfo{Netto}{NETTO}{1996}

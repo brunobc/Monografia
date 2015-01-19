@@ -19,7 +19,7 @@ de navegação de carros e sistemas embarcados GPS, esse tipo de problema de cam
 tem se tornado cada vez mais usado.
 
 Diante o grande aumento do tráfego de veículos, se torna indispensável o uso de Sistemas Inteligentes
-de Transporte (ITS - Intelligent Transportation System), que realizam o controle e gerenciamento desse fluxo de veículos,
+de Transporte (ITS - $Intelligent Transportation System$), que realizam o controle e gerenciamento desse fluxo de veículos,
 permitindo assim o aumento do poder de decisão para o planejamento de ações de maneira
 mais inteligente e eficiente.
 Sistemas de previsão de tráfego são como forma de auxiliar o controle de tráfego de veículos.
@@ -30,22 +30,18 @@ vias \cite{leonard}.
 
 \section{Motivação}
 
-Um sistema de seleção da melhor rota em condições de tráfego intenso poderia
-direcionar os condutores a rotas alternativas, para que se evite transitar em rotas já saturadas,
-mitigando os gargalos de tráfego nessas regiões. Todas essas informações seriam
-geradas em tempo real, e estariam disponíveis em um sistema web para os condutores através de aplicações para acesso público.
-Essas aplicações podem fazer uso de Sistemas Inteligentes de Transporte (do inglês Intelligent Transportation Systems ou ITS),
-como já dito anteriormente, definidos genericamente como sistemas de transporte que usam tecnologias de informação e
-de telecomunicações para assegurar a sua melhor utilização e operação, buscando controlar e
-reduzir congestionamentos e filas. Entre as inúmeras aplicações, incluem-se sistemas de apoio
-à navegação em tempo real, cuja finalidade é auxiliar motoristas a encontrar os melhores
-caminhos ou rotas para atingirem seus locais de destino.
+Um sistema que selecione a melhor rota para os condutores ajudaria a diminuir o tráfego intenso em determinados locais.
+Todas essas informações seriam geradas em tempo real e poderia usar Sistemas Inteligentes de Transporte, definidos 
+como sistemas de transporte que usam tecnologias de informação e
+de telecomunicações buscando reduzir congestionamentos e filas.
+Entre as inúmeras aplicações, incluem-se sistemas de apoio à navegação em tempo real, cuja finalidade é auxiliar
+motoristas a encontrar os melhores caminhos ou rotas para atingirem seus locais de destino.
 
-Inúmeras aplicações baseadas em SIG’s (GIS - Geographic Information Systems),
+Inúmeras aplicações baseadas em SIG’s (GIS - $Geographic Information Systems$),
 que permitem tratamento computacional a dados geográficos ou geo-referenciados,
 vêm sendo disponibilizadas na internet.
 São ferramentas em forma de mapa que facilitam o usuário localizar um endereço,
-encontrar o menor caminho entre dois lugares, ou até mesmo o caminho mais rápido para chegar ao destino.
+encontrar o menor caminho entre dois lugares, ou até mesmo o caminho mais rápido para chegar ao destino \cite{leonard}.
 
 O uso de sistemas ``on-line'' que sugerem a melhor rota de um ponto de origem a um ponto de destino conhecido,
 obtém dados em tempo real, e com isso realizam a previsão de rotas otimizadas, levando em conta o tráfego

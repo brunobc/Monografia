@@ -88,7 +88,8 @@ O algoritmo Radix Heap é utilizado numa variação do algoritmo de Dijkstra e f
 Ahuja, Mehlhorn, Orlin e Tarjan em \cite{ahuja}.
 Ele é considerado ainda no meio científico como um dos algoritmos mais eficientes para resolver o
 problema do caminho mínimo.
-A implementação do Radix Heap é um híbrido da implementação primitiva $O(n^2)$ e implementação de Dial($O(m + nC))$). 
+A implementação do Radix Heap é um híbrido da implementação primitiva $O(n^2)$ e implementação de Dial($O(m + nC))$), que
+é uma variação do algoritmo de Dijkstra. 
 Estas duas implementações representam dois extremos no que diz respeito à quantidade dos \textit{buckets} utilizados.
 A implementação primitiva considera todos os vértices rotulados temporariamente juntos, em um \textit{bucket} grande,
 e procura por um vértice com o menor rótulo. Já o algoritmo de Dial usa um grande número de \textit{buckets} e separa os vértices,
@@ -107,13 +108,13 @@ Mas para encontrar o rótulo de menor distância, é preciso procurar todos os e
 Para superar isso, o algoritmo radix heap considera usar larguras variáveis e altera os intervalos de forma dinâmica. 
 O Radix Heap segue as pro\-prie\-dades:
 
-Propriedade 3: As larguras dos \textit{buckets} são 1, 1, 2, 4, 8, 16, ..., de modo que o número de \textit{buckets} necessários é somente $O(log(NC))$,
-onde N é o número de vértice e C o custo da maior aresta.
+Propriedade 3: As larguras dos \textit{buckets} são 1, 1, 2, 4, 8, 16, ..., de modo que o número de \textit{buckets} necessários
+é somente $O(log_2(NC))$, onde N é o número de vértice e C o custo da maior aresta.
 
 Propriedade 4: Os intervalos dos \textit{buckets} são modificados dinamicamente e são realocados os vértices de menor rótulo temporário
 para um único \textit{bucket}, cuja largura é 1.
 
-A Propriedade 3 nos permite manter apenas $O(log(NC))$ \textit{buckets} e, assim, supera a desvantagem do algoritmo
+A Propriedade 3 nos permite manter apenas $O(log_2(NC))$ \textit{buckets} e, assim, supera a desvantagem do algoritmo
 de Dial, que usa muitos \textit{buckets}.
 A Propriedade 4 nos permite, como no algoritmo Dial, evitar a necessidade de 
 pesquisar todo o \textit{bucket} para encontrar um vértice de menor rótulo temporário. Quando implementado deste modo, esta 
@@ -136,7 +137,7 @@ para além das suas larguras iniciais \cite{bookahuja}.
 
 \subsubsection{Operações sobre o Radix Heap}
 Determinar qual intervalo contém um dado valor pode ser feito percorrendo o vetor de \textit{buckets} com complexidade $O(log \hspace*{1mm} nC)$.
-Logo, inserir um vértice na estrutura, tem complexidade $O(K)$, pois $O(K) = O(log \hspace*{1mm} nC)$
+Logo, inserir um vértice na estrutura tem complexidade $O(K)$, pois $O(K) = O(log \hspace*{1mm} nC)$
 
 Para descrever a operação de retirar o item da fila de prioridades que contém o menor valor chave considere o seguinte exemplo:
 Supondo que o rótulo temporário de um vértice de conteudo(4) é 9, cujo intervalo é [8, 15].

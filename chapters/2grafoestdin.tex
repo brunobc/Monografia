@@ -49,7 +49,7 @@ Fonte: Elaboração própria, baseada em \cite{goodrich}
 \FloatBarrier
 
 
-\cite{goodrich} diz que se todas as arestas em um grafo forem não-dirigidas,
+Em \cite{goodrich}, se todas as arestas em um grafo forem não-dirigidas,
 então diz-se que o grafo é um grafo não-dirigido. De forma similar, um grafo dirigido, ou digrafo, é um grafo em
 que todas as arestas são dirigidas. Um grafo que tem arestas dirigidas e não-dirigidas é chamado de grafo misto, 
 como mostra a figura \ref{fig:misto}.
@@ -69,7 +69,7 @@ e arestas dirigidas, correspondendo a trechos de um único sentido. Assim, um gr
 Várias estruturas representam esse tipo de rede, como: estrutura matricial,
 estrutura de listas encadeadas, estrutura de listas duplamente
 encadeadas, dentre outras \cite{negreiros}.
-Segundo \cite{cormen}, existem duas maneiras para representar um grafo $G = (V,E)$:
+Em  \cite{cormen}, existem duas maneiras para representar um grafo $G = (V,E)$:
 como uma coleção de listas de adjacências ou como uma matriz de adjacências. A representação
 de lista de adjacências em geral é preferida, porque ela fornece um modo compacto para representar grafos esparsos,
 onde para os quais $|E|$ é muito menor que $|V|^2$. Contudo, uma representação de matriz de adjacências pode ser
@@ -80,7 +80,7 @@ Segundo \cite{goldbarg}, uma matriz $A = |a_{ij}|$ quadrada de ordem $n$ é deno
 \indent $a_{ij}$ = 1, se $\exists(i,j)$ $\in$ $E$\\
 \indent $a_{ij}$ = 0 em caso contrário.
 
-As figuras \ref{fig:matriznaodirecionada} e \ref{fig:matrizdirecionada} apresentam exemplos de matrizes de adjacências para
+As Figuras \ref{fig:matriznaodirecionada} e \ref{fig:matrizdirecionada} apresentam exemplos de matrizes de adjacências para
 grafos não orientados e orientados, respectivamente.
 
 \begin{figure}[htbp]
@@ -101,12 +101,12 @@ Fonte: \cite{goldbarg}
 \label{fig:matrizdirecionada}
 \end{figure}
 
-Em Listas Encadeadas, segundo \cite{negreirosbook} e \cite{cormen}, quando se deseja armazenar um grafo pouco denso, ou seja,
-$D_{max} \leqslant$ $\dfrac{|V|}{2}$ é mais vantajoso usar estruturas mais eficientes de armazenamento, assim como as listas
-e vetores de listas. Neste caso, os vértices estão posicionados no vetor principal, onde a própria célula do vetor
-guarda o rótulo do vértice que entrou primeiro e assim sucessivamente, como numa pilha. As pilhas, que derivam de cada
-célula do vetor, podem ser construídas levando-se em conta as ligações de arcos/elos ao elemento vértice da célula
-que o gera. No índice de cada célula de lista, mantém-se pelo menos uma informação contendo o vértice de ligação,
+Em Listas Encadeadas, quando se deseja armazenar um grafo pouco denso, ou seja,
+$D_{max} \leqslant$ $\dfrac{|V|}{2}$ é mais vantajoso usar estruturas compactas, assim como as listas
+e vetores de listas \cite{negreirosbook}, \cite{cormen}. Neste caso, os vértices estão posicionados no vetor principal,
+onde a própria célula do vetor guarda o rótulo do vértice que entrou primeiro e assim sucessivamente, como numa pilha.
+As pilhas, que derivam de cada célula do vetor, podem ser construídas levando-se em conta as ligações de arcos/elos ao
+elemento vértice da célula que o gera. No índice de cada célula de lista, mantém-se pelo menos uma informação contendo o vértice de ligação,
 figura \ref{fig:listaencad}.
 \FloatBarrier
 \noindent $Type$\\
@@ -153,11 +153,11 @@ Em \cite{harary}, são definidas três tipos de redes: rede de nodos, rede de el
 \item Uma rede de nodos (ou grafo de nodos ponderados) é uma tripla $(V, L, f)$, onde $V$ é um conjunto
 de vértices, $L$ é um conjunto de ligações $\{u,v\}$, e $f$ é uma função, $f: V \rightarrow N$ onde $N$
 é um sistema numérico, atribuição de um valor ou um peso;
-\item Uma rede de elos (ou grafo de arestas ponderadas) é uma tripla $(V, L, g)$, definida de forma semelhante;
-\item Uma rede ponderada (ou grafo totalmente ponderado) tem pesos atribuídos a ambos nós e arestas.
+\item Uma rede de elos (ou grafo de arestas ponderadas) é uma tripla $(V, L, g)$, definida de forma semelhante a rede de nodos;
+\item Uma rede ponderada (ou grafo totalmente ponderado) tem pesos atribuídos a ambos nodos e arestas.
 \end{itemize}
 
-Outro tipo de rede é chamada de rede genérica, que contém atributos e características.
+Um outro tipo de rede é chamada de rede genérica, que contém atributos e características.
 
 Grafo Dinâmico $G^t(V^t, L^t)$ é todo grafo que modifica seus vértices ($V^t$) e/ou ligações ($L^t$)
 ao longo de um período de tempo ($H \in [T_i, T_k]$). Ou seja, as entidades $V$ (um conjunto de nodos),
@@ -177,7 +177,7 @@ podem variar com o tempo.
 \end{itemize}
 
 \subsection{Topologia Estática e Atributos Dinâmicos}
-Nesta rede os vértices e as arestas são constantes ao longo do tempo, mas seus atributos podem ser alterados.
+Nesta rede, os vértices e as arestas são constantes ao longo do tempo, mas seus atributos podem ser alterados.
 O grafo é definido como $G(V^t, L^t)$, onde $V^t$ e $L^t$ são constantes no horizonte $H \in [T_i, T_k]$.
 A figura \ref{fig:tead} exemplifica este grafo.
 
@@ -190,7 +190,7 @@ A figura \ref{fig:tead} exemplifica este grafo.
 
 \subsection{Topologia Dinâmica e Atributos Estáticos}
 \label{subsec:topdinatribest}
-Nesta rede, ao longo do tempo, os vértices e as arestas podem ser removidos, adicionados e até mesmo
+Nesta rede, os vértices e as arestas podem ser removidos, ao longo do tempo, adicionados e até mesmo
 modificados para outra posição, mas suas características como espessura, cor e tamanho são fixas.
 O grafo é definido como $G(V^t, L^t)$, onde $V^t$ e $L^t$ mudam no horizonte $H \in [T_i, T_k]$,
 porém os atributos sempre serão os mesmos. A figura \ref{fig:tdae} mostra um exemplo desse grafo.
@@ -335,7 +335,7 @@ O Dynagraph é capaz de visualizar o comportamento do grafo ao longo de um perí
 visualizar previsões e processos dinâmicos em vários contextos e realizar simulações preditivas sobre estes eventos \cite{dynagraph}.
 
 Um grafo dinâmico é definido por $G^t$, que ocorre no intervalo $t = [t_s,t_f]$, onde $t_s$ é o tempo inicial e $t_f$ é o tempo final.
-$G^t = (V^{t_v}, E^{t_e})$, onde $t_v \subseteq t$ e $t_e \subseteq t$, e $V^{t_v}$ e $E^{t_e}$ são funções que geram vértices e arestas
+$G^t = (V^{t_v}, E^{t_e})$, onde $t_v \subset t$ e $t_e \subset t$, e $V^{t_v}$ e $E^{t_e}$ são funções que geram vértices e arestas
 respectivamente, em função do intervalo $t=t_v \cup t_e$.
 
 As estruturas $V^{t_v} = \{O^{t_v}, F^{t_v}\}$ para vértices e $E^{t_e} = \{O^{t_e}, F^{t_e}\}$ para arestas são semelhantes,
