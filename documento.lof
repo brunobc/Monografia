@@ -1,0 +1,68 @@
+\select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Grafo Orientado ou Assim\IeC {\'e}trico\relax }}{18}{figure.caption.7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Grafo n\IeC {\~a}o Orientado ou Sim\IeC {\'e}trico - $G(V,E)$\relax }}{19}{figure.caption.8}
+\contentsline {figure}{\numberline {3}{\ignorespaces Grafo de co-autoria de alguns autores\relax }}{19}{figure.caption.9}
+\contentsline {figure}{\numberline {4}{\ignorespaces Grafo Misto - $G(V,E,A)$\relax }}{20}{figure.caption.10}
+\contentsline {figure}{\numberline {5}{\ignorespaces Matriz de adjac\IeC {\^e}ncias de grafo n\IeC {\~a}o orientado\relax }}{20}{figure.caption.11}
+\contentsline {figure}{\numberline {6}{\ignorespaces Matriz de adjac\IeC {\^e}ncia de grafo orientado\relax }}{21}{figure.caption.12}
+\contentsline {figure}{\numberline {7}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o em Listas Encadeadas de um grafo\relax }}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {8}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o de um grafo em Listas Duplamente Encadeadas\relax }}{22}{figure.caption.14}
+\contentsline {figure}{\numberline {9}{\ignorespaces Grafo com Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos\relax }}{23}{figure.caption.15}
+\contentsline {figure}{\numberline {10}{\ignorespaces Grafo com Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos\relax }}{24}{figure.caption.16}
+\contentsline {figure}{\numberline {11}{\ignorespaces Grafo com Topologia e Atributos Din\IeC {\^a}micos\relax }}{24}{figure.caption.17}
+\contentsline {figure}{\numberline {12}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre a representa\IeC {\c c}\IeC {\~a}o de grafos agregados(esquerda) e representa\IeC {\c c}\IeC {\~a}o de sequ\IeC {\^e}ncia temporal(direita)\relax }}{26}{figure.caption.19}
+\contentsline {figure}{\numberline {13}{\ignorespaces Captura de tela do software Gephi\relax }}{27}{figure.caption.20}
+\contentsline {figure}{\numberline {14}{\ignorespaces Captura de tela do software Gephi\relax }}{28}{figure.caption.21}
+\contentsline {figure}{\numberline {15}{\ignorespaces Estrutura JSON usada pelo Dynagraph\relax }}{31}{figure.caption.22}
+\contentsline {figure}{\numberline {16}{\ignorespaces Capturas de tela do software Dynagraph no modo de edi\IeC {\c c}\IeC {\~a}o de um Grafo Din\IeC {\^a}mico\relax }}{31}{figure.caption.23}
+\contentsline {figure}{\numberline {17}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o das propriedades do princ\IeC {\'\i }pio do algoritmo de caminho m\IeC {\'\i }nimo\relax }}{33}{figure.caption.24}
+\contentsline {figure}{\numberline {18}{\ignorespaces Grafo - Caminho M\IeC {\'\i }nimo\relax }}{37}{figure.caption.26}
+\contentsline {figure}{\numberline {19}{\ignorespaces Grafo exemplo para determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo\relax }}{42}{figure.caption.31}
+\contentsline {figure}{\numberline {20}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o do intervalo de previs\IeC {\~a}o em uma liga\IeC {\c c}\IeC {\~a}o\relax }}{42}{figure.caption.32}
+\contentsline {figure}{\numberline {21}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 1\relax }}{43}{figure.caption.33}
+\contentsline {figure}{\numberline {22}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 2\relax }}{44}{figure.caption.35}
+\contentsline {figure}{\numberline {23}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 3\relax }}{44}{figure.caption.37}
+\contentsline {figure}{\numberline {24}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 4\relax }}{45}{figure.caption.39}
+\contentsline {figure}{\numberline {25}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 5\relax }}{45}{figure.caption.41}
+\contentsline {figure}{\numberline {26}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 6\relax }}{46}{figure.caption.43}
+\contentsline {figure}{\numberline {27}{\ignorespaces Processo de determina\IeC {\c c}\IeC {\~a}o de caminho m\IeC {\'\i }nimo - Parte 7\relax }}{46}{figure.caption.45}
+\contentsline {figure}{\numberline {28}{\ignorespaces Estrutura JSON usada pelo vetor de custos\relax }}{47}{figure.caption.46}
+\contentsline {figure}{\numberline {29}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets\relax }}{48}{figure.caption.48}
+\contentsline {figure}{\numberline {30}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 1\relax }}{48}{figure.caption.49}
+\contentsline {figure}{\numberline {31}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 2\relax }}{49}{figure.caption.50}
+\contentsline {figure}{\numberline {32}{\ignorespaces Radix Heap - Parte 1\relax }}{49}{figure.caption.51}
+\contentsline {figure}{\numberline {33}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 3\relax }}{49}{figure.caption.52}
+\contentsline {figure}{\numberline {34}{\ignorespaces Radix Heap - Parte 2\relax }}{49}{figure.caption.53}
+\contentsline {figure}{\numberline {35}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 4\relax }}{50}{figure.caption.54}
+\contentsline {figure}{\numberline {36}{\ignorespaces Radix Heap - Parte 3\relax }}{50}{figure.caption.55}
+\contentsline {figure}{\numberline {37}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 5\relax }}{50}{figure.caption.56}
+\contentsline {figure}{\numberline {38}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 6\relax }}{50}{figure.caption.57}
+\contentsline {figure}{\numberline {39}{\ignorespaces Radix Heap - Parte 4\relax }}{51}{figure.caption.58}
+\contentsline {figure}{\numberline {40}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o dos v\IeC {\'e}rtices nos buckets - Parte 7\relax }}{51}{figure.caption.59}
+\contentsline {figure}{\numberline {41}{\ignorespaces Radix Heap - Parte 5\relax }}{51}{figure.caption.60}
+\contentsline {figure}{\numberline {42}{\ignorespaces Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Est\IeC {\'a}ticos\relax }}{52}{figure.caption.61}
+\contentsline {figure}{\numberline {43}{\ignorespaces Estrutura JSON do tempo de exist\IeC {\^e}ncia dos v\IeC {\'e}rtices e arestas\relax }}{54}{figure.caption.63}
+\contentsline {figure}{\numberline {44}{\ignorespaces Dynagraph - Captura de tela\relax }}{54}{figure.caption.64}
+\contentsline {figure}{\numberline {45}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 1\relax }}{55}{figure.caption.65}
+\contentsline {figure}{\numberline {46}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 2 e 3\relax }}{55}{figure.caption.66}
+\contentsline {figure}{\numberline {47}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 4 e 5\relax }}{55}{figure.caption.67}
+\contentsline {figure}{\numberline {48}{\ignorespaces Radix Heap Din\IeC {\^a}mico - Parte 6 e 7\relax }}{56}{figure.caption.68}
+\contentsline {figure}{\numberline {49}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Din\IeC {\^a}mica e Atributos Din\IeC {\^a}micos\relax }}{57}{figure.caption.69}
+\contentsline {figure}{\numberline {50}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: sem permiss\IeC {\~a}o adiante\relax }}{58}{figure.caption.70}
+\contentsline {figure}{\numberline {51}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Topologia Est\IeC {\'a}tica e Atributos Din\IeC {\^a}micos: com permiss\IeC {\~a}o adiante\relax }}{58}{figure.caption.71}
+\contentsline {figure}{\numberline {52}{\ignorespaces Estrutura JSON - Exemplo 1\relax }}{59}{figure.caption.72}
+\contentsline {figure}{\numberline {53}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 1\relax }}{60}{figure.caption.73}
+\contentsline {figure}{\numberline {54}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 1\relax }}{60}{figure.caption.74}
+\contentsline {figure}{\numberline {55}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 1\relax }}{61}{figure.caption.75}
+\contentsline {figure}{\numberline {56}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 2\relax }}{62}{figure.caption.76}
+\contentsline {figure}{\numberline {57}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 2\relax }}{62}{figure.caption.77}
+\contentsline {figure}{\numberline {58}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 2\relax }}{64}{figure.caption.78}
+\contentsline {figure}{\numberline {59}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 3\relax }}{64}{figure.caption.79}
+\contentsline {figure}{\numberline {60}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 3\relax }}{65}{figure.caption.80}
+\contentsline {figure}{\numberline {61}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 3\relax }}{65}{figure.caption.81}
+\contentsline {figure}{\numberline {62}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 4\relax }}{66}{figure.caption.82}
+\contentsline {figure}{\numberline {63}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 4\relax }}{67}{figure.caption.83}
+\contentsline {figure}{\numberline {64}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 4\relax }}{68}{figure.caption.84}
+\contentsline {figure}{\numberline {65}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo - Exemplo 5\relax }}{69}{figure.caption.85}
+\contentsline {figure}{\numberline {66}{\ignorespaces Caminho M\IeC {\'\i }nimo no Dynagraph - Exemplo 5\relax }}{70}{figure.caption.86}
+\contentsline {figure}{\numberline {67}{\ignorespaces Simulador de Caminho M\IeC {\'\i }nimo: Estrutura JSON - Exemplo 5\relax }}{71}{figure.caption.87}

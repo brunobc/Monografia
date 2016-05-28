@@ -1,8 +1,0 @@
-digraph G {
-  rankdir = LR;
-  margin = 0;
-  a -> b;
-  b -> c;
-  c -> c [ label = "loop" ];
-  c -> a;
-}

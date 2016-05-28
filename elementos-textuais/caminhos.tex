@@ -1,0 +1,909 @@
+\chapter{Caminhos em Grafos}
+
+\section{Caminhos em Redes Estáticas}
+Dentre os diversos problemas que surgem em grafos, este é o mais fundamental de todos e
+aquele que ao longo dos anos foi dos mais estudados. Várias técnicas surgiram desde meados
+de 1950 com o objetivo de tratar eficientemente o problema de caminhos mínimos em grafos. A
+principal delas considera o fato de se promover uma arborescência em um grafo onde à medida
+que os vértices explorados são atingidos, tem-se uma proximidade da solução do problema \cite{negreirosbook}.
+
+\subsection{Problema de Caminho Mínimo}
+Uma rede de transporte (que pode ser uma malha viária, rodoviária, etc.) pode ser
+representada por uma grafo $G = (V, A)$, onde $V$ é o conjunto de nós e A é o conjunto de arcos
+os quais interligam estes nós. Considerado o número de nós $|V| = n;$ e o número de arcos $|A| = m;$ para
+cada arco $(i, j) \in A$ está associado um custo unitário $c_{ij}$. O caminho entre um
+nó origem $(s)$ e um nó destino $(t)$ é definido por uma sequência de
+arcos: $(s,i),...(k,l),...(j,t) = \Gamma(s,t)$. O Problema de Caminho Mínimo (PCM) consiste em determinar
+um caminho entre $s$ e $t$ tal que a somatória dos custos unitários dos arcos que compõem este caminho seja o mínimo \cite{cunha}.
+
+Dada uma rede $G$ com $m$ nós e $n$ arcos, associando a cada arco $(i,j)$ o custo $c_{ij}$, o Problema
+de Caminho Mínimo é encontrar o menor caminho entre o nó 1 e o nó $m$ em $G$ (caminho mínimo de menor valor).
+O custo do caminho é dado pela soma dos custos sobre os arcos do caminho encontrado. Uma formatação genérica do problema
+de caminho mínimo é dada via grafos, quando deseja-se encontrar o percurso de custo mínimo entre dois vértices $i$ e $j$
+de um grafo $G(V,L)$, onde, se $\exists$ $\Gamma (i,j)$, $i$, $j \in V$, então $w_{ij}$ é tomado como o custo mínimo
+de um caminho direto entre os vértices $i$ e $j$, e todo $i_1$, ..., $i_k \in V$, distintos de $i$, $j$, são ditos
+serem vértices do caminho, onde $i$ precede $i_1$ e assim por diante, nesta ordem \cite{negreirosbook}.
+
+O princípio de qualquer algoritmo de caminho mínimo está associado ao seguinte contexto:
+\begin{enumerate}
+  \item Seja $G(V,A)$ um grafo dirigido e ponderado, onde $c_{i,j} \geqslant 0, \forall (i,j) \in A$ e $c_{i,j} \in \mathbb{Z}^+$;
+  \item G contém um caminho direto entre todo nó $s \in V$ a todo nó $t \in V$;
+\end{enumerate}
+
+Propriedade 1: Se o caminho $s=i_1 \rightarrow i_2 \rightarrow \cdots \rightarrow i_h = k$ é o caminho mínimo de s a k ($\Gamma(s,k)$),
+então para todo nó $q = 2,3, \cdots, (t-1)$ o subcaminho $s=i_1 \rightarrow i_2 \rightarrow \cdots \rightarrow i_q$ é o menor caminho
+do nó fonte ao nó $i_q$.
+
+Propriedade 2: Seja $d$ o vetor que representa as distâncias mais curtas de um vértice s a qualquer vértice t de G. Então o caminho
+direto P de um nó fonte a um nó K é um caminho mínimo se e somente se $d(j) = d(i) + c_{ij}$ para todo arco $(i,j) \in P$.
+
+Prova das propriedades pode ser encontrada em \cite{bookahuja}. As propriedades 1 e 2 conduzem ao seguinte teorema representado na
+figura \ref{fig:teorema}:
+
+\newtheorem{meuteorema}{Teorema}[chapter]
+\begin{meuteorema} \label{teo:Pita} 
+Seja $C(\Gamma(s,t))$ o custo do caminho de s a t, então é certo dizer:
+$C(\Gamma(s,t)) = C(\Gamma(s,k)) + C(\Gamma(k,t))$ é mínimo $\Longleftrightarrow$ $\Gamma(s,k)$ é mínimo e $\Gamma(k,t)$ é mínimo . 
+\end{meuteorema}
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.45\textwidth]{figuras/teorema.png}
+\caption{Representação das propriedades do princípio do algoritmo de caminho mínimo}
+\label{fig:teorema}
+\end{figure}
+\FloatBarrier
+
+\subsection{Algoritmo de Dijkstra}
+O algoritmo de Dijkstra foi proposto em 1959 e permite determinar a solução ótima através da adição de
+vértices à árvore de caminho mínimo pelo processo de relaxamento de uma aresta. Esse processo consiste em verificar
+se há a possibilidade de melhorar o caminho obtido até o momento \cite{boaventura}. Este algoritmo considera
+basicamente um processo de rotulação de vértices à medida que o menor caminho é encontrado passo a passo,
+interativamente, em vértices intermediários. O algoritmo requer que nenhum peso no grafo seja negativo. Abaixo
+é apresentado o pseudocódigo do algoritmo de Dijkstra.
+
+\begin{algorithm}[h!]
+\Caption{Dijkstra}
+  \Inicio{
+    inicialize a distância para todos os nós em G = infinito\;
+    inicialize o predecessor de todos os nós em G = vazio\;
+    \Enqto{H nao estiver vazio}{
+      u = o nó com menor rótulo extraído de H\;
+      \Para{v=1 até número de adjacentes a u}{
+        \Se {rotulo[v] > rotulo[u] + distancia[u, v]}{
+          rótulo[v] = rótulo[u] + distância[u, v]\;
+          predecessor[v] = u\;
+          atualiza a posição de v em H\;
+        }
+      }
+    }
+  }
+Fonte: \cite{cormen}
+\label{newdijkstra}
+\end{algorithm}
+\FloatBarrier
+
+\subsection{Algoritmo Radix Heap}
+O algoritmo Radix Heap é utilizado numa variação do algoritmo de Dijkstra e foi proposto inicialmente por
+Ahuja, Mehlhorn, Orlin e Tarjan em \cite{ahuja}.
+Ele é considerado ainda no meio científico como um dos algoritmos mais eficientes para resolver o
+problema do caminho mínimo.
+A implementação do Radix Heap é um híbrido da implementação primitiva $O(n^2)$ e implementação de Dial($O(m + nC))$), que
+é uma variação do algoritmo de Dijkstra. 
+Estas duas implementações representam dois extremos no que diz respeito à quantidade dos \textit{buckets} utilizados.
+A implementação primitiva considera todos os vértices rotulados temporariamente juntos, em um \textit{bucket} grande,
+e procura por um vértice com o menor rótulo. Já o algoritmo de Dial usa um grande número de \textit{buckets} e separa os vértices,
+armazenando dois vértices quaisquer com rótulos diferentes em diferentes segmentos \cite{bookahuja}.
+A implementação Radix Heap melhora esses dois métodos através de uma solução intermediária:
+Ele armazena vários, mas não todos os vértices em um mesmo \textit{bucket}. Por exemplo, em vez de armazenar
+apenas os vértices com $d[v] = k$ em um \textit{bucket} k, como na implementação do Dial,
+pode-se armazenar todos os vértices com $d[v]$ dentro do intervalo [100$k$ para 100$k$ + 99] no \textit{bucket} $k$ \cite{bookahuja}.
+
+Para o \textit{bucket}[k] é definido um intervalo de valores denotado por intervalo(k). O número de inteiros
+no intervalo é chamado de largura do intervalo e denotado por largura(k).
+No exemplo anterior, o intervalo do \textit{bucket} $k$ é [100$k$, 100$k$ + 99] e sua largura é 100. 
+
+Usar larguras de tamanho $k$ permite reduzir o número de \textit{buckets} necessários por um fator de $k$.
+Mas para encontrar o rótulo de menor distância, é preciso procurar todos os elementos no \textit{bucket} não vazio de menor índice.
+Para superar isso, o algoritmo radix heap considera usar larguras variáveis e altera os intervalos de forma dinâmica. 
+O Radix Heap segue as pro\-prie\-dades:
+
+Propriedade 3: As larguras dos \textit{buckets} são 1, 1, 2, 4, 8, 16, ..., de modo que o número de \textit{buckets} necessários
+é somente $O(log_2(NC))$, onde N é o número de vértice e C o custo da maior aresta.
+
+Propriedade 4: Os intervalos dos \textit{buckets} são modificados dinamicamente e são realocados os vértices de menor rótulo temporário
+para um único \textit{bucket}, cuja largura é 1.
+
+A Propriedade 3 nos permite manter apenas $O(log_2(NC))$ \textit{buckets} e, assim, supera a desvantagem do algoritmo
+de Dial, que usa muitos \textit{buckets}.
+A Propriedade 4 nos permite, como no algoritmo Dial, evitar a necessidade de 
+pesquisar todo o \textit{bucket} para encontrar um vértice de menor rótulo temporário. Quando implementado deste modo, esta 
+versão do algoritmo radix heap tem complexidade $O(m + nlog(nC))$ \cite{bookahuja}.
+
+Para um dado problema de caminho mínimo, o radix heap consiste em formar $1 + [log(NC)]$ \textit{buckets}.
+Os \textit{buckets} são numeradas de $0$ até $K = [log(nC)]$.
+O algoritmo irá alterar os intervalos dos \textit{buckets} de forma dinâmica, e cada vez que muda os intervalos,
+redistribui os vértices nos \textit{buckets}. Inicialmente, os \textit{buckets} têm os seguintes intervalos:\\
+intervalo(0) = [0];\\
+intervalo(1) = [1];\\
+intervalo(2) = [2, 3];\\
+intervalo(3) = [4, 7];\\
+intervalo(4) = [8, 15];\\
+...\\
+intervalo(K) = [$2^{K - 1}$, $2^K - 1$].
+
+Esses intervalos mudam à medida que o algoritmo prossegue. No entanto, a largura dos \textit{buckets} nunca aumenta
+para além das suas larguras iniciais \cite{bookahuja}.
+
+\subsubsection{Operações sobre o Radix Heap}
+Determinar qual intervalo contém um dado valor pode ser feito percorrendo o vetor de \textit{buckets} com complexidade $O(log \hspace*{1mm} nC)$.
+Logo, inserir um vértice na estrutura tem complexidade $O(K)$, pois $O(K) = O(log \hspace*{1mm} nC)$
+
+Para descrever a operação de retirar o item da fila de prioridades que contém o menor valor chave considere o seguinte exemplo:
+Supondo que o rótulo temporário de um vértice de conteudo(4) é 9, cujo intervalo é [8, 15].
+O algoritmo irá examinar cada vértice em conteudo(4) para identificar um vértice com o rótulo de menor distância.
+Segundo \cite{bookahuja}, os rótulos de distância que o algoritmo de Dijkstra designa como permanente não são decrescentes,
+isso implica que nenhum rótulo temporário de distância jamais voltará
+a ser inferior a 9 e, consequentemente, não precisará mais dos \textit{buckets} de 0 a 3.
+
+Em vez de deixar estes \textit{buckets} inativos, o algoritmo redistribui o intervalo [9, 15]
+para os \textit{buckets} anteriores, resultando nos intervalos intervalo(0) = [9], intervalo(1) = [10],
+intervalo(2) = [11, 12], intervalo(3) = [13,15] e intervalo(4) = $\emptyset$ . Uma vez que o intervalo(4)
+está vazio agora, o algoritmo redistribui os vértices que estavam em conteudo(4) para os \textit{buckets} adequados (0, 1, 2, e 3).
+Assim, cada um dos vértices no \textit{bucket} 4 move-se para um \textit{bucket} de menor índice e todos vértices com o rótulo de menor distância
+são movidos para o \textit{bucket} 0, que tem largura 1 \cite{bookahuja}.
+
+\subsubsection{Funcionamento do Algoritmo de Dijkstra com Radix Heap}
+Sempre que o algoritmo encontra vértices com o rótulo de menor distância em um \textit{bucket} com
+largura maior que 1, ele verifica todos os vértices no \textit{bucket} para identificar um vértice com rótulo de menor distância.
+Em seguida, o algoritmo redistribui o intervalo dos \textit{buckets} e muda cada vértice no \textit{bucket} para o \textit{bucket} de menor índice.
+Uma vez que o radix heap contém $k$ \textit{buckets}, um vértice pode mudar na maioria das $k$ vezes, e consequentemente,
+o algoritmo irá verificar qualquer vértice na maioria das $k$ vezes. Por isso, o número total de verificações
+de vértices é $O(NK)$, o qual não é "muito grande" \cite{bookahuja}.
+
+Para demonstrar o funcionamento do algoritmo de Dijkstra com Radix Heap serão utilizadas figuras do livro \cite{bookahuja}.
+O grafo na figura \ref{fig:grafoRadix} exemplifica o radix heap, e o número ao lado de cada arco indica o seu comprimento.
+\FloatBarrier
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.65\textwidth]{figuras/grafoRadix.png}
+\caption{Grafo - Caminho Mínimo}
+\label{fig:grafoRadix}
+\end{figure}
+\FloatBarrier
+O vértice origem é $s = 1$. O peso da maior aresta é $C = 20$, logo $K = [log(nC))] = [log(120)] = 7$.
+A Tabela \ref{tab:initialradixheap} especifica os rótulos de distância determinada pelo algoritmo de Dijkstra
+após análise do vértice 1.
+\FloatBarrier
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{l l l l l l l}
+  \toprule
+  vértice $i$ & 1 & 2 & 3 & 4 & 5 & 6\\
+  \midrule
+  rótulo d[$i$] & 0 & 13 & 0 & 15 & 20 & $\infty$ \\
+  \bottomrule
+  \end{tabular}
+  
+  \centering
+  \begin{tabular}{l l l l l l l l l}
+  \toprule
+  \\bucket $k$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
+  \midrule
+  \\intervalo($k$) & [0] & [1] & [2, 3] & [4, 7] & [8, 15] & [16, 31] & [32, 63] & [64, 127]\\
+  \\conteudo($k$) & \{3\} & $\emptyset$ & $\emptyset$ & $\emptyset$ & \{2, 4\} & \{5\} & $\emptyset$ & \\
+  \bottomrule
+  \end{tabular}
+\caption{Radix Heap inicial}
+ \label{tab:initialradixheap}
+\end{table}
+
+Para selecionar o vértice com o rótulo de menor distância, os \textit{buckets} 0, 1, 2, ..., K são percorridos para encontrar o
+primeiro \textit{bucket} não vazio. No exemplo, o \textit{bucket} 0 é não vazio. Uma vez que o \textit{bucket} 0 tem largura 1,
+cada vértice neste \textit{bucket} tem o mesmo (no mínimo) rótulo de distância. Assim, o algoritmo determina o vértice 3 como permanente,
+exclui o vértice 3 do radix heap, e verifica o arco (3, 5) para alterar o rótulo de distância do vértice 5 de 20 para 9.
+Em seguida, é verificado se o novo rótulo de distância do vértice 5 está contido no intervalo de seu \textit{bucket} presente,
+que é o \textit{bucket} 5. Como o seu rótulo de distância diminuiu, o vértice 5 deve se mover para um \textit{bucket} de menor índice.
+Assim, é concluída a análise sequencial dos \textit{bucket} da direita para a esquerda, a partir do \textit{bucket} 5,
+para identificar o primeiro \textit{bucket} cujo intervalo contém o número 9, que é o \textit{bucket} 4.
+O vértice 5 é movido do \textit{bucket} 5 para \textit{bucket} 4. A tabela \ref{tab:secondradixheap} mostra o novo radix heap.
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{l l l l l}
+  \toprule
+  vértice $i$ & 2 & 4 & 5 & 6\\
+  \midrule
+  rótulo d[$i$] & 13 & 15 & 9 & $\infty$ \\
+  \bottomrule
+  \end{tabular}
+  
+  \centering
+  \begin{tabular}{l l l l l l l l l}
+  \toprule
+  \\bucket $k$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
+  \midrule
+  \\intervalo($k$) & [0] & [1] & [2, 3] & [4, 7] & [8, 15] & [16, 31] & [32, 63] & [64, 127]\\
+  \\conteudo($k$) & $\emptyset$ & $\emptyset$ & $\emptyset$ & $\emptyset$ & \{2, 4, 5\} & $\emptyset$ & $\emptyset$ & $\emptyset$\\
+  \bottomrule
+  \end{tabular}
+\caption{Radix Heap - final da iteração 1}
+ \label{tab:secondradixheap}
+\end{table}
+\FloatBarrier
+Varrendo os \textit{buckets} sequencialmente, é observado que o \textit{bucket} $k = 4$ é o primeiro \textit{bucket} não vazio.
+Uma vez que o intervalo deste \textit{bucket} contém mais de um número inteiro, o primeiro vértice no \textit{bucket} não precisa ter
+o rótulo de menor distância. Tem-se que intervalo(4) é [8, 15], mas como seu menor rótulo temporário neste \textit{bucket} é 9,
+o novo intervalo a ser redistribuído é o intervalo [9, 15] da seguinte maneira:\\
+intervalo(0) = [9],\\
+intervalo(1) = [10],\\
+intervalo(2) = [11, 12],\\
+intervalo(3) = [13, 15],\\
+intervalo(4) = $\emptyset$.
+
+Outros intervalos não mudam. Os vértices do \textit{bucket} 4 foram redistribuídos nos \textit{buckets} 0 a 3.
+Os \textit{buckets} resultantes têm os seguintes conteúdo:\\
+conteúdo(0) = {5},\\
+conteúdo(1) = $\emptyset$,\\
+conteúdo(2) = $\emptyset$,\\
+conteúdo(3) = {2, 4},\\
+conteúdo(4) = $\emptyset$.
+
+Esta redistribuição esvazia necessariamente o \textit{bucket} 4 e move o vértice com o rótulo de menor distância para o \textit{bucket} 0.
+
+\subsubsection{Complexidade do Algoritmo de Dijkstra com Radix Heap}
+Cada operação de inserção do vértice no \textit{bucket} consome tempo $O(K)$.
+Como um vértice só pode ser movido $K$ vezes no máximo, então $O(nK)$ é um limite para o número total de movimentos
+de vértices.
+O termo $m$ significa o número de distâncias atualizadas, logo o tempo total gasto em atualizar os rótulos temporários
+é $O(m + nK)$.
+A operação de selecionar um vértice começa verificando os \textit{buckets} da esquerda para a direita para encontrar
+o primeiro \textit{bucket} não vazio $k$ no radix heap. Esta operação requer tempo $O(K)$ por iteração e $O(nk)$ no total.
+A redistribuição do intervalo segue atribuindo o primeiro inteiro para \textit{bucket} 0, o próximo inteiro para \textit{bucket} 1,
+os próximos dois inteiros para \textit{bucket} 2, nos próximos quatro inteiros para \textit{bucket} 3, e assim por diante.
+Uma vez que o \textit{bucket} $k$ tem uma largura inferior a $2^{k - 1}$, e uma vez que as larguras dos primeiros $k$ \textit{buckets}
+pode ser tão grande como $1, 1, 2, ..., 2^{k - 2}$ até uma largura total de potencial $2k - 1$,
+o intervalo útil do \textit{bucket} k sobre os \textit{buckets} $0, 1, ..., k - 1$ é redistribuído.
+Esta redistribuição dos intevalos e re-inserções subsequentes de vértices esvazia o \textit{bucket} k e move os vértices com
+os rótulos de menor distância para o \textit{bucket} 0 \cite{bookahuja}.
+Portanto, como $k = [log(nC)]$, o tempo de execução do algoritmo de Dijkstra com Radix Heap é $O(m + nk) = O(m + n log(nC))$.
+Usando a estrutura de dados Fibonacci heap com a implementação do radix heap, é possível reduzir ainda mais a complexidade
+para $O(m + n\sqrt{logC})$, o que dá uma execução mais rápida do algoritmo em tempo polinomial para resolver
+o problema do caminho mínimo com comprimentos de arcos não negativos \cite{ahuja}.
+O algoritmo \ref{codeRadix} apresenta o pseudocódigo do Radix Heap.
+% A linha \ref{trechoradix} do algoritmo \ref{codeRadix} 
+
+\begin{algorithm}[h!]
+\caption{Radix Heap}
+  \Inicio{
+    buckets = []\;
+    distancias = []\;
+    Inicializa o rótulo de distância dos vértices\;
+    \Para{i=1 até número de vértices}{
+      distancias[i] $\leftarrow$ MAXINT\;
+    }
+    Inicializa os buckets e seus intervalos\;
+    \Para{i=0 até número de buckets}{
+      iniBucket $\leftarrow$ $2^{k - 1}$\;
+      fimBucket $\leftarrow$ $2^k - 1$\;
+    }
+    Insere os vértices dentro dos buckets correspondentes\;
+    \Enqto{todos os vértices não forem rotulados permanentemente}{
+      menorBucket $\leftarrow$ menor bucket não vazio\;
+      \Se{o menorBucket tem largura = 1 || número de elementos no menorBucket = 1}{
+        verticeSelecionado $\leftarrow$ vértice do menorBucket\;
+        \Para{v=0 até número de arcos do verticeSelecionado}{
+          Atualiza o rótulo de distância dos vértices \label{trechoradix}\;
+          Insere o vértice no bucket que contenha a sua faixa de valores\;
+        }
+        Remove do heap o verticeSelecionado\;
+        Marca o rótulo verticeSelecionado como permanentemente\;
+      } \Senao{
+        Recalcula o intervalo dos buckets\;
+        Redistribui os vertices\;
+      }
+    }
+  }
+\label{codeRadix}
+\end{algorithm}
+\FloatBarrier
+
+\section{Caminhos em Redes Dinâmicas}
+\label{sec:pathdyn}
+Embora o Problema de Caminho Mínimo seja um dos problemas de otimização combinatória mais bem estudados
+na literatura \cite{bookahuja}, Caminhos em Redes Dinâmicas tem recebido muito menos atenção ao longo dos anos.
+\cite{giacomo} aborda duas categorias de Problema de Caminho Mínimo em Grafos Dinâmicos. O primeiro é chamado
+geralmente na literatura de ``variante dependente do tempo'': nele, o custo de um arco é o tempo de viagem, que é dado
+por uma função pré-determinada de tempo, que significa que o custo de um arco $(u, v)$ sobre um caminho
+depende do tempo a partir do caminho e do tempo já gasto para alcançar $u$.
+O segundo ainda não tem um nome comum na literatura: são grafos onde a função de custo muda ou é atualizada
+depois de um certo intervalo de tempo, mas o grafo é estático entre duas alterações da função custo.
+
+\subsection{Algoritmos de Caminho Mínimo Dinâmico}
+Esta seção aborda 3 diferentes tipos de grafos, onde se pretende calcular o caminho mais rápido entre pares de vértices
+de uma rede dinâmica.
+\begin{itemize}
+\item $G(V^t, L^t)$ com Topologia Estática e Atributos Dinâmicos;
+\item $G(V^t, L^t)$ com Topologia Dinâmica e Atributos Estáticos;
+\item $G(V^t, L^t)$ com Topologia Dinâmica e Atributos Dinâmicos.
+\end{itemize}
+
+\subsubsection{Topologia Estática e Atributos Dinâmicos}
+\label{subsec:limitesuperior}
+\cite{leonard} trata o Problema de Caminho Mínimo com previsão de tempo utilizando um vetor de custos e
+através da aplicação do algoritmo Dijkstra com Radix Heap modificado. O vetor de custos é composto por dados das passagens 
+dos veículos na via como instante da passagem, velocidade, tipo e placa do veículo, que são periodicamente calculados
+a cada 10 minutos para cada ligação ou aresta. O algoritmo de Dijkstra é modificado para que o mesmo atualize os custos
+de suas arestas à medida que os tempos de percurso se modificam, pois o trânsito dos veículos nas vias descreve um
+comportamento dinâmico ao longo do tempo.
+
+Por exemplo, se o tempo parcial até um determinado ponto for de 7 minutos, então
+é utilizado para o próximo cálculo o tempo de previsão no intervalo $t + 1$, mas se o tempo parcial for de 15 minutos, logo
+o período de previsão é ultrapassado, e com isso utiliza-se $t + 2$ para o cálculo do próximo trajeto. Se o tempo parcial
+estiver entre 30 e 40 minutos utiliza-se o intervalo $t + 4$, entre 40 e 50 minutos $t + 5$, e assim por diante.
+Essa abordagem é chamada de Algoritmo com Permissão Adiante, pois só altera o intervalo de previsão quando o valor do custo
+do vértice for superior a 10.
+O algoritmo \ref{codeRadix} representa essa abordagem, e o algoritmo \ref{compermissaoadiante} mostra a modificação
+do método na linha \ref{trechoradix} do algoritmo \ref{codeRadix}.
+
+\begin{algorithm}[h!]
+\caption{Com Permissão Adiante}
+  \Inicio{
+    custoAresta $\leftarrow$ horário até o momento\;
+    \Se{custoVerticeSelecionado > janelaTemporalAtual}{
+      custoAresta $\leftarrow$ tempo de previsão do próximo intervalo\;
+    }
+
+    \Se{custoAresta + custoVerticeSelecionado < custoVerticeDestino}{
+      custoVerticeDestino $\leftarrow$ custoAresta + custoVerticeSelecionado\;
+      predecessor verticeDestino $\leftarrow$ verticeSelecionado\;
+    }
+  }
+\label{compermissaoadiante}
+\end{algorithm}
+\FloatBarrier
+
+A seguir, é apresentado o funcionamento do algoritmo. O exemplo na figura \ref{fig:leo1} utiliza
+6 pontos representados através do grafo G(N=\{P1, P2, P3, P4, P5, P6\}, A).
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.60\textwidth]{figuras/leo1.png}
+\caption{Grafo exemplo para determinação de caminho mínimo}
+Fonte: Elaboração própria, baseada em \cite{leonard}
+\label{fig:leo1}
+\end{figure}
+
+As arestas possuem vários pesos que são os tempos de percursos previstos entre os pontos para os tempos
+futuros $t + 1$, $t + 2$ e $t + 3$, como mostra a figura \ref{fig:intervalotemporal}. Esses custos são armazenados
+no algoritmo através de um vetor de atributos.
+Para determinar o caminho mínimo, utiliza-se um conjunto chamado PERM, que inicialmente contém o vértice fonte P1.
+A qualquer momento PERM contém todos os vértices para os quais já foram determinados os menores caminhos usando
+apenas vértices em PERM, a partir de P1. Para cada vértice $s$ fora de PERM mantém-se a menor distância dentro do
+seu respectivo intervalo de previsão dist[$s$] de P1 a $s$ usando caminhos onde o único vértice que não está em
+PERM seja $s$ \cite{leonard}.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.60\textwidth]{figuras/intervalotemporal.png}
+\caption{Representação do intervalo de previsão em uma ligação}
+\label{fig:intervalotemporal}
+\end{figure}
+
+Outra característica do algoritmo é a necessidade de armazenar o vértice adjacente
+a $s$ neste caminho em path[$s$]. Selecionando o vértice com menor distância, entre todos os que ainda não pertencem
+a PERM, o adiciona a PERM, chamando-o de $current$, e recalcula-se as distâncias (dist) para todos os vértices
+adjacentes a ele que não estejam em PERM, pois pode haver um caminho menor a partir de P1, passando por $current$, 
+do que aquele que havia antes de $current$ ser agregado a PERM. É preciso atualizar path[$s$] se houver um caminho
+mais curto, e com isso indicar que $current$ é o vértice adjacente a $s$ pelo novo caminho mínimo \cite{leonard}.
+
+Para determinar o caminho mínimo é preciso definir o ponto de origem ou nó raiz. A partir disso, o algoritmo
+aplica custo de valor tendendo ao infinito a todos os vértices exceto P1, que possui custo 0. A figura \ref{fig:leo2} exibe
+o vértice P1 como ponto de saída. Se o caminho no vértice P1 iniciou no primeiro intervalo (0-10], e vai
+até P2, o percurso leva 8 minutos.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/leo2.png}
+\caption{Processo de determinação de caminho mínimo - Parte 1}
+\label{fig:leo2}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{l l l l}
+  \toprule
+  Vértice & PERM & Distância & Predecessor\\
+  \midrule
+  P1 & Sim & 0 & - \\
+  P2 & Não & $\infty$ & - \\
+  P3 & Não & $\infty$ & - \\
+  P4 & Não & $\infty$ & - \\
+  P5 & Não & $\infty$ & - \\
+  P6 & Não & $\infty$ & - \\
+  \bottomrule
+  \end{tabular}
+\caption{Processo de determinação de caminho mínimo - Parte 1}
+ \label{tab:leotab1}
+\end{table}
+\FloatBarrier
+
+A partir de P1 consulta-se os vértices adjacentes a ele, que são P2 e P3. Para todos os vértices
+adjacentes denonimados $s$, calcula-se o pseudocódigo \ref{compermissaoadiante}.
+
+% \fbox{\begin{minipage}{70ex}
+% \vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Se} dist[s] > dist[d]\ + peso(d,s)\\
+% \vspace*{-1mm} \phantom{} \hspace{6ex} dist[s] = dist[d]\ + peso(d,s)\\
+% \vspace*{-1mm} \phantom{} \hspace{6ex} path[s] = s\\
+% \vspace*{-1mm} \phantom{} \hspace{3ex} {\bf Fim Se}\\
+% \end{minipage}}
+% \begin{figure}[htbp]
+% \centering
+% \caption{Dijkstra Modificado - Trecho aplicado a vértices adjacentes}
+% \label{fig:diMod}
+% \end{figure}
+% \FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/leo3.png}
+\caption{Processo de determinação de caminho mínimo - Parte 2}
+\label{fig:leo3}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{l l l l}
+  \toprule
+  Vértice & PERM & Distância & Predecessor\\
+  \midrule
+  P1 & Sim & 0 & - \\
+  P2 & Não & 8 & P1 \\
+  P3 & Não & 9 & P1 \\
+  P4 & Não & $\infty$ & - \\
+  P5 & Não & $\infty$ & - \\
+  P6 & Não & $\infty$ & - \\
+  \bottomrule
+  \end{tabular}
+\caption{Processo de determinação de caminho mínimo - Parte 2}
+ \label{tab:leotab2}
+\end{table}
+\FloatBarrier
+
+P2 é selecionado de PERM, pois possui a menor distância dist[x] = 8. Então inclui-se x em PERM e consulta-se
+seus vértices adjacentes, que no caso são P3 e P4.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/leo4.png}
+\caption{Processo de determinação de caminho mínimo - Parte 3}
+\label{fig:leo4}
+\end{figure}
+\FloatBarrier
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{l l l l}
+  \toprule
+  Vértice & PERM & Distância & Predecessor\\
+  \midrule
+  P1 & Sim & 0 & - \\
+  P2 & Sim & 8 & P1 \\
+  P3 & Não & 9 & P1 \\
+  P4 & Não & 14 & P2 \\
+  P5 & Não & $\infty$ & - \\
+  P6 & Não & $\infty$ & - \\
+  \bottomrule
+  \end{tabular}
+\caption{Processo de determinação de caminho mínimo - Parte 3}
+ \label{tab:leotab3}
+\end{table}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/leo5.png}
+\caption{Processo de determinação de caminho mínimo - Parte 4}
+\label{fig:leo5}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{l l l l}
+  \toprule
+  Vértice & PERM & Distância & Predecessor\\
+  \midrule
+  P1 & Sim & 0 & - \\
+  P2 & Sim & 8 & P1 \\
+  P3 & Sim & 9 & P1 \\
+  P4 & Não & 14 & P2 \\
+  P5 & Não & 17 & P3 \\
+  P6 & Não & $\infty$ & - \\
+  \bottomrule
+  \end{tabular}
+\caption{Processo de determinação de caminho mínimo - Parte 4}
+ \label{tab:leotab4}
+\end{table}
+\FloatBarrier
+
+Ao selecionar o vértice P4, não pertencente a PERM, o intervalo de previsão é ultrapassado
+de 10 minutos. Logo, é utilizada a segunda posição do vetor de custos $t + 2$. O custo do trajeto até
+o vértice P5 pelo P4 é menor do que o custo atual por P3, logo atualiza-se seu peso e predecessor
+para 16 e P4 respectivamente.
+\FloatBarrier
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/leo6.png}
+\caption{Processo de determinação de caminho mínimo - Parte 5}
+\label{fig:leo6}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{l l l l}
+  \toprule
+  Vértice & PERM & Distância & Predecessor\\
+  \midrule
+  P1 & Sim & 0 & - \\
+  P2 & Sim & 8 & P1 \\
+  P3 & Sim & 9 & P1 \\
+  P4 & Sim & 14 & P2 \\
+  P5 & Não & 16 & P4 \\
+  P6 & Não & 18 & P4 \\
+  \bottomrule
+  \end{tabular}
+\caption{Processo de determinação de caminho mínimo - Parte 5}
+ \label{tab:leotab5}
+\end{table}
+
+P5 é adicionado a PERM e seu único vértice adjacente é P6. Logo temos:
+\FloatBarrier
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/leo7.png}
+\caption{Processo de determinação de caminho mínimo - Parte 6}
+\label{fig:leo7}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{l l l l}
+  \toprule
+  Vértice & PERM & Distância & Predecessor\\
+  \midrule
+  P1 & Sim & 0 & - \\
+  P2 & Sim & 8 & P1 \\
+  P3 & Sim & 9 & P1 \\
+  P4 & Sim & 14 & P2 \\
+  P5 & Sim & 16 & P4 \\
+  P6 & Sim & 18 & P4 \\
+  \bottomrule
+  \end{tabular}
+\caption{Processo de determinação de caminho mínimo - Parte 6}
+ \label{tab:leotab5}
+\end{table}
+\FloatBarrier
+
+E finalmente temos a figura \ref{fig:leo8}, pois P6 não possui vértice adjacente. Logo, o 
+tempo para percorrer o caminho mínimo passando por P1, P2, P4 e P6 é 18 minutos.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/leo8.png}
+\caption{Processo de determinação de caminho mínimo - Parte 7}
+\label{fig:leo8}
+\end{figure}
+\FloatBarrier
+
+A presente pesquisa resolve o mesmo problema utilizando o Algoritmo de Dijkstra com Radix Heap para Grafos Dinâmicos.
+Foram implementados dois algoritmos nesse contexto: o primeiro segue a mesma abordagem do Dijkstra Modificado com Radix Heap
+de \cite{leonard}, em relação a mudança do tempo de previsão ao exceder 10 minutos, chamado Algoritmo com Permissão Adiante;
+e o segundo altera o intervalo de previsão quando o valor do custo do vértice acrescido do valor do custo da aresta adjacente 
+for superior a 10, chamado Algoritmo sem Permissão Adiante.
+Os dois usados em conjunto indicam um intervalo de limite inferior e superior para determinação do caminho mínimo.
+
+Os dois algoritmos utilizam um vetor de custos composto pelo tempo médio das passagens dos veículos, em intervalos
+de 10 minutos ao longo do dia, numa determinada ligação ou aresta. Por exemplo, entre 12 horas e 12 horas e 10 minutos um
+veículo demora em média 2 minutos para percorrer a aresta, entre 12 horas e 10 minutos e 12h e 20 minutos ele demora 3 minutos
+para percorrer a mesma aresta, e assim por diante. Os dados do vetor de custo são armazenados em um arquivo no formato JSON
+como mostra a figura \ref{fig:tabelajson}. Cada aresta possui um vetor de tamanho 24 para representar as horas, e cada elemento
+do vetor possui um vetor de tamanho 6 para representar os intervalos de 10 minutos ao longo de 1 hora.
+
+\lstinputlisting[language=Java]{figuras/tabela.json}
+\begin{figure}[htbp]
+  \caption{Estrutura JSON usada pelo vetor de custos}
+  \label{fig:tabelajson}
+\end{figure}
+\FloatBarrier
+
+A mudança de intervalo de previsão do segundo algoritmo segue o seguinte exemplo: se o tempo parcial até um determinado 
+ponto somado ao custo de travessia da aresta adjacente for de 8 minutos, então é utilizado para o próximo cálculo o tempo
+de previsão no intervalo $t + 1$, mas se a soma for de 13 minutos, logo o período de previsão é ultrapassado, e com isso
+utiliza-se $t + 2$ para o cálculo do próximo trajeto. Se a soma estiver entre 20 e 30 minutos utiliza-se o intervalo
+$t + 3$, entre 30 e 40 minutos $t + 4$, e assim por diante.
+O Algoritmo sem Permissão Adiante é representado pelo algoritmo \ref{codeRadix}, e o algoritmo \ref{sempermissaoadiante}
+apresenta o pseudocódigo dessa abordagem, onde mostra a modificação do método na linha \ref{trechoradix} do
+algoritmo \ref{codeRadix}.
+
+\begin{algorithm}[h!]
+\caption{Sem Permissão Adiante}
+  \Inicio{
+    custoAresta $\leftarrow$ horário até o momento\;
+    \Se{custoAresta + custoVerticeSelecionado > janelaTemporalAtual}{
+      custoAresta $\leftarrow$ tempo de previsão do próximo intervalo\;
+    }
+    \Se{custoAresta + custoVerticeSelecionado < custoVerticeDestino}{
+      custoVerticeDestino $\leftarrow$ custoAresta + custoVerticeSelecionado\;
+      predecessor verticeDestino $\leftarrow$ verticeSelecionado\;
+    }
+  }
+\label{sempermissaoadiante}
+\end{algorithm}
+\FloatBarrier
+
+A seguir, é apresentado o funcionamento do algoritmo utilizando o mesmo grafo da figura \ref{fig:leo1}
+e o mesmo ponto de origem. Para determinar o caminho mínimo, cada vértice armazena o identificador do vértice anterior.
+O algoritmo utiliza \textit{buckets} para armazenar os vértices de acordo com seus rótulos.
+Inicialmente, os rótulos de todos os vértices recebem um custo de valor tendendo ao infinito exceto P1,
+que possui custo 0, da mesma forma que a figura \ref{fig:leo2}. A figura \ref{fig:buckets} exibe a disposição dos vértices em seus
+respectivos \textit{buckets}.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/buckets.png}
+\caption{Disposição dos vértices nos buckets}
+\label{fig:buckets}
+\end{figure}
+\FloatBarrier
+
+Após consultar os vértices adjacentes a P1, que são P2 e P3, o pseudocódigo \ref{sempermissaoadiante}
+é executado e o mesmo resultado da figura \ref{fig:leo3} é encontrado. Em seguida, os \textit{buckets} são atualizados
+como mostra a figura \ref{fig:buckets1}.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/buckets1.png}
+\caption{Disposição dos vértices nos buckets - Parte 1}
+\label{fig:buckets1}
+\end{figure}
+\FloatBarrier
+
+Como o menor \textit{bucket} não tem largura igual a 1 e possui mais de 1 elemento, o intervalo dos \textit{buckets}
+é atualizado:
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/buckets2.png}
+\caption{Disposição dos vértices nos buckets - Parte 2}
+\label{fig:buckets2}
+\end{figure}
+\FloatBarrier
+
+O vértice P2 é selecionado do menor \textit{bucket} e em seguida consulta-se seus vértices adjacentes, que são P3 e P4.
+O intervalo de previsão é ultrapassado ao somar o rótulo de P2 com o custo da aresta, que segue até P3, no intervalo $t + 1$. Logo, 
+é utilizado a próxima posição do vetor de custos, que é $t + 2$. As figuras \ref{fig:limitesup1} e \ref{fig:buckets3} exibem o resultado.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/limitesup1.png}
+\caption{Radix Heap - Parte 1}
+\label{fig:limitesup1}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/buckets3.png}
+\caption{Disposição dos vértices nos buckets - Parte 3}
+\label{fig:buckets3}
+\end{figure}
+\FloatBarrier
+
+Em seguida, são exibidos os próximos passos até chegar no resultado final.
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/limitesup2.png}
+\caption{Radix Heap - Parte 2}
+\label{fig:limitesup2}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/buckets4.png}
+\caption{Disposição dos vértices nos buckets - Parte 4}
+\label{fig:buckets4}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/limitesup3.png}
+\caption{Radix Heap - Parte 3}
+\label{fig:limitesup3}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/buckets5.png}
+\caption{Disposição dos vértices nos buckets - Parte 5}
+\label{fig:buckets5}
+\end{figure}
+\FloatBarrier
+
+Novamente o intervalo dos ``buckets'' é atualizado e P5 é selecionado.
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/buckets6.png}
+\caption{Disposição dos vértices nos buckets - Parte 6}
+\label{fig:buckets6}
+\end{figure}
+\FloatBarrier
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/limitesup4.png}
+\caption{Radix Heap - Parte 4}
+\label{fig:limitesup4}
+\end{figure}
+\FloatBarrier
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/buckets7.png}
+\caption{Disposição dos vértices nos buckets - Parte 7}
+\label{fig:buckets7}
+\end{figure}
+\FloatBarrier
+
+Finalmente, P6 é selecionado, mas como não possui vértices adjacentes, o caminho mínimo é definido passando
+pelos vértices P1, P2, P4 e P6 com tempo de percurso de 19 minutos, como mostra a figura \ref{fig:limitesup5}.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.50\textwidth]{figuras/limitesup5.png}
+\caption{Radix Heap - Parte 5}
+\label{fig:limitesup5}
+\end{figure}
+\FloatBarrier
+
+Tomando-se o grafo da figura \ref{fig:leo8} e o grafo da figura \ref{fig:limitesup5}, vimos que os percursos
+foram os mesmos $P1 \rightarrow P2 \rightarrow P4 \rightarrow P6$ porém os custos (tempos) foram distintos.
+No primeiro algoritmo, obtivemos o tempo mínimo de percurso de 18 minutos, enquanto no segundo obtivemos 19 minutos.
+Nota-se aqui que a visão adiante ou robusta afeta diretamente o cálculo do caminho mínimo (tempo) no grafo dinâmico,
+apesar de não ter afetado a discrição do percurso.
+Porém deve-se tomar cuidado, pois os percursos para cada método podem ser distintos.
+
+% O exemplo da figura \ref{fig:intervalo} exibe a resolução dos caminhos mínimos de dois grafos de vetor de custo distintos,
+% usando os dois algoritmos implementados nesta pesquisa. 
+% \begin{figure}[htbp]
+% \centering
+%  \includegraphics[width=.60\textwidth]{figuras/intervalo.png}
+% \caption{Grafo exemplo para indicar o Intervalo de Previsão}
+% \label{fig:intervalo}
+% \end{figure}
+% \FloatBarrier
+
+\subsubsection{Topologia Dinâmica e Atributos Estáticos}
+Esse algoritmo não foi implementado e segue a estrutura apresentada na seção \ref{subsec:topdinatribest},
+onde vértices e arestas podem mudar ao longo do tempo e seus atributos são constantes. A 
+figura \ref{fig:pathtopdyn} apresenta essa estrutura:
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.80\textwidth]{figuras/pathtopdyn.png}
+\caption{Caminho Mínimo - Topologia Dinâmica e Atributos Estáticos}
+\label{fig:pathtopdyn}
+\end{figure}
+\FloatBarrier
+O exemplo utiliza pontos representados através do grafo G(N=\{P1, P2, P3, P4, P5, P6\}, A), onde o 
+ponto de partida é P1 e o destino o ponto P6. No instante $t_1$ é possível observar vários caminhos
+até chegar ao objetivo. Já no instante $t_2$ o vértice P2 foi removido, e em $t_3$ a aresta que começa em
+P4 e vai até P5 é removida, e com isso reduzindo as possibilidades de chegar a P6. Diante disso,
+se faz necessário conhecer o tempo inicial e final de cada vértice e aresta para chegar a P6.
+
+\subsubsection{Topologia Dinâmica e Atributos Dinâmicos}
+Essa seção resolve o problema apresentado na seção \ref{subsec:limitesuperior} utilizando o Algoritmo de
+Dijkstra com Radix Heap seguindo a estrutura da seção \ref{subsec:topdinatridin}.
+
+Ao executar o exemplo da figura \ref{fig:leo1}, com o mesmo vetor de custo e ponto de origem, tem-se
+os vértices adjacentes P2 e P3. Ao atualizar o rótulo dos vértices adjacentes, é necessário executar o mesmo
+pseudocódigo \ref{sempermissaoadiante}. Além disso, é levado em consideração o tempo
+inicial e final dos vértices e arestas para determinar o caminho mínimo. Para isso,
+verifica-se as seguintes questões:
+\begin{itemize}
+\item Se a aresta já existe, ou seja, se o tempo inicial dela é menor que o horário de referência;
+\item Se a aresta existirá durante o tempo de travessia, que correspondente ao seu custo no intervalo de previsão;
+\item Se os vértices origem e destino existirão durante a travessia.
+\end{itemize}
+\FloatBarrier
+
+O algoritmo, fica, pois do seguinte modo:
+
+\begin{algorithm}[h!]
+\caption{Radix Heap - Topologia Dinâmica e Atributos Dinâmicos}
+  \Inicio{
+    \Para{isValidPath(elemento, horarioDestino, horarioOrigem)}{
+      ini $\leftarrow$ data inicial do elemento\;
+      \Se {ini > horarioOrigem}{
+        O elemento ainda não existe \Return falso\;
+      }
+      \Se {data final do elemento for diferente de nulo}{
+        fim $\leftarrow$ data final do elemento\;
+        Return (fim > horarioDestino $\&\&$ horarioDestino > ini)\;
+      }
+      Return horarioDestino > ini\;
+    }
+
+    horarioOrigem $\leftarrow$ horário de referência\;
+    horarioDestino $\leftarrow$ horário de referência\;
+    isValidLigacao $\leftarrow$ isValidPath(ligacao, horarioDestino, horarioOrigem)\;
+    isValidVerticeOrigem $\leftarrow$ isValidPath(verticeOrigem, horarioDestino)\;
+    isValidVerticeDestino $\leftarrow$ isValidPath(verticeDestino, horarioDestino, horarioOrigem)\;
+
+    \Se {!isValidLigacao $\|\|$ !isValidVerticeOrigem $\|\|$ !isValidVerticeDestino}{
+      custoVerticeDestino $\leftarrow$ custoOriginal\;
+      predecessor[v] $\leftarrow$ predecessor anterior\;
+    }
+  }
+\label{algtudodinamico}
+\end{algorithm}
+\FloatBarrier
+
+Para ilustrar o método proposto para este tipo de rede, consideramos o seguinte grafo da figura \ref{fig:datatime}, que
+exibe o tempo de existência de cada elemento do grafo.
+
+\lstinputlisting[language=Java]{figuras/datatime.json}
+\begin{figure}[htbp]
+  \caption{Estrutura JSON do tempo de existência dos vértices e arestas}
+  \label{fig:datatime}
+\end{figure}
+\FloatBarrier
+
+A seguir, é exibido o grafo dinâmico na figura \ref{fig:datatime} para acompanhar o exemplo.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.45\textwidth]{figuras/explicacaoDyn1.png}
+ \includegraphics[width=.45\textwidth]{figuras/explicacaoDyn2.png}
+ \includegraphics[width=.45\textwidth]{figuras/explicacaoDyn3.png}
+ \includegraphics[width=.45\textwidth]{figuras/explicacaoDyn4.png}
+\caption{Dynagraph - Captura de tela}
+\label{fig:explicacaodyn}
+\end{figure}
+\FloatBarrier
+
+A figura \ref{fig:dyndyn1} exibe o início da solução do caminho sobre o grafo dinâmico.
+Tomando os vértices adjacentes a P1, observa-se o grafo da figura \ref{fig:dyndyn1}, onde as arestas
+que ligam P1 a P2 e P4 a P5 ainda não existem.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.55\textwidth]{figuras/dyndyn1.png}
+\caption{Radix Heap Dinâmico - Parte 1}
+\label{fig:dyndyn1}
+\end{figure}
+\FloatBarrier
+
+A seguir, é apresentada a sequência de instantes utilizando o Dynagraph após resolução do algoritmo.
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.42\textwidth]{figuras/dyndyn2.png}
+ \includegraphics[width=.42\textwidth]{figuras/dyndyn3.png}
+\caption{Radix Heap Dinâmico - Parte 2 e 3}
+\label{fig:dyndyn2}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.42\textwidth]{figuras/dyndyn4.png}
+ \includegraphics[width=.42\textwidth]{figuras/dyndyn5.png}
+\caption{Radix Heap Dinâmico - Parte 4 e 5}
+\label{fig:dyndyn3}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+ \includegraphics[width=.42\textwidth]{figuras/dyndyn6.png}
+ \includegraphics[width=.42\textwidth]{figuras/dyndyn7.png}
+\caption{Radix Heap Dinâmico - Parte 6 e 7}
+\label{fig:dyndyn4}
+\end{figure}
+
